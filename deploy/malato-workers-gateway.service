@@ -1,0 +1,30 @@
+[Unit]
+Description=MALATO - portero de /workers (clave de acceso)
+After=network-online.target malato-gestion.service
+Wants=network-online.target
+Requires=malato-gestion.service
+
+[Service]
+Type=simple
+User=jonserver
+Group=jonserver
+WorkingDirectory=/opt/malato-gestion
+Environment=NODE_ENV=production
+Environment=PORT=3002
+Environment=HOST=127.0.0.1
+Environment=APP_ORIGIN=http://127.0.0.1:3001
+Environment=APP_PUBLIC=/opt/malato-gestion/public
+Environment=PIN_FILE=/opt/malato-gestion/.workers-pin
+Environment=SECRET_FILE=/opt/malato-gestion/.workers-secret
+Environment=SESSION_DAYS=30
+ExecStart=/usr/local/bin/node /opt/malato-gestion/workers-gateway.mjs
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/malato-gestion
+
+[Install]
+WantedBy=multi-user.target

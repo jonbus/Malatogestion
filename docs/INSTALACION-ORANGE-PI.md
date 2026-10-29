@@ -6,20 +6,21 @@
 
 ## 1 · Dónde está
 
-```
-https://orangepi4pro.tail369549.ts.net:8443/
-```
+| Puerta | Dirección | Quién entra |
+|---|---|---|
+| **Pública, con clave** | **https://supermalato.es/workers/** | **cualquier móvil o navegador** |
+| **Privada, Tailscale** | **https://orangepi4pro.tail369549.ts.net:8443/** | **solo equipos dentro de la tailnet** |
 
-### Y dos formas de entrar
+### Y desde la tienda
 
 | | Dirección | Cuándo |
 |---|---|---|
 | **Desde la tienda** (misma wifi) | **http://orangepi4pro.local:3001** | **lo normal, y lo más rápido** |
 | Desde la tienda, si el nombre falla | http://192.168.1.47:3001 | la IP directa |
-| **Desde internet** | **https://orangepi4pro.tail369549.ts.net:8443** | **desde fuera** |
 
 > **La de la tienda va por la red local**: **no depende de internet** y **va más rápido**. **Es la de todos los días.**
-> **La de internet va por Tailscale Funnel**, en el puerto **8443**.
+> **La pública pasa por el túnel de Cloudflare y pide una clave** (ver `ACCESO-WORKERS.md`).
+> **La privada es Tailscale Serve**: **el Funnel público del 8443 ya está apagado**.
 
 **El nombre `orangepi4pro.local` no cambia aunque cambie la IP** (mDNS, aviso instalado el 29/10).
 
@@ -27,7 +28,8 @@ https://orangepi4pro.tail369549.ts.net:8443/
 |---|---|
 | **El asador** (recepción de pedidos) | `https://orangepi4pro.tail369549.ts.net` · puerto **8080** |
 | **Otra cosa** | `https://orangepi4pro.tail369549.ts.net:10000` · puerto **8082** |
-| **La gestión** | `https://orangepi4pro.tail369549.ts.net:8443` · puerto **3001** |
+| **La gestión, privada** | `https://orangepi4pro.tail369549.ts.net:8443` · puerto **3001** |
+| **La gestión, pública** | `https://supermalato.es/workers/` · portero en **3002** |
 
 **Nada se comparte entre ellos.** **Cada uno tiene su puerto y su carpeta.**
 
@@ -38,17 +40,30 @@ https://orangepi4pro.tail369549.ts.net:8443/
 ```
 /opt/malato-gestion/
    servidor-local.mjs          el servidor (sirve la app y su API)
+   workers-gateway.mjs         el portero de /workers (clave)
    public/index.html           la aplicación
    netlify/functions/nucleo.js el núcleo
    .datos/estado.json          LOS DATOS — aquí, en un fichero
+   .workers-pin                la clave de la puerta pública
+   .workers-secret             el secreto que firma las sesiones
 ```
 
-**Servicio**: `malato-gestion.service` — **arranca solo al encender**, y **se reinicia si se cae**.
+**Servicios** — los tres **arrancan solos al encender** y **se reinician si se caen**:
+
+| Servicio | Qué hace |
+|---|---|
+| `malato-gestion.service` | La app en el **3001** |
+| `malato-workers-gateway.service` | El portero con clave en el **3002** (solo `127.0.0.1`) |
+| `cloudflared-supermalato.service` | El túnel de **supermalato.es** |
 
 ```bash
 sudo systemctl status malato-gestion
+sudo systemctl status malato-workers-gateway
+sudo systemctl status cloudflared-supermalato
 sudo systemctl restart malato-gestion
 sudo journalctl -u malato-gestion -n 40     # ver qué ha pasado
+sudo journalctl -u malato-workers-gateway -n 40
+sudo journalctl -u cloudflared-supermalato -n 40
 ```
 
 **El asador sigue con su servicio** (`malato.service`). **No se ha tocado.**
@@ -66,7 +81,11 @@ sudo journalctl -u malato-gestion -n 40     # ver qué ha pasado
 
 > ⚠ **NO se sincronizan.** **Una tarea marcada en el Pi no aparece marcada en Cloudflare, y al revés.**
 
-**Cuando haya que unificarlas**, hay que decidir **cuál manda** y **cómo se copia**. **Hoy empiezan las dos vacías.**
+**Cuando haya que unificarlas**, hay que decidir **cuál manda** y **cómo se copia**.
+
+**El 29 de octubre de 2026 se copió una vez el estado de Cloudflare a la Pi** (marcas, encargos, notas, recuentos, tahona y cascadas), con el visto bueno de la propiedad. **A partir de ahí las dos listas siguen separadas**: la Pi no escribe en Cloudflare ni al revés.
+
+**Copia del estado importado:** `/opt/malato-gestion/.datos/estado.json` · nota: `/opt/malato-gestion/.datos/COPIADO-DESDE-CLOUDFLARE.txt`.
 
 ---
 
@@ -99,6 +118,13 @@ sudo systemctl restart malato-gestion
 ```
 
 **Los datos NO se tocan**: están en `.datos/estado.json`, aparte del código.
+
+**El portero no hay que tocarlo** cuando cambia la app: lee el `index.html` nuevo
+y reescribe las llamadas `"/api/"` cada vez. Solo se actualiza
+`workers-gateway.mjs` si cambia el propio portero.
+
+> **Detalle completo del acceso público, la clave y Tailscale:**
+> **[`ACCESO-WORKERS.md`](ACCESO-WORKERS.md)**.
 
 ---
 
