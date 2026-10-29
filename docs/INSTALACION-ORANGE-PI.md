@@ -10,7 +10,18 @@
 https://orangepi4pro.tail369549.ts.net:8443/
 ```
 
-**Va por Tailscale Funnel**, en el **puerto 8443**.
+### Y dos formas de entrar
+
+| | Dirección | Cuándo |
+|---|---|---|
+| **Desde la tienda** (misma wifi) | **http://orangepi4pro.local:3001** | **lo normal, y lo más rápido** |
+| Desde la tienda, si el nombre falla | http://192.168.1.47:3001 | la IP directa |
+| **Desde internet** | **https://orangepi4pro.tail369549.ts.net:8443** | **desde fuera** |
+
+> **La de la tienda va por la red local**: **no depende de internet** y **va más rápido**. **Es la de todos los días.**
+> **La de internet va por Tailscale Funnel**, en el puerto **8443**.
+
+**El nombre `orangepi4pro.local` no cambia aunque cambie la IP** (mDNS, aviso instalado el 29/10).
 
 | Lo que hay en esa máquina | Dónde |
 |---|---|
