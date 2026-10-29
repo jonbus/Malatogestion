@@ -181,6 +181,11 @@ público o se ponga un VPS por medio. Lo que **sí** se ha evitado:
 | **Cloudflare Access** | **No se usa**; la clave la pone el portero |
 | **Cloudflare Tunnel** | **Sí**, es la puerta de entrada del dominio |
 
+> **Si se quiere cero Cloudflare**, no se puede mantener `supermalato.es/workers`
+> con la infraestructura actual: habría que cambiar los DNS, abrir puertos
+> públicos o poner un VPS por medio. **La alternativa sin Cloudflare es
+> `https://orangepi4pro.tail369549.ts.net:8443/`**, que no usa el dominio.
+
 El túnel está en:
 
 ```
