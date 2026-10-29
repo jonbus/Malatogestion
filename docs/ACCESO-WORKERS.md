@@ -270,6 +270,19 @@ rm -f /tmp/cookies
 | **Tailscale ACL** | **No se ha tocado**. Si se añaden personas a la tailnet, hay que poner el ACL antes |
 | **Certificado** | Cloudflare pone el TLS de la puerta pública; Tailscale pone el del 8443. No hay certificados que renovar a mano |
 
+### Configurar la clave de gerencia (pendiente)
+
+La app de la Pi **no tiene clave de gerencia**. Para ponerla:
+
+```bash
+printf 'LA_CLAVE_DE_GERENCIA\n' | sudo tee /opt/malato-gestion/.pin >/dev/null
+sudo chmod 600 /opt/malato-gestion/.pin
+sudo systemctl restart malato-gestion
+```
+
+**Mejor una clave distinta de la pública**: la de gerencia es la que protege la
+bandeja de la Jefa, no la puerta de la tienda.
+
 ---
 
 ## 8 · Cómo se deshace
