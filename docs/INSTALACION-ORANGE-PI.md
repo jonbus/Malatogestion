@@ -8,8 +8,10 @@
 
 | Puerta | Dirección | Quién entra |
 |---|---|---|
-| **Pública, con clave** | **https://supermalato.es/workers/** | **cualquier móvil o navegador** |
-| **Privada, Tailscale** | **https://orangepi4pro.tail369549.ts.net:8443/** | **solo equipos dentro de la tailnet** |
+| **Portada** | **https://supermalato.es/** | **página «en construcción»** |
+| **Asador** | **https://supermalato.es/asador/** · **https://supermalato.es/erretegia** | **clientes y tienda** |
+| **Gestión pública, con clave** | **https://supermalato.es/workers/** | **cualquier móvil o navegador** |
+| **Gestión privada, Tailscale** | **https://orangepi4pro.tail369549.ts.net:8443/** | **solo equipos dentro de la tailnet** |
 
 ### Y desde la tienda
 
@@ -19,14 +21,18 @@
 | Desde la tienda, si el nombre falla | http://192.168.1.47:3001 | la IP directa |
 
 > **La de la tienda va por la red local**: **no depende de internet** y **va más rápido**. **Es la de todos los días.**
-> **La pública pasa por el túnel de Cloudflare y pide una clave** (ver `ACCESO-WORKERS.md`).
-> **La privada es Tailscale Serve**: **el Funnel público del 8443 ya está apagado**.
+> **La raíz del dominio es una portada «en construcción»**: **no lleva al asador**.
+> **El asador se abre solo por `/asador` y por `/erretegia`**.
+> **La gestión pública pasa por el túnel de Cloudflare y pide una clave** (ver `ACCESO-WORKERS.md`).
+> **La gestión privada es Tailscale Serve**: **el Funnel público del 8443 ya está apagado**.
 
 **El nombre `orangepi4pro.local` no cambia aunque cambie la IP** (mDNS, aviso instalado el 29/10).
 
 | Lo que hay en esa máquina | Dónde |
 |---|---|
-| **El asador** (recepción de pedidos) | `https://orangepi4pro.tail369549.ts.net` · puerto **8080** |
+| **La portada** | `https://supermalato.es/` · servidor en **3003** |
+| **El asador** (recepción de pedidos) | `https://supermalato.es/asador/` y `/erretegia` · puerto **8082** |
+| **El asador por Tailscale** | `https://orangepi4pro.tail369549.ts.net` · puerto **8080** |
 | **Otra cosa** | `https://orangepi4pro.tail369549.ts.net:10000` · puerto **8082** |
 | **La gestión, privada** | `https://orangepi4pro.tail369549.ts.net:8443` · puerto **3001** |
 | **La gestión, pública** | `https://supermalato.es/workers/` · portero en **3002** |
@@ -41,6 +47,9 @@
 /opt/malato-gestion/
    servidor-local.mjs          el servidor (sirve la app y su API)
    workers-gateway.mjs         el portero de /workers (clave)
+   landing-servidor.mjs        la portada «en construcción»
+   landing/index.html          el HTML de la portada
+   landing/logo-o-verde.png    el logo de la portada
    public/index.html           la aplicación
    netlify/functions/nucleo.js el núcleo
    .datos/estado.json          LOS DATOS — aquí, en un fichero
@@ -48,21 +57,24 @@
    .workers-secret             el secreto que firma las sesiones
 ```
 
-**Servicios** — los tres **arrancan solos al encender** y **se reinician si se caen**:
+**Servicios** — los cuatro **arrancan solos al encender** y **se reinician si se caen**:
 
 | Servicio | Qué hace |
 |---|---|
 | `malato-gestion.service` | La app en el **3001** |
 | `malato-workers-gateway.service` | El portero con clave en el **3002** (solo `127.0.0.1`) |
+| `malato-landing.service` | La portada «en construcción» en el **3003** (solo `127.0.0.1`) |
 | `cloudflared-supermalato.service` | El túnel de **supermalato.es** |
 
 ```bash
 sudo systemctl status malato-gestion
 sudo systemctl status malato-workers-gateway
+sudo systemctl status malato-landing
 sudo systemctl status cloudflared-supermalato
 sudo systemctl restart malato-gestion
 sudo journalctl -u malato-gestion -n 40     # ver qué ha pasado
 sudo journalctl -u malato-workers-gateway -n 40
+sudo journalctl -u malato-landing -n 40
 sudo journalctl -u cloudflared-supermalato -n 40
 ```
 
@@ -122,6 +134,10 @@ sudo systemctl restart malato-gestion
 **El portero no hay que tocarlo** cuando cambia la app: lee el `index.html` nuevo
 y reescribe las llamadas `"/api/"` cada vez. Solo se actualiza
 `workers-gateway.mjs` si cambia el propio portero.
+
+**La portada «en construcción»** se cambia en
+`/opt/malato-gestion/landing/index.html` (o en `deploy/landing/index.html` y se
+copia). El servidor la lee en cada petición: **no hace falta reiniciar**.
 
 > **Detalle completo del acceso público, la clave y Tailscale:**
 > **[`ACCESO-WORKERS.md`](ACCESO-WORKERS.md)**.

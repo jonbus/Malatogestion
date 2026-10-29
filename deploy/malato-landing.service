@@ -1,0 +1,24 @@
+[Unit]
+Description=MALATO - pagina en construccion
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=jonserver
+Group=jonserver
+WorkingDirectory=/opt/malato-gestion
+Environment=NODE_ENV=production
+Environment=PORT=3003
+Environment=HOST=127.0.0.1
+Environment=LANDING_DIR=/opt/malato-gestion/landing
+ExecStart=/usr/local/bin/node /opt/malato-gestion/landing-servidor.mjs
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

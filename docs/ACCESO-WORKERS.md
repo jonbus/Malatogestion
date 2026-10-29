@@ -18,8 +18,9 @@
 puerto es **solo tailnet** (`tailscale serve`), y la única puerta pública es
 `supermalato.es/workers`, que pide la clave.
 
-**El resto del dominio no cambia**: `https://supermalato.es/` sigue llevando al
-asador (`/asador/`), como estaba configurado.
+**La raíz del dominio ya no lleva al asador**: `https://supermalato.es/` muestra
+una página de **«en construcción»**. El asador se abre solo por
+`https://supermalato.es/asador/` y por `https://supermalato.es/erretegia`.
 
 ---
 
@@ -202,12 +203,19 @@ cloudflared-supermalato.service
 
 | Host | Ruta | Destino |
 |---|---|---|
-| `supermalato.es` | `^/workers` | `http://localhost:3002` |
-| `www.supermalato.es` | `^/workers` | `http://localhost:3002` |
-| `supermalato.es` | resto | `http://localhost:8082` (asador) |
-| `www.supermalato.es` | resto | `http://localhost:8082` (asador) |
+| `supermalato.es` | `^/workers` | `http://localhost:3002` (portero) |
+| `www.supermalato.es` | `^/workers` | `http://localhost:3002` (portero) |
+| `supermalato.es` | `^/asador(/|$)` | `http://localhost:8082` (asador) |
+| `www.supermalato.es` | `^/asador(/|$)` | `http://localhost:8082` (asador) |
+| `supermalato.es` | `^/erretegia(/|$)` | `http://localhost:8082` (asador) |
+| `www.supermalato.es` | `^/erretegia(/|$)` | `http://localhost:8082` (asador) |
+| `supermalato.es` | resto (incluida `/`) | `http://localhost:3003` (en construcción) |
+| `www.supermalato.es` | resto (incluida `/`) | `http://localhost:3003` (en construcción) |
 
-**Copia de la configuración anterior:** `/etc/cloudflared/config.yml.bak-20261029-171820`.
+**Copias de la configuración:**
+
+- `/etc/cloudflared/config.yml.bak-20261029-portada` — **antes de poner la página en construcción**.
+- `/etc/cloudflared/config.yml.bak-20261029-171820` — **antes de añadir `/workers`**.
 
 ---
 
@@ -217,19 +225,22 @@ cloudflared-supermalato.service
 |---|---|---|
 | `malato-gestion` | La app de gestión | `3001` (red local) |
 | `malato-workers-gateway` | Portero con clave para `/workers` | `3002` (solo `127.0.0.1`) |
+| `malato-landing` | Página «en construcción» de la raíz | `3003` (solo `127.0.0.1`) |
 | `cloudflared-supermalato` | Túnel del dominio | sale a Cloudflare |
 | `tailscaled` | Tailscale + Serve del 8443 | `8443` (solo tailnet) |
 
 ```bash
 sudo systemctl status malato-gestion
 sudo systemctl status malato-workers-gateway
+sudo systemctl status malato-landing
 sudo systemctl status cloudflared-supermalato
 
 sudo journalctl -u malato-workers-gateway -n 40 --no-pager
+sudo journalctl -u malato-landing -n 40 --no-pager
 sudo journalctl -u cloudflared-supermalato -n 40 --no-pager
 ```
 
-Los tres están **enabled**: arrancan solos al encender la OrangePi.
+Los cuatro están **enabled**: arrancan solos al encender la OrangePi.
 
 ---
 
@@ -242,8 +253,12 @@ curl -I https://supermalato.es/workers/
 # La API sin sesión tiene que dar 401
 curl -i https://supermalato.es/workers/api/estado
 
-# El resto del dominio sigue yendo al asador
+# La raíz es la página en construcción
+curl -I https://supermalato.es/
+
+# El asador, solo por sus dos nombres
 curl -I https://supermalato.es/asador/
+curl -I https://supermalato.es/erretegia
 
 # La puerta privada, solo desde la tailnet
 curl -I https://orangepi4pro.tail369549.ts.net:8443/
@@ -298,11 +313,15 @@ Si algo va mal:
 # 1. Parar la puerta pública nueva
 sudo systemctl disable --now cloudflared-supermalato
 
-# 2. Volver a la configuración anterior del túnel (si se quiere)
-sudo cp /etc/cloudflared/config.yml.bak-20261029-171820 /etc/cloudflared/config.yml
+# 2. Quitar solo la página en construcción (la raíz vuelve al asador)
+sudo cp /etc/cloudflared/config.yml.bak-20261029-portada /etc/cloudflared/config.yml
 
-# 3. Parar el portero
+# 2b. O deshacer también /workers: volver a la configuración de antes
+# sudo cp /etc/cloudflared/config.yml.bak-20261029-171820 /etc/cloudflared/config.yml
+
+# 3. Parar el portero y la portada
 sudo systemctl disable --now malato-workers-gateway
+sudo systemctl disable --now malato-landing
 
 # 4. Dejar el 8443 como estaba (Funnel público) — solo si se decide volver atrás
 sudo tailscale serve --https=8443 off
@@ -319,6 +338,10 @@ sudo tailscale funnel --bg --https=8443 http://127.0.0.1:3001
 |---|---|
 | `deploy/workers-gateway.mjs` | El portero (código) |
 | `deploy/malato-workers-gateway.service` | Servicio systemd del portero |
+| `deploy/landing-servidor.mjs` | La página en construcción (código) |
+| `deploy/landing/index.html` | El HTML de la portada |
+| `deploy/landing/logo-o-verde.png` | El logo de la portada |
+| `deploy/malato-landing.service` | Servicio systemd de la portada |
 | `deploy/cloudflared-supermalato.service` | Servicio systemd del túnel |
 | `/opt/malato-gestion/workers-gateway.mjs` | Copia que corre en la Pi |
 | `/opt/malato-gestion/.workers-pin` | La clave |
