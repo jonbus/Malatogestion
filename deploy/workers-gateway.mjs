@@ -294,8 +294,13 @@ function proxyApi(req, res, url) {
   const rutaDestino = url.pathname.slice(PREFIJO.length) + url.search;
   const cabeceras = { ...req.headers };
   delete cabeceras.host;
-  delete cabeceras.cookie;
   delete cabeceras.connection;
+  /* La cookie de la puerta NO se pasa a la app. La de gerencia SÍ, porque
+     la app la necesita para firmar el acceso a las copias de seguridad. */
+  const galletas = String(req.headers.cookie || '').split(';').map(s => s.trim()).filter(Boolean);
+  const deGerencia = galletas.filter(c => c.startsWith('malato_gerencia='));
+  if (deGerencia.length) cabeceras.cookie = deGerencia.join('; ');
+  else delete cabeceras.cookie;
   cabeceras['x-forwarded-host'] = req.headers.host || '';
   cabeceras['x-forwarded-proto'] = req.headers['x-forwarded-proto'] || 'https';
   cabeceras['x-forwarded-prefix'] = PREFIJO;

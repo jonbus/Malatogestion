@@ -285,23 +285,25 @@ rm -f /tmp/cookies
 | **Clave compartida** | Es una llave de tienda, no una cuenta por persona |
 | **Sin auditoría en la puerta** | La app sí guarda quién marca y quién ficha |
 | **Sesión de 30 días** | Un móvil de tienda queda dentro hasta que se use `/workers/salir` o se rote el secreto |
-| **Gerencia en la Pi** | **No tiene `GERENCIA_PIN` configurado**: `POST /api/entrar` devuelve 503. Hay que poner `/opt/malato-gestion/.pin` y reiniciar `malato-gestion` |
+| **Gerencia en la Pi** | **Configurada el 29/10/2026**. La clave se guarda en `/opt/malato-gestion/.pin` y no se escribe aquí |
+| **Copias desde la app** | La Jefa tiene el botón **Copias de seguridad**: lista y descarga las copias diarias. Exige la clave de gerencia |
 | **Dos datos separados** | La Pi y `app.supermalato.workers.dev` **no se sincronizan**. El 29/10/2026 se copió una vez el estado de Cloudflare a la Pi; a partir de ahí cada una escribe en su sitio |
 | **Tailscale ACL** | **No se ha tocado**. Si se añaden personas a la tailnet, hay que poner el ACL antes |
 | **Certificado** | Cloudflare pone el TLS de la puerta pública; Tailscale pone el del 8443. No hay certificados que renovar a mano |
 
-### Configurar la clave de gerencia (pendiente)
+### Cambiar la clave de gerencia
 
-La app de la Pi **no tiene clave de gerencia**. Para ponerla:
+La app de la Pi **ya tiene clave de gerencia**. Para cambiarla:
 
 ```bash
-printf 'LA_CLAVE_DE_GERENCIA\n' | sudo tee /opt/malato-gestion/.pin >/dev/null
+printf 'LA_CLAVE_NUEVA\n' | sudo tee /opt/malato-gestion/.pin >/dev/null
 sudo chmod 600 /opt/malato-gestion/.pin
 sudo systemctl restart malato-gestion
 ```
 
-**Mejor una clave distinta de la pública**: la de gerencia es la que protege la
-bandeja de la Jefa, no la puerta de la tienda.
+**Es una clave distinta de la pública**: la de gerencia protege la bandeja de la
+Jefa y las copias de seguridad; la pública (`Malato20`) es la puerta de la tienda.
+Al cambiarla, las sesiones de copias que estuvieran abiertas dejan de valer.
 
 ---
 

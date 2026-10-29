@@ -335,6 +335,22 @@ HTML = """<!DOCTYPE html>
            padding:11px 15px; margin-bottom:12px; font-size:13.5px}
   .ger-cab b{font-size:14.5px; color:var(--verde-oscuro)}
   .ger-cab span{color:var(--gris); font-size:12px}
+  /* ---- copias de seguridad ---- */
+  .copia-acceso{display:flex; align-items:center; justify-content:space-between;
+                gap:10px; flex-wrap:wrap; background:#fff; border:1px solid var(--borde);
+                border-radius:12px; padding:11px 14px; margin:0 0 12px}
+  .copia-acceso b{display:block; font-size:13.5px; color:var(--verde-oscuro)}
+  .copia-acceso small{display:block; font-size:11.5px; color:var(--gris)}
+  .copia-fila{display:flex; align-items:center; justify-content:space-between;
+              gap:10px; padding:11px 14px; border-top:1px solid #F2F7F3; flex-wrap:wrap}
+  .copia-fila:first-child{border-top:none}
+  .copia-datos b{display:block; font-size:13.5px}
+  .copia-datos span{display:block; font-size:11.5px; color:var(--gris)}
+  .copia-btn{border:1px solid var(--verde); background:#fff; color:var(--verde-oscuro);
+             border-radius:8px; padding:7px 12px; font-size:12px; font-weight:700;
+             text-decoration:none; white-space:nowrap}
+  .copia-btn:hover{background:var(--verde-suave)}
+  .copia-vacia{padding:12px 14px; font-size:12.5px; color:var(--gris); font-style:italic}
   .bloque-apagado{color:var(--gris); border-bottom-color:var(--borde)}
   .bloque-apagado small{color:var(--gris); font-style:italic}
   .ventana{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;
@@ -627,6 +643,7 @@ let tahona = {};      // el pan del panadero, por fecha
 let encargosFecha = [];   // los encargos: series con fecha
 let agenda = [];          // los proveedores, con sus teléfonos
 let turnoTarea = "", tipoTarea = "extra";
+let copias = null, copiasCargando = false, copiasError = "";
 /* la cascada que se está montando: cuando se haga esta tarea, qué nace */
 let cascHijos = [];
 const NOMBRE_PUESTO = { tienda: "Tienda", coordinacion: "Coordinación", gerencia: "Gerencia" };
@@ -692,7 +709,12 @@ function pintarLogin(){
   document.getElementById("btn-entrar").disabled = !(selPuesto && selNumero);
 }
 
-document.getElementById("btn-entrar").addEventListener("click", ()=>{
+document.getElementById("btn-entrar").addEventListener("click", async ()=>{
+  /* Al entrar como tienda o coordinación se cierra cualquier sesión de
+     gerencia que hubiera quedado abierta en este dispositivo. */
+  if(selPuesto !== "gerencia"){
+    try { await fetch("api/salir", { method: "POST" }); } catch(e){}
+  }
   quien = { puesto: selPuesto, numero: selNumero,
             id: (selPuesto === "tienda" ? "op" : "co") + selNumero };
   try { localStorage.setItem("tienda-quien", JSON.stringify(quien)); } catch(e){}
@@ -751,6 +773,7 @@ document.getElementById("pin-inp").addEventListener("keydown", e=>{
 });
 document.getElementById("btn-salir").addEventListener("click", async ()=>{
   /* sin reloj: el turno lo pone la plantilla */
+  try { await fetch("api/salir", { method: "POST" }); } catch(e){}
   if(quien && quien.puesto === "gerencia") recordarGerencia(false);
   try { localStorage.removeItem("tienda-quien"); } catch(e){}
   quien = null; document.getElementById("app").hidden = true;
@@ -3470,6 +3493,8 @@ function pintaGerencia(){
         : "ninguna ventana abierta"}</span>
     </div>`;
 
+  html += bloqueCopias();
+
   if(!laborable){
     html += `<div class="lista"><div class="aviso-item">
       Es ${DIAS.find(x=>x[0]===W)[1].toLowerCase()}: la gerencia va de lunes a viernes.
@@ -3588,6 +3613,79 @@ function pintaGerencia(){
   if(dd) dd.addEventListener("change", ()=>{ ofertasDesde = dd.value; });
   const dh = document.getElementById("of-hasta");
   if(dh) dh.addEventListener("change", ()=>{ ofertasHasta = dh.value; });
+}
+
+/* ---------------------------------------------------- copias de seguridad
+   Solo se llega aquí desde la bandeja de la Jefa. La lista y la descarga
+   pasan por /api/copias y /api/copia/<id>, que exigen la cookie firmada que
+   se crea al entrar con la clave de gerencia. */
+function escapaTexto(t){
+  return String(t == null ? "" : t).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function formatoBytes(n){
+  const v = Number(n);
+  if(!Number.isFinite(v) || v < 0) return "?";
+  if(v >= 1024 * 1024) return (v / (1024 * 1024)).toFixed(1).replace(".", ",") + " MB";
+  if(v >= 1024) return Math.round(v / 1024) + " KB";
+  return v + " B";
+}
+
+function bloqueCopias(){
+  let html = `<div class="copia-acceso">
+      <span><b>Copias de seguridad</b><small>Datos de la tienda · todos los días a las 23:00</small></span>
+      <button class="btn-add" type="button"
+        onclick="${copias === null ? "abrirCopias()" : "cerrarCopias()"}">
+        ${copias === null ? "Ver copias" : "Ocultar"}
+      </button>
+    </div>`;
+  if(copias === null) return html;
+
+  html += `<div class="lista">`;
+  if(copiasCargando){
+    html += `<div class="copia-vacia">Leyendo las copias…</div>`;
+  } else if(copiasError){
+    html += `<div class="copia-vacia">No se pudieron leer: ${escapaTexto(copiasError)}</div>`;
+  } else if(!copias.length){
+    html += `<div class="copia-vacia">Todavía no hay copias.</div>`;
+  } else {
+    html += copias.map(c => `<div class="copia-fila">
+        <div class="copia-datos">
+          <b>${escapaTexto(c.fecha)}</b>
+          <span>${formatoBytes(c.tamano)} · ${c.marcas == null ? "?" : c.marcas} marcas · ${c.encargos == null ? "?" : c.encargos} encargos</span>
+        </div>
+        <a class="copia-btn" href="api/copia/${encodeURIComponent(c.id)}" download>Descargar</a>
+      </div>`).join("");
+  }
+  html += `</div>`;
+  return html;
+}
+
+async function abrirCopias(){
+  copias = [];
+  copiasCargando = true;
+  copiasError = "";
+  pinta();
+  try{
+    const r = await fetch("api/copias", { cache: "no-store" });
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok || !d.ok) throw new Error(d.error || ("HTTP " + r.status));
+    copias = d.copias || [];
+  }catch(e){
+    copias = [];
+    copiasError = e.message || "No se pudo conectar";
+  }
+  copiasCargando = false;
+  pinta();
+}
+
+function cerrarCopias(){
+  copias = null;
+  copiasCargando = false;
+  copiasError = "";
+  pinta();
 }
 
 /* ---------------------------------------------------------- EL MENÚ

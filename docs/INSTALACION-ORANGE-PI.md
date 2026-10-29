@@ -118,6 +118,11 @@ de `estado.json` a:
 - **Servicio:** `malato-backup-gestion.service`.
 - **Script:** `/usr/local/bin/malato-backup-gestion.sh`.
 
+**Desde la app:** en la bandeja de la **Jefa** hay un botón **Copias de
+seguridad**. Muestra las copias disponibles y permite descargar cada
+`estado.json`. Solo responde con la sesión de gerencia; la puerta pública sigue
+pidiendo `Malato20`.
+
 ```bash
 # Ver la próxima copia
 systemctl list-timers malato-backup-gestion
