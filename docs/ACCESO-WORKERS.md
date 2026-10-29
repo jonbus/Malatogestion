@@ -247,8 +247,8 @@ curl -I https://orangepi4pro.tail369549.ts.net:8443/
 Prueba completa con clave (sin imprimir la clave en el historial):
 
 ```bash
-read -rs PIN
-curl -sS -c /tmp/cookies -o /dev/null -X POST -d "pin=$PIN" \
+read -rs CLAVE
+curl -sS -c /tmp/cookies -o /dev/null -X POST -d "pin=$CLAVE" \
   https://supermalato.es/workers/login
 curl -sS -b /tmp/cookies -o /dev/null -w '%{http_code}\n' \
   https://supermalato.es/workers/

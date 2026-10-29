@@ -4,7 +4,7 @@
 
   Qué hace:
     - Publica la app en  https://supermalato.es/workers/
-    - Pide una clave (PIN) antes de dejar ver nada.
+    - Pide una clave antes de dejar ver nada.
     - Traduce /workers/api/...  ->  http://127.0.0.1:3001/api/...
     - Reescribe la página para que sus llamadas vayan por /workers/api/...
 
