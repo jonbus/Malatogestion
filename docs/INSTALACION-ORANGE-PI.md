@@ -99,6 +99,57 @@ sudo journalctl -u cloudflared-supermalato -n 40
 
 **Copia del estado importado:** `/opt/malato-gestion/.datos/estado.json` · nota: `/opt/malato-gestion/.datos/COPIADO-DESDE-CLOUDFLARE.txt`.
 
+### Copia diaria de los datos de gestión
+
+**Todos los días a las 23:00**, el `malato-backup-gestion.timer` lanza una copia
+de `estado.json` a:
+
+```
+/home/jonserver/copias-gestion/<fecha>/
+   estado.json     la copia
+   INFO.txt        fecha, tamaño, SHA256 y número de marcas/encargos
+```
+
+- **Se conservan las últimas 30 copias.**
+- **`/home/jonserver/copias-gestion/ultima`** apunta siempre a la más reciente.
+- **Si la Pi estaba apagada a las 23:00**, la copia se hace al encender
+  (`Persistent=true`).
+- **La copia se valida como JSON**; si pilla una escritura a medias, reintenta.
+- **Servicio:** `malato-backup-gestion.service`.
+- **Script:** `/usr/local/bin/malato-backup-gestion.sh`.
+
+```bash
+# Ver la próxima copia
+systemctl list-timers malato-backup-gestion
+
+# Forzar una copia ahora
+sudo systemctl start malato-backup-gestion.service
+sudo journalctl -u malato-backup-gestion -n 30 --no-pager
+
+# Ver la última
+ls -lah /home/jonserver/copias-gestion/ultima/
+cat /home/jonserver/copias-gestion/ultima/INFO.txt
+```
+
+**Para restaurar una copia:**
+
+```bash
+sudo systemctl stop malato-gestion
+sudo cp /home/jonserver/copias-gestion/ultima/estado.json \
+        /opt/malato-gestion/.datos/estado.json
+sudo chown jonserver:jonserver /opt/malato-gestion/.datos/estado.json
+sudo chmod 600 /opt/malato-gestion/.datos/estado.json
+sudo systemctl start malato-gestion
+```
+
+> **Aviso:** esta copia está **en la misma eMMC**. Protege de un borrado, de una
+> escritura a medias o de una corrupción lógica, **pero no de que falle el disco**.
+> Cuando se pueda, hay que llevar una copia fuera de la Pi.
+
+> **Servicio ajeno desactivado:** `futbooking` (servicio de usuario de
+> `jonserver`) estaba en bucle porque faltaba `/home/jonserver/futbooking`.
+> Se desactivó el **29/10/2026**. No era de Malato.
+
 ---
 
 ## 4 · La copia del asador

@@ -1,0 +1,18 @@
+[Unit]
+Description=MALATO - copia diaria de los datos de gestion
+After=local-fs.target
+
+[Service]
+Type=oneshot
+User=jonserver
+Group=jonserver
+Environment=ORIGEN=/opt/malato-gestion/.datos/estado.json
+Environment=DESTINO=/home/jonserver/copias-gestion
+Environment=CONSERVAR=30
+ExecStart=/usr/local/bin/malato-backup-gestion.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+NoNewPrivileges=true
+PrivateTmp=true
+SyslogIdentifier=malato-backup-gestion

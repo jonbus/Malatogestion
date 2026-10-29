@@ -1,0 +1,10 @@
+[Unit]
+Description=MALATO - copia diaria de gestion a las 23:00
+
+[Timer]
+OnCalendar=*-*-* 23:00:00
+Persistent=true
+Unit=malato-backup-gestion.service
+
+[Install]
+WantedBy=timers.target
