@@ -1,0 +1,23 @@
+# Tienda Malato en Cloudflare
+# Un Worker con los ficheros estáticos al lado y los datos en KV.
+# Se despliega con:  wrangler deploy --config docs/nube/wrangler.toml
+
+name = "app"
+main = "cloudflare/worker.js"
+compatibility_date = "2026-01-01"
+
+# el núcleo usa node:crypto y Buffer
+compatibility_flags = ["nodejs_compat"]
+
+# los ficheros de la aplicación
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# los datos: marcas, notas, tareas, recuentos del lunes
+[[kv_namespaces]]
+binding = "ESTADO"
+id = "544a4e67fd9c4acaab5a0e7d2dcfbd35"
+
+[observability]
+enabled = true

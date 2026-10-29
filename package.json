@@ -1,0 +1,26 @@
+{
+  "name": "app-malato",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nucleo del sistema de gestion integral para tienda de alimentacion (Bloque 0, FASE 5.3).",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "node apps/api/src/main.ts",
+    "check": "node tools/check-boundaries.mjs",
+    "test": "node tools/run-tests.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "validate:sql": "node .tools/validate-sql.mjs"
+  },
+  "//devDependencies": "Solo para comprobacion de tipos. El codigo de runtime no tiene NINGUNA dependencia externa: se ejecuta con Node 24 a pelo sobre TypeScript nativo.",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

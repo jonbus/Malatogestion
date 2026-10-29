@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coordinación · Supermercado Malato</title>
+<style>
+  :root{
+    --verde:#2EC258; --verde-oscuro:#1E9A45; --verde-claro:#5CD47F;
+    --verde-suave:#EFFAF2; --tinta:#13251A; --gris:#5E6E63; --borde:#D6EDDD;
+    --azul:#1E6FA8; --ambar:#D97706;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--verde-suave); color:var(--tinta);
+       font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.5;
+       -webkit-tap-highlight-color:transparent}
+  header{background:linear-gradient(135deg,var(--verde) 0%,var(--verde-oscuro) 100%);
+         color:#fff; padding:15px 20px; text-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .fila-sup{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+  .logo{width:52px; height:52px; flex:0 0 auto; background:#fff; border-radius:12px;
+        display:flex; align-items:center; justify-content:center; color:var(--verde-oscuro);
+        text-align:center;
+        border:none; text-shadow:none; padding:2px}
+  .logo img{max-width:100%; max-height:100%; object-fit:contain}
+  header h1{margin:0; font-size:20px}
+  header .sub{font-size:12.5px; opacity:.95; margin-top:1px}
+  .prog{margin-top:12px}
+  .prog .txt{display:flex; justify-content:space-between; font-size:12.5px; margin-bottom:5px; opacity:.95}
+  .prog .barra{height:9px; background:rgba(255,255,255,.28); border-radius:5px; overflow:hidden}
+  .prog .barra i{display:block; height:100%; background:#fff; width:0; transition:width .3s ease; border-radius:5px}
+  main{max-width:760px; margin:0 auto; padding:14px 16px 70px}
+
+  .tabs{display:flex; gap:8px; margin-bottom:14px}
+  .tab{flex:1; border:2px solid var(--verde); background:#fff; color:var(--verde-oscuro);
+       border-radius:11px; padding:10px; font-size:14.5px; font-weight:700; cursor:pointer;
+       font-family:inherit}
+  .tab[aria-pressed=true]{background:var(--verde); color:#fff}
+  .subtab{display:flex; gap:7px; margin-bottom:14px; flex-wrap:wrap}
+  .st{border:1px solid var(--borde); background:#fff; border-radius:9px; padding:7px 14px;
+      font-size:13px; font-weight:600; cursor:pointer; font-family:inherit; color:var(--verde-oscuro)}
+  .st[aria-pressed=true]{background:var(--verde); border-color:var(--verde); color:#fff}
+
+  .dias{display:flex; gap:5px; overflow-x:auto; padding-bottom:6px; margin-bottom:14px}
+  .dia-btn{flex:0 0 auto; border:1px solid var(--borde); background:#fff; border-radius:9px;
+           padding:7px 11px; font-size:12.5px; font-weight:600; cursor:pointer;
+           font-family:inherit; color:var(--verde-oscuro); min-width:48px; text-align:center}
+  .dia-btn[aria-pressed=true]{background:var(--verde); border-color:var(--verde); color:#fff}
+  .dia-btn.hoy{box-shadow:0 0 0 2px var(--verde-claro) inset}
+
+  h2.bloque{font-size:15.5px; margin:20px 0 9px; padding-bottom:7px;
+            border-bottom:2px solid var(--verde); color:var(--verde-oscuro);
+            display:flex; justify-content:space-between; align-items:baseline; gap:10px}
+  h2.bloque small{font-weight:400; font-size:11.5px; color:var(--gris)}
+  .nota-patron{background:#E8F2FA; border:1px solid #C3DDF0; border-left:4px solid var(--azul);
+               border-radius:11px; padding:11px 15px; font-size:13px; color:#14506F; margin-bottom:14px}
+  .nota-patron b{color:#0E3D57}
+
+  .lista{background:#fff; border:1px solid var(--borde); border-radius:12px; overflow:hidden}
+  .item{border-top:1px solid #F2F7F3}
+  .item:first-child{border-top:none}
+  .cab-item{display:flex; gap:11px; align-items:flex-start; padding:11px 14px; cursor:pointer}
+  .cab-item:hover{background:#FAFDFB}
+  .item.hecha .cab-item{background:var(--verde-suave)}
+  .caja{width:20px; height:20px; flex:0 0 auto; border-radius:6px; border:2px solid var(--borde);
+        margin-top:1px; display:flex; align-items:center; justify-content:center; font-size:11px; color:#fff}
+  .item.hecha .caja{background:var(--verde); border-color:var(--verde)}
+  .item.hecha .caja::after{content:"✓"}
+  .caja.parcial{background:var(--verde-claro); border-color:var(--verde-claro)}
+  .caja.parcial::after{content:"–"}
+  .txt{flex:1 1 auto; font-size:14px}
+  .item.hecha .txt b{text-decoration:line-through; color:var(--gris)}
+  .txt b{font-weight:500}
+  .n{display:block; font-size:11.5px; color:var(--gris); margin-top:2px}
+  .tag{font-size:10.5px; font-weight:700; color:var(--azul); background:#E8F2FA;
+       border-radius:5px; padding:1px 7px; margin-left:6px; white-space:nowrap}
+  .partes{display:none; padding:0 14px 12px 45px}
+  .item.abierta .partes{display:block}
+  .parte{display:flex; gap:9px; align-items:flex-start; padding:5px 0; cursor:pointer;
+         font-size:13px; color:var(--gris)}
+  .parte .pc{width:16px; height:16px; flex:0 0 auto; border-radius:5px;
+             border:1.5px solid var(--borde); margin-top:2px; display:flex;
+             align-items:center; justify-content:center; font-size:9px; color:#fff}
+  .parte.hecha .pc{background:var(--verde); border-color:var(--verde)}
+  .parte.hecha .pc::after{content:"✓"}
+  .parte.hecha{color:var(--tinta); text-decoration:line-through}
+  footer{max-width:760px; margin:0 auto; padding:0 16px 60px; color:var(--gris); font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="fila-sup">
+    <div class="logo"><img src="data:image/png;base64,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" alt="Malato"></div>
+    <div><h1>Coordinación</h1><div class="sub" id="sub"></div></div>
+  </div>
+  <div class="prog">
+    <div class="txt"><span id="ptxt">0 de 0</span><span id="ppct">0 %</span></div>
+    <div class="barra"><i id="pbar"></i></div>
+  </div>
+</header>
+
+<main>
+  <div class="tabs" id="tabs"></div>
+  <div id="subopciones"></div>
+  <div id="cuerpo"></div>
+</main>
+
+<footer>La apertura la hace coordinación, o gerencia cuando hace de coordinadora.</footer>
+
+<script>
+const D = {"apertura": {"A": {"nombre": "Lunes a sábado", "abre": "8:00 · sábado 9:00", "bloques": [{"sec": "BLOQUE 0 · Al llegar — 7:00 (sábado 8:00)", "tareas": [{"t": "Quitar la alarma"}, {"t": "Encender contadora, ordenadores, cajas, balanzas y horno"}, {"t": "Sacar el carro de la cámara de fruta"}, {"t": "Sacar la bollería de Malato", "n": "La que sobró del día anterior"}, {"t": "Preparar la primera hornada: pan y una bandeja de bollería grande"}, {"t": "Quitar los ventiladores, si hiciera falta"}]}, {"sec": "BLOQUE 1 · Durante la primera hornada", "tareas": [{"t": "Sacar bandejas de bollería de la cámara y colocarlas en el lineal de la caja"}, {"t": "Decidir si hace falta bollería pequeña y, si sí, apuntarla para la 3.ª hornada"}, {"t": "Mirar si harán falta empanadillas", "n": "Si sí, 4.ª y 5.ª: tardan dos hornadas"}, {"t": "Preparar las siguientes bandejas de pan"}, {"t": "Quitar el pan del día anterior, si hubiera"}, {"t": "Comprobar la devolución de pan"}, {"t": "Colocar el carro de la fruta"}, {"t": "Echar un vistazo rápido a la fruta", "n": "Por si faltara algo antes de abrir"}, {"t": "Preparar pollo, cerdo, ternera, salchichas, hamburguesas y empanado"}, {"t": "Guardar el pedido de fruta", "n": "Lunes y viernes"}, {"t": "Hacer la lista del monta"}, {"t": "Preparar las cajas de cobro para el día"}, {"t": "Pintar bollería", "n": "La recién horneada"}, {"t": "Frentear los yogures"}, {"t": "Frentear el congelado"}]}, {"sec": "BLOQUE 2 · Segunda hornada", "tareas": [{"t": "Bajar al almacén a preparar el monta"}]}, {"sec": "BLOQUE 3 · Antes de abrir — 8:00 (sábado 9:00)", "tareas": [{"t": "Encender luces"}, {"t": "Encender música"}]}, {"sec": "BLOQUE 4 · Una vez abierta la tienda", "tareas": [{"t": "Pintar la bollería de Malato"}, {"t": "Limpiar y ordenar la zona del horno"}, {"t": "Sacar lo que hace falta reponer, para colocarlo después", "partes": ["Expositores de snacks: Matutano, Tosfrit, paquetería variada", "Cesto expositor de bolsitas de 1 €", "Envasados de charcutería: queso, chorizo, jamón, salchichón, lomo, cecina, membrillo, panceta", "Congelado: cubetas y tarrinas", "Refrigerado: pizzas, postres de Urki, quesos loncheados, embutidos loncheados"]}]}]}, "B": {"nombre": "Domingos y festivos", "abre": "10:00", "bloques": [{"sec": "BLOQUE 0 · Al llegar — 8:00", "tareas": [{"t": "Quitar la alarma", "n": "La misma que de lunes a sábado"}, {"t": "Encender contadora, ordenadores, cajas, balanzas y horno"}, {"t": "Bajar al almacén y subir", "n": "1 caja Mediterránea + 1 caja Baguette"}, {"t": "Sacar la bollería de Malato", "n": "Si la hubiera: no todos los domingos hay"}]}, {"sec": "BLOQUE 1 · Primera hornada — 8:00 a 8:30", "tareas": [{"t": "Preparar la bollería para la apertura de las 10:00"}, {"t": "Quitar el pan del día anterior, si lo hubiera"}, {"t": "Comprobar la devolución de pan"}, {"t": "Colocar el carro de la fruta"}, {"t": "Sacar la fruta y verdura para que la coloque la persona de tienda"}, {"t": "Preparar pollo, cerdo, ternera, salchichas, hamburguesas y empanado"}, {"t": "Hacer la lista del monta"}]}, {"sec": "BLOQUE 2 · Segunda hornada — 8:30 a 9:00", "tareas": [{"t": "Bajar al almacén a preparar el monta"}, {"t": "Subir el pan restante"}, {"t": "Subir panes especiales"}, {"t": "Frentear la cámara de yogures"}, {"t": "Sacar lo que hace falta reponer, para colocarlo antes de abrir", "partes": ["Expositores de snacks: Matutano, Tosfrit, paquetería variada", "Cesto expositor de bolsitas de 1 €", "Envasados de charcutería", "Congelado: cubetas y tarrinas", "Refrigerado: pizzas, postres de Urki, quesos loncheados, embutidos loncheados"]}]}, {"sec": "BLOQUE 3 · Tercera hornada — 9:00 a 9:30", "tareas": [{"t": "Pintar toda la bollería hecha hasta el momento y meterla a la nevera"}, {"t": "Abrir las cajas de cobro"}]}, {"sec": "BLOQUE 4 · Cuarta hornada — 9:30 a 10:00", "tareas": [{"t": "Pintar la última bandeja de bollería y meterla a la cámara"}, {"t": "Sacar las bandejas de bollería y montar la grande y la pequeña, y las tartas y el pastel de arroz"}, {"t": "Sacar la última bandeja de bollería de la cámara y montarla"}]}, {"sec": "BLOQUE 5 · Antes de abrir — 9:45", "tareas": [{"t": "Actualizar el stock de la cocina y decidir lo que se mete en el asador", "n": "9:45 · es una decisión, no una tarea"}, {"t": "Pintar la bollería de Malato", "n": "Si la hubiera"}, {"t": "Encender luces"}, {"t": "Encender tablets"}, {"t": "Encender música"}]}], "nota": "La hace UNA sola persona: la coordinadora que entra a las 8:00. A las 9:00 entran la cocinera y la persona de tienda, cada una a lo suyo."}}, "dia": {"rutina": [{"t": "Preparar pedidos"}, {"t": "Pasar pedidos"}, {"t": "Mirar si hace falta utillaje y subirlo del almacén"}, {"t": "Organizar el trabajo del día", "n": "Buscar tarea o clasificar alguna como urgente"}, {"t": "Hacer pan según necesidades"}, {"t": "Ordenar Lineal", "n": "Producto-Precio"}, {"t": "Subir panes especiales"}, {"t": "Hacer sitio para los pedidos que vayan a llegar hoy"}, {"t": "Poner precios nuevos o actualizados en los productos"}, {"t": "Ordenar trastienda"}, {"t": "Fruta, verdura, carne y empanado: sacar y reponer a lo largo de la mañana"}, {"t": "Arreglar productos que no estén en buen estado"}], "porDia": {"LUN": [{"t": "Bajar Cadagua"}], "MAR": [{"t": "Subir Cadagua"}], "MIE": [{"t": "Bajar Cadagua"}], "JUE": [{"t": "Subir Cadagua"}, {"t": "Sacar pollos congelados"}, {"t": "Sacar salsa de pollos congelada"}, {"t": "Ordenar cámara de fruta"}], "VIE": [{"t": "Bajar Cadagua"}, {"t": "Limpiar pollos", "n": "Mínimo 20 ud"}, {"t": "Preparar bollería de Malato en bandejas de 1-2 €", "n": "Se sacan en el cierre, para dejarlas preparadas para la tarde"}], "SAB": [{"t": "Subir Cadagua"}, {"t": "Preparar bollería de Malato en bandejas de 1-2 €"}, {"t": "Reponer el utillaje de la tienda", "n": "Lo necesita la tienda para embandejar la bollería a granel por la tarde"}, {"t": "Subir la bollería a granel del almacén", "n": "Llegó el viernes y se bajó al almacén · la tienda la necesita esta tarde"}], "DOM": [{"t": "Subir Cadagua"}, {"t": "Ordenar cámara de fruta"}]}}, "cierre": [{"sec": "CIERRE DE COORDINACIÓN", "tareas": [{"t": "Cerrar Caja 3"}, {"t": "Revisar que la carne esté bien repuesta"}, {"t": "Revisar que la fruta esté bien repuesta"}, {"t": "Revisar que la verdura esté bien repuesta"}, {"t": "Guardar en la cámara frigorífica el pan que no se haya horneado", "n": "Para que no se estropee · se hornea mañana"}]}]};
+const DIAS = [["LUN","Lunes"],["MAR","Martes"],["MIE","Miércoles"],["JUE","Jueves"],
+              ["VIE","Viernes"],["SAB","Sábado"],["DOM","Domingo"]];
+const HOY = ["DOM","LUN","MAR","MIE","JUE","VIE","SAB"][new Date().getDay()];
+let tab = "apertura", patron = (HOY === "DOM") ? "B" : "A", dia = HOY;
+const hechas = {}, REG = {};
+
+function pintaTabs(){
+  const c = document.getElementById("tabs"); c.innerHTML = "";
+  [["apertura","Apertura"],["dia","El día"],["cierre","Cierre"]].forEach(([k,n])=>{
+    const b = document.createElement("button");
+    b.className = "tab"; b.type = "button"; b.textContent = n;
+    b.setAttribute("aria-pressed", k === tab);
+    b.addEventListener("click", ()=>{ tab = k; pintaTabs(); pinta(); });
+    c.appendChild(b);
+  });
+  const s = document.getElementById("subopciones"); s.innerHTML = "";
+  if(tab === "apertura"){
+    const d = document.createElement("div"); d.className = "subtab";
+    Object.entries(D.apertura).forEach(([k, v])=>{
+      const b = document.createElement("button");
+      b.className = "st"; b.type = "button";
+      b.textContent = v.nombre + " · abre " + v.abre;
+      b.setAttribute("aria-pressed", k === patron);
+      b.addEventListener("click", ()=>{ patron = k; pintaTabs(); pinta(); });
+      d.appendChild(b);
+    });
+    s.appendChild(d);
+  }
+  if(tab === "dia"){
+    const d = document.createElement("div"); d.className = "dias";
+    DIAS.forEach(([k,n])=>{
+      const b = document.createElement("button");
+      b.className = "dia-btn" + (k === HOY ? " hoy" : "");
+      b.type = "button"; b.textContent = n.slice(0,3);
+      b.setAttribute("aria-pressed", k === dia);
+      b.addEventListener("click", ()=>{ dia = k; pintaTabs(); pinta(); });
+      d.appendChild(b);
+    });
+    s.appendChild(d);
+  }
+}
+
+function bloque(titulo, tareas, pre){
+  if(!tareas || !tareas.length) return "";
+  let html = `<h2 class="bloque">${titulo}<small>${tareas.length} ${
+    tareas.length===1?"tarea":"tareas"}</small></h2><div class="lista">`;
+  tareas.forEach((t, i)=>{
+    const k = pre + i; REG[k] = t;
+    const partes = t.partes || [];
+    const hp = partes.filter((_, j) => hechas[k+"."+j]).length;
+    const completa = partes.length ? hp === partes.length : hechas[k];
+    const parcial = partes.length && hp > 0 && hp < partes.length;
+    let sub = "";
+    if(partes.length){
+      sub = `<div class="partes">` + partes.map((p, j)=>
+        `<div class="parte ${hechas[k+"."+j]?"hecha":""}" data-pk="${k+"."+j}">
+           <span class="pc"></span><span>${p}</span></div>`).join("") + `</div>`;
+    }
+    const tag = partes.length ? `<span class="tag">${hp} / ${partes.length} partes</span>` : "";
+    const n = t.n ? `<span class="n">${t.n}</span>` : "";
+    html += `<div class="item ${completa?"hecha":""} ${hechas["ab:"+k]?"abierta":""}" data-k="${k}">
+        <div class="cab-item"><span class="caja ${parcial?"parcial":""}"></span>
+        <span class="txt"><b>${t.t}</b>${tag}${n}</span></div>${sub}</div>`;
+  });
+  return html + "</div>";
+}
+
+function pinta(){
+  let html = "", total = 0, hechos = 0;
+  const sumar = (tareas, pre) => {
+    (tareas||[]).forEach((t, i)=>{
+      const k = pre + i, partes = t.partes || [];
+      if(partes.length){ total += partes.length;
+        partes.forEach((_, j)=>{ if(hechas[k+"."+j]) hechos++; });
+      } else { total += 1; if(hechas[k]) hechos++; }
+    });
+  };
+
+  if(tab === "apertura"){
+    const P = D.apertura[patron];
+    if(P.nota) html += `<div class="nota-patron"><b>${P.nombre}.</b> ${P.nota}</div>`;
+    P.bloques.forEach((b, bi)=>{
+      html += bloque(b.sec, b.tareas, patron + bi + "_");
+      sumar(b.tareas, patron + bi + "_");
+    });
+    document.getElementById("sub").textContent = "Apertura · " + P.nombre;
+  } else if(tab === "dia"){
+    html += bloque("Rutina · todos los días", D.dia.rutina, "dr");
+    sumar(D.dia.rutina, "dr");
+    html += bloque("Lo de hoy · " + DIAS.find(x=>x[0]===dia)[1], D.dia.porDia[dia] || [], "dd");
+    sumar(D.dia.porDia[dia], "dd");
+    document.getElementById("sub").textContent = "El día · " + DIAS.find(x=>x[0]===dia)[1];
+  } else {
+    D.cierre.forEach((s, si)=>{
+      html += bloque(s.sec, s.tareas, "c" + si + "_");
+      sumar(s.tareas, "c" + si + "_");
+    });
+    document.getElementById("sub").textContent = "Cierre de coordinación";
+  }
+
+  document.getElementById("cuerpo").innerHTML = html;
+  const pct = total ? Math.round(100 * hechos / total) : 0;
+  document.getElementById("ptxt").textContent = hechos + " de " + total;
+  document.getElementById("ppct").textContent = pct + " %";
+  document.getElementById("pbar").style.width = pct + "%";
+
+  const c = document.getElementById("cuerpo");
+  c.querySelectorAll(".item").forEach(it=>{
+    const k = it.dataset.k;
+    it.querySelector(".cab-item").addEventListener("click", e=>{
+      if(e.target.closest(".partes")) return;
+      const t = REG[k];
+      if(t && t.partes && t.partes.length) hechas["ab:"+k] = !hechas["ab:"+k];
+      else hechas[k] = !hechas[k];
+      pinta();
+    });
+  });
+  c.querySelectorAll(".parte").forEach(p=>{
+    p.addEventListener("click", e=>{ e.stopPropagation();
+      const pk = p.dataset.pk; hechas[pk] = !hechas[pk]; pinta(); });
+  });
+}
+pintaTabs(); pinta();
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "format": "xlsx",
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "package",
+      "status": "pass"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "Verdura"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "Ensaladas Preparadas"
+    },
+    {
+      "id": "count",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3
+    }
+  ],
+  "summary": {
+    "sheets": [
+      {
+        "name": "C\u00f3mo usarlo",
+        "cells": 28,
+        "formulas": 0
+      },
+      {
+        "name": "Clasificar",
+        "cells": 376,
+        "formulas": 0
+      },
+      {
+        "name": "Resumen",
+        "cells": 20,
+        "formulas": 8
+      }
+    ],
+    "formulas_evaluated": false
+  }
+}

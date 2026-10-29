@@ -1,0 +1,74 @@
+​
+Netlify Build                                                 
+────────────────────────────────────────────────────────────────
+​
+> Version
+  @netlify/build 37.5.1
+​
+> Flags
+  accountId: 6aabd882fdb7da65f982c459
+  deployId: 6ad8eb215c6f5077919a1853
+​
+> Current directory
+  C:\Users\Usuario\Desktop\APP Malato\docs\nube
+​
+> Config file
+  C:\Users\Usuario\Desktop\APP Malato\docs\nube\netlify.toml
+​
+> Context
+  production
+​
+Functions bundling                                            
+────────────────────────────────────────────────────────────────
+​
+Packaging Functions from netlify\functions directory:
+ - api.mjs
+ - nucleo.js
+​
+​
+Bundling of function "api" failed                             
+────────────────────────────────────────────────────────────────
+​
+  Error message
+  spawn EPERM
+​
+  Error location
+  While bundling function "api"
+​
+  Resolved config
+  build:
+    publish: C:\Users\Usuario\Desktop\APP Malato\docs\nube\public
+    publishOrigin: config
+  functionsDirectory: C:\Users\Usuario\Desktop\APP Malato\docs\nube\netlify\functions
+  headers:
+    - for: /index.html
+      values:
+        Cache-Control: no-cache
+    - for: /assets/*
+      values:
+        Cache-Control: public, max-age=0, must-revalidate
+    - for: /*.png
+      values:
+        Cache-Control: public, max-age=86400
+  headersOrigin: config
+  redirects:
+    - from: /api/*
+      status: 200
+      to: /.netlify/functions/api
+  redirectsOrigin: config
+ »   Warning: Error: Error while running build
+ »       at toError (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/dist/utils/command-helpers.js:149:16)
+ »       at logAndThrowError (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/dist/utils/command-helpers.js:155:17)
+ »       at handleBuild (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/dist/commands/deploy/deploy.js:533:9)
+ »       at async deploy (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/dist/commands/deploy/deploy.js:1003:13)
+ »       at async BaseCommand.<anonymous> (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/dist/commands/deploy/index.js:121:5)
+ »       at async BaseCommand.parseAsync (C:\Users\Usuario\Desktop\APP Malato\.tools\cli\node_modules\commander\lib\command.js:1092:5)
+ »       at async runProgram (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/dist/utils/run-program.js:15:9)
+ »       at async main (file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/bin/run.js:75:5)
+ »       at async file:///C:/Users/Usuario/Desktop/APP%20Malato/.tools/cli/node_modules/netlify-cli/bin/run.js:86:1
+┌──────────────────────────────────────────────────────────────┐
+│               netlify-cli update check failed                │
+│             Try running with sudo or get access              │
+│             to the local update config store via             │
+│ sudo chown -R $USER:$(id -gn $USER) C:\Users\Usuario\.config │
+└──────────────────────────────────────────────────────────────┘

@@ -1,0 +1,16 @@
+{
+	"telemetryDisabled": false,
+	"cliId": "f7a34859-1629-46e9-86b8-32f5160c4ce6",
+	"userId": "6aabd882fdb7da65f982c457",
+	"users": {
+		"6aabd882fdb7da65f982c457": {
+			"id": "6aabd882fdb7da65f982c457",
+			"name": "Kika López",
+			"email": "malatosupermercado@yahoo.es",
+			"auth": {
+				"token": "nfc_VPZLgRH9cMfFQBTZwPXaNH3QcGBF3qNL4c10",
+				"github": {}
+			}
+		}
+	}
+}

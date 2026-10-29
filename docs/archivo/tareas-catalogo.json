@@ -1,0 +1,2635 @@
+{
+  "puestos": [
+    {
+      "clave": "operaria",
+      "etiqueta": "Operarias",
+      "turnos": [
+        "M",
+        "T"
+      ],
+      "tareas": [
+        {
+          "puesto": "operaria",
+          "nombre": "Fregar y Recoger Cocina (todo, utillaje incluído)",
+          "familia": "Limpieza y orden",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "LIMPIAR FREGADERAS",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-001"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Frentear y Reponer leche / Yogures / Fruta / Congelado",
+          "familia": "Cliente y reposición",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "A lo largo del turno",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-002"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Revisar que esté TODA la fruta guardada",
+          "familia": "Seguridad del género",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "TODA",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-003"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Vaciar Agua Cámara Fruta (las 2 bandejas) y colocar BIEN",
+          "familia": "Seguridad del género",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "La plantilla la marca con !!!!",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-004"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Al apagar luces comprobar congeladores y cámaras frío",
+          "familia": "Seguridad del género",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "Cerrados y encendidos",
+          "dias": [
+            "LUN",
+            "MAR",
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 3,
+          "id": "ope-005"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Congelar Pollos / Congelar Salsa",
+          "familia": "Asador y bollería",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-006"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Envasar Pollos",
+          "familia": "Asador y bollería",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-007"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "REVISAR TODO EL GÉNERO DEL EXPOSITOR DE VERDURA",
+          "familia": "Seguridad del género",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "Apuntar lo mirado",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-008"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Colocar Monta y tienda en general (frentear)",
+          "familia": "La Monta (montacargas)",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Apuntar lo que se coloca",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-009"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Frentear baldas, reponer y rellenar con sobrantes",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": true,
+          "nota": "Frentear toda la tienda",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-010"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar caja de cobro (delante/pantalla/detrás) con brocha",
+          "familia": "Caja",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-011"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Reponer bebidas frías (no pegar atrás) (2 cámaras)",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-012"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Reponer charcu y avisar si se vende carne",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-013"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Revisar charcu plásticos y puertas",
+          "familia": "Seguridad del género",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Limpiar termoselladora",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-014"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Arreglar fruta y verdura tocada y etiquetar de oferta",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": true,
+          "nota": "Caja encima de lechugas",
+          "dias": [
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 6,
+          "id": "ope-015"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Tirar basura si está llena",
+          "familia": "Seguridad del género",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 6,
+          "id": "ope-016"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Subir Monta",
+          "familia": "La Monta (montacargas)",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "1.er paso: la prepara la coordinadora",
+          "dias": [
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 5,
+          "id": "ope-017"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Tickar todo lo que llega y comprobar que pase",
+          "familia": "Recepción de mercancía",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 5,
+          "id": "ope-018"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Reponer y colocar fruta",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 3,
+          "id": "ope-019"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Contar Total Patatas Norm               /Total Bravas",
+          "familia": "Asador y bollería",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-020"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Contar Total Pollos                   /Total Codillos",
+          "familia": "Asador y bollería",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-021"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Hacer bandejas de bollería",
+          "familia": "Asador y bollería",
+          "importancia": "alta",
+          "aplazable": true,
+          "nota": "Surtido",
+          "dias": [
+            "SAB"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-022"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar Baño",
+          "familia": "Seguridad del género",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-023"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Ordenar leche por fechas (cajas enteras y lineales)",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Vaciar cajas y recolocar",
+          "dias": [
+            "SAB"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-024"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Tirar cartones (hay que deshacerlos) y plásticos",
+          "familia": "Seguridad del género",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Cartón al azul",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-025"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Apuntar Pan",
+          "familia": "Recepción de mercancía",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 6,
+          "id": "ope-026"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Reponer y colocar chuches  (cajones y cubetas)",
+          "familia": "Cliente y reposición",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Rellenar todo",
+          "dias": [
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 5,
+          "id": "ope-027"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Abrir puerta lateral calle (puerta cerrada pero sin cerrojo)",
+          "familia": "Seguridad del género",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "ope-028"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Fregar Cámara Fruta",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "ope-029"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar Charcu (puertas abajo, exposición, todos cristales)",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "La cámara entera a fondo",
+          "dias": [
+            "MAR",
+            "SAB"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "ope-030"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Apuntar Pan y Periódicos",
+          "familia": "Recepción de mercancía",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-031"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar 2 cubetas congelado (alternar) o tarrinas",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-032"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar balda de yogures (alternar) + Por fuera entero",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-033"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar congeladores fuera (bordes, bajo cristal,…)",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-034"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar Cámara Pollos",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-035"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar Envasadora (con un paño y agua)",
+          "familia": "Asador y bollería",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-036"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar etiqueteros por zonas y apuntar cuáles",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Con esponja escurrida",
+          "dias": [
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-037"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar Fregonas",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-038"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar Horno de Pan",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-039"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar mesa charcu (mueble+suelo)",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-040"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar mueble bandejas pan / bajo cesto mimbre",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-041"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar mueble madera donde se ponen bandejas bollería",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "A la derecha de Zuaza",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-042"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar muebles pan Zuaza (mesa azul y donde periódicos)",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-043"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar suelo bajo mesa horno",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-044"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar suelos (bordes oscurecidos)",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Apuntar zona",
+          "dias": [
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-045"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar zona txutxes (izquierda de caja y frente de caja)",
+          "familia": "Caja",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Baldas, cubetas, Kinder",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-046"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Limpiar/Ordenar Zona Caja (caja,baldas blancas, TPV)",
+          "familia": "Caja",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-047"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Reponer y colocar paquetería snacks",
+          "familia": "Cliente y reposición",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Matutano, Grefusa, Tosfrit",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-048"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Hacer bolsitas txutxes y torcidas",
+          "familia": "Suministros internos",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "Coger de la TRASTIENDA",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "ope-049"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Poner cartones en las escaleras (felpudo)",
+          "familia": "Seguridad del género",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "ope-050"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Reponer utillaje (1)",
+          "familia": "Suministros internos",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MIE",
+            "SAB"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "ope-051"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Bandejas: charcu (gr/med/peq)",
+          "familia": "Suministros internos",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-052"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Bolsas: fruta / charcu / bollería (gr/peq) / pan (gr/peq) / gominolas / compra (asas)",
+          "familia": "Suministros internos",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-053"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Centrar agua (cajas de 1,5l y garrafas)",
+          "familia": "Cliente y reposición",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-054"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Ordenar Galletas 1€ / Dulcesol",
+          "familia": "Cliente y reposición",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-055"
+        },
+        {
+          "puesto": "operaria",
+          "nombre": "Papel: pan / charcu (gr/peq)",
+          "familia": "Suministros internos",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "ope-056"
+        }
+      ],
+      "semana": {
+        "LUN": [
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-018",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-017",
+            "t": "M"
+          },
+          {
+            "id": "ope-007",
+            "t": "M"
+          },
+          {
+            "id": "ope-006",
+            "t": "M"
+          },
+          {
+            "id": "ope-021",
+            "t": "M"
+          },
+          {
+            "id": "ope-020",
+            "t": "M"
+          },
+          {
+            "id": "ope-036",
+            "t": "M"
+          },
+          {
+            "id": "ope-038",
+            "t": "M"
+          },
+          {
+            "id": "ope-023",
+            "t": "M"
+          },
+          {
+            "id": "ope-035",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-026",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-005",
+            "t": "M"
+          },
+          {
+            "id": "ope-016",
+            "t": "M"
+          },
+          {
+            "id": "ope-027",
+            "t": "T"
+          },
+          {
+            "id": "ope-048",
+            "t": "T"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-046",
+            "t": "T"
+          },
+          {
+            "id": "ope-043",
+            "t": "T"
+          },
+          {
+            "id": "ope-042",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-003",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-015",
+            "t": "T"
+          }
+        ],
+        "MAR": [
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-018",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-017",
+            "t": "M"
+          },
+          {
+            "id": "ope-039",
+            "t": "M"
+          },
+          {
+            "id": "ope-030",
+            "t": "M"
+          },
+          {
+            "id": "ope-040",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-026",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-005",
+            "t": "M"
+          },
+          {
+            "id": "ope-016",
+            "t": "M"
+          },
+          {
+            "id": "ope-027",
+            "t": "T"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-047",
+            "t": "T"
+          },
+          {
+            "id": "ope-045",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-003",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-015",
+            "t": "M"
+          },
+          {
+            "id": "ope-037",
+            "t": "T"
+          }
+        ],
+        "MIE": [
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-018",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-044",
+            "t": "M"
+          },
+          {
+            "id": "ope-032",
+            "t": "M"
+          },
+          {
+            "id": "ope-017",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-026",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-005",
+            "t": "M"
+          },
+          {
+            "id": "ope-016",
+            "t": "M"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-027",
+            "t": "T"
+          },
+          {
+            "id": "ope-008",
+            "t": "T"
+          },
+          {
+            "id": "ope-054",
+            "t": "T"
+          },
+          {
+            "id": "ope-041",
+            "t": "T"
+          },
+          {
+            "id": "ope-051",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-003",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-015",
+            "t": "T"
+          },
+          {
+            "id": "ope-034",
+            "t": "T"
+          }
+        ],
+        "JUE": [
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-018",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-026",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-016",
+            "t": "M"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-055",
+            "t": "T"
+          },
+          {
+            "id": "ope-033",
+            "t": "T"
+          },
+          {
+            "id": "ope-029",
+            "t": "T"
+          },
+          {
+            "id": "ope-003",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-050",
+            "t": "T"
+          },
+          {
+            "id": "ope-028",
+            "t": "T"
+          },
+          {
+            "id": "ope-015",
+            "t": "M"
+          }
+        ],
+        "VIE": [
+          {
+            "id": "ope-019",
+            "t": "M"
+          },
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-018",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-017",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-026",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-016",
+            "t": "M"
+          },
+          {
+            "id": "ope-027",
+            "t": "T"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-003",
+            "t": "T"
+          },
+          {
+            "id": "ope-015",
+            "t": "M"
+          }
+        ],
+        "SAB": [
+          {
+            "id": "ope-019",
+            "t": "M"
+          },
+          {
+            "id": "ope-003",
+            "t": "M"
+          },
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-017",
+            "t": "M"
+          },
+          {
+            "id": "ope-030",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-024",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-026",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-027",
+            "t": "T"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-022",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-051",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-015",
+            "t": "M"
+          }
+        ],
+        "DOM": [
+          {
+            "id": "ope-019",
+            "t": "M"
+          },
+          {
+            "id": "ope-002",
+            "t": "M"
+          },
+          {
+            "id": "ope-001",
+            "t": "M"
+          },
+          {
+            "id": "ope-025",
+            "t": "M"
+          },
+          {
+            "id": "ope-013",
+            "t": "M"
+          },
+          {
+            "id": "ope-012",
+            "t": "M"
+          },
+          {
+            "id": "ope-031",
+            "t": "M"
+          },
+          {
+            "id": "ope-014",
+            "t": "M"
+          },
+          {
+            "id": "ope-016",
+            "t": "M"
+          },
+          {
+            "id": "ope-009",
+            "t": "T"
+          },
+          {
+            "id": "ope-010",
+            "t": "T"
+          },
+          {
+            "id": "ope-049",
+            "t": "T"
+          },
+          {
+            "id": "ope-004",
+            "t": "T"
+          },
+          {
+            "id": "ope-029",
+            "t": "T"
+          },
+          {
+            "id": "ope-003",
+            "t": "T"
+          },
+          {
+            "id": "ope-011",
+            "t": "T"
+          },
+          {
+            "id": "ope-050",
+            "t": "T"
+          },
+          {
+            "id": "ope-028",
+            "t": "T"
+          },
+          {
+            "id": "ope-053",
+            "t": "T"
+          },
+          {
+            "id": "ope-056",
+            "t": "T"
+          },
+          {
+            "id": "ope-052",
+            "t": "T"
+          }
+        ]
+      }
+    },
+    {
+      "clave": "coordinadora",
+      "etiqueta": "Coordinadoras",
+      "turnos": [
+        "M"
+      ],
+      "tareas": [
+        {
+          "puesto": "coordinadora",
+          "nombre": "Recepción de Mercancía: tickar (ud o peso) y guardar",
+          "familia": "Recepción y control",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 6,
+          "id": "coo-001"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Sacar, reponer, colocar fruta y ARREGLAR si hiciera falta",
+          "familia": "Cliente y reposición",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 6,
+          "id": "coo-002"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Organizar trabajo del día",
+          "familia": "Dirigir el día",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "LA TAREA CLAVE: reparte el trabajo de las demás",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 5,
+          "id": "coo-003"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Hacer Pan y Bollería",
+          "familia": "Asador y pan",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "Domingo",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-004"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Limpiar pollos si hiciera falta",
+          "familia": "Asador y pan",
+          "importancia": "critica",
+          "aplazable": false,
+          "nota": "Dice 'si hiciera falta' pero SE HACE SIEMPRE. Es lo que hace posible el sabado",
+          "dias": [
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-005"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Subir Panes Especiales",
+          "familia": "Recepción y control",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 7,
+          "id": "coo-006"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Preparar Monta",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "1.er paso del ciclo de la Monta",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 5,
+          "id": "coo-007"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Reponer leche / Yogures / Fruta / Congelado",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "SOLAPE con operarias",
+          "dias": [
+            "DOM",
+            "JUE",
+            "LUN",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 5,
+          "id": "coo-008"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Reponer y colocar fruta",
+          "familia": "Cliente y reposición",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "SOLAPE con operarias",
+          "dias": [
+            "DOM",
+            "JUE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 4,
+          "id": "coo-009"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Bajar Berly's / Cadagua",
+          "familia": "Recepción y control",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN",
+            "MIE",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 3,
+          "id": "coo-010"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Ordenar Lineal (Producto-Precio)",
+          "familia": "Precios y ofertas",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Que el precio de la balda coincida con la caja",
+          "dias": [
+            "LUN",
+            "MAR",
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 3,
+          "id": "coo-011"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Reunión",
+          "familia": "Dirigir el día",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 3,
+          "id": "coo-012"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Hacer sitio para los pedidos que llegan hoy",
+          "familia": "Recepción y control",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "MAR",
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-013"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Precios nuevos",
+          "familia": "Precios y ofertas",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-014"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Sacar bollería grande y peque de Malato",
+          "familia": "Asador y pan",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Bandejas 1EUR y 2EUR",
+          "dias": [
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-015"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Cambiar plantillas semanales (tareasx2, revistas, pollos)",
+          "familia": "Dirigir el día",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Aqui se cambian las dos hojas de operarias",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-016"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Camión: Colocar mercancía y Precios nuevos",
+          "familia": "Recepción y control",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-017"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Guardar Fruta / Uvesa / Gonvador / Berly's / Frigo",
+          "familia": "Recepción y control",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-018"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Sacar pollos y salsa",
+          "familia": "Asador y pan",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-019"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Hacer pedidos y pasarlos",
+          "familia": "Pedidos",
+          "importancia": "alta",
+          "aplazable": false,
+          "nota": "Hacer los pedidos a proveedor y pasarlos. El calculo y las reglas van en el bloque de PEDIDOS",
+          "dias": [],
+          "en_plantilla": false,
+          "n_dias": 0,
+          "id": "coo-020"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Limpiar fregonas",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "SOLAPE con operarias",
+          "dias": [
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 4,
+          "id": "coo-021"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Quitar pelos de fregona de ruedas, carros, muebles, baldas,...",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR",
+            "MIE",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 4,
+          "id": "coo-022"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Reponer Vending",
+          "familia": "Cliente y reposición",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM",
+            "SAB",
+            "VIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 3,
+          "id": "coo-023"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Ordenar cámara fruta",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR",
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-024"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Ordenar trastienda",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR",
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-025"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Recoger, limpiar y ordenar balda de fideos, gelina, …",
+          "familia": "Limpieza y orden",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "MAR",
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-026"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Subir Berly's / Cadagua",
+          "familia": "Recepción y control",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "JUE",
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 2,
+          "id": "coo-027"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Colocar Danone",
+          "familia": "Cliente y reposición",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-028"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Llega Donuts",
+          "familia": "Recepción y control",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "EVENTO: viene el proveedor",
+          "dias": [
+            "MIE"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-029"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Ofertas Finde de Yogures",
+          "familia": "Precios y ofertas",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-030"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Quitar / Poner Ofertas Coaliment",
+          "familia": "Precios y ofertas",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-031"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Quitar revistas Pronto y apuntar devolución",
+          "familia": "Recepción y control",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-032"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Subir Berly's / Cadagua (lo que esté fuera de la cámara)",
+          "familia": "Recepción y control",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "SAB"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-033"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Subir Berly's / Cadagua (lo que queda dentro de la cámara)",
+          "familia": "Recepción y control",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "",
+          "dias": [
+            "DOM"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-034"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Viene Matutano Preventa (sacar para que reponga él)",
+          "familia": "Recepción y control",
+          "importancia": "media",
+          "aplazable": false,
+          "nota": "EVENTO: viene el proveedor",
+          "dias": [
+            "MAR"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-035"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Llamar por teléfono",
+          "familia": "Dirigir el día",
+          "importancia": "media",
+          "aplazable": true,
+          "nota": "Añadida por la propiedad. La lista es viva: se pueden añadir más como esta",
+          "dias": [],
+          "en_plantilla": false,
+          "n_dias": 0,
+          "id": "coo-036"
+        },
+        {
+          "puesto": "coordinadora",
+          "nombre": "Ordenar cestos",
+          "familia": "Limpieza y orden",
+          "importancia": "baja",
+          "aplazable": true,
+          "nota": "",
+          "dias": [
+            "LUN"
+          ],
+          "en_plantilla": true,
+          "n_dias": 1,
+          "id": "coo-037"
+        }
+      ],
+      "semana": {
+        "LUN": [
+          {
+            "id": "coo-031",
+            "t": "M"
+          },
+          {
+            "id": "coo-002",
+            "t": "M"
+          },
+          {
+            "id": "coo-003",
+            "t": "M"
+          },
+          {
+            "id": "coo-014",
+            "t": "M"
+          },
+          {
+            "id": "coo-008",
+            "t": "M"
+          },
+          {
+            "id": "coo-011",
+            "t": "M"
+          },
+          {
+            "id": "coo-012",
+            "t": "M"
+          },
+          {
+            "id": "coo-007",
+            "t": "M"
+          },
+          {
+            "id": "coo-016",
+            "t": "M"
+          },
+          {
+            "id": "coo-032",
+            "t": "M"
+          },
+          {
+            "id": "coo-001",
+            "t": "M"
+          },
+          {
+            "id": "coo-010",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          },
+          {
+            "id": "coo-037",
+            "t": "M"
+          }
+        ],
+        "MAR": [
+          {
+            "id": "coo-035",
+            "t": "M"
+          },
+          {
+            "id": "coo-002",
+            "t": "M"
+          },
+          {
+            "id": "coo-011",
+            "t": "M"
+          },
+          {
+            "id": "coo-013",
+            "t": "M"
+          },
+          {
+            "id": "coo-001",
+            "t": "M"
+          },
+          {
+            "id": "coo-027",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          },
+          {
+            "id": "coo-026",
+            "t": "M"
+          },
+          {
+            "id": "coo-024",
+            "t": "M"
+          },
+          {
+            "id": "coo-025",
+            "t": "M"
+          },
+          {
+            "id": "coo-021",
+            "t": "M"
+          },
+          {
+            "id": "coo-022",
+            "t": "M"
+          }
+        ],
+        "MIE": [
+          {
+            "id": "coo-029",
+            "t": "M"
+          },
+          {
+            "id": "coo-002",
+            "t": "M"
+          },
+          {
+            "id": "coo-011",
+            "t": "M"
+          },
+          {
+            "id": "coo-013",
+            "t": "M"
+          },
+          {
+            "id": "coo-001",
+            "t": "M"
+          },
+          {
+            "id": "coo-026",
+            "t": "M"
+          },
+          {
+            "id": "coo-024",
+            "t": "M"
+          },
+          {
+            "id": "coo-025",
+            "t": "M"
+          },
+          {
+            "id": "coo-010",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          },
+          {
+            "id": "coo-028",
+            "t": "M"
+          },
+          {
+            "id": "coo-021",
+            "t": "M"
+          },
+          {
+            "id": "coo-022",
+            "t": "M"
+          }
+        ],
+        "JUE": [
+          {
+            "id": "coo-009",
+            "t": "M"
+          },
+          {
+            "id": "coo-002",
+            "t": "M"
+          },
+          {
+            "id": "coo-003",
+            "t": "M"
+          },
+          {
+            "id": "coo-017",
+            "t": "M"
+          },
+          {
+            "id": "coo-008",
+            "t": "M"
+          },
+          {
+            "id": "coo-007",
+            "t": "M"
+          },
+          {
+            "id": "coo-019",
+            "t": "M"
+          },
+          {
+            "id": "coo-001",
+            "t": "M"
+          },
+          {
+            "id": "coo-027",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          }
+        ],
+        "VIE": [
+          {
+            "id": "coo-009",
+            "t": "M"
+          },
+          {
+            "id": "coo-002",
+            "t": "M"
+          },
+          {
+            "id": "coo-003",
+            "t": "M"
+          },
+          {
+            "id": "coo-014",
+            "t": "M"
+          },
+          {
+            "id": "coo-008",
+            "t": "M"
+          },
+          {
+            "id": "coo-012",
+            "t": "M"
+          },
+          {
+            "id": "coo-023",
+            "t": "M"
+          },
+          {
+            "id": "coo-007",
+            "t": "M"
+          },
+          {
+            "id": "coo-018",
+            "t": "M"
+          },
+          {
+            "id": "coo-001",
+            "t": "M"
+          },
+          {
+            "id": "coo-010",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          },
+          {
+            "id": "coo-021",
+            "t": "M"
+          },
+          {
+            "id": "coo-005",
+            "t": "M"
+          },
+          {
+            "id": "coo-022",
+            "t": "M"
+          },
+          {
+            "id": "coo-015",
+            "t": "M"
+          }
+        ],
+        "SAB": [
+          {
+            "id": "coo-009",
+            "t": "M"
+          },
+          {
+            "id": "coo-002",
+            "t": "M"
+          },
+          {
+            "id": "coo-003",
+            "t": "M"
+          },
+          {
+            "id": "coo-008",
+            "t": "M"
+          },
+          {
+            "id": "coo-012",
+            "t": "M"
+          },
+          {
+            "id": "coo-023",
+            "t": "M"
+          },
+          {
+            "id": "coo-007",
+            "t": "M"
+          },
+          {
+            "id": "coo-001",
+            "t": "M"
+          },
+          {
+            "id": "coo-033",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          },
+          {
+            "id": "coo-021",
+            "t": "M"
+          },
+          {
+            "id": "coo-022",
+            "t": "M"
+          },
+          {
+            "id": "coo-015",
+            "t": "M"
+          }
+        ],
+        "DOM": [
+          {
+            "id": "coo-004",
+            "t": "M"
+          },
+          {
+            "id": "coo-030",
+            "t": "M"
+          },
+          {
+            "id": "coo-009",
+            "t": "M"
+          },
+          {
+            "id": "coo-003",
+            "t": "M"
+          },
+          {
+            "id": "coo-008",
+            "t": "M"
+          },
+          {
+            "id": "coo-023",
+            "t": "M"
+          },
+          {
+            "id": "coo-007",
+            "t": "M"
+          },
+          {
+            "id": "coo-034",
+            "t": "M"
+          },
+          {
+            "id": "coo-006",
+            "t": "M"
+          }
+        ]
+      }
+    }
+  ],
+  "banco": {
+    "titulo": "Tareas para los huecos",
+    "explicacion": "No tienen día fijo. Se hacen cuando se necesitan, porque la tienda no tiene siempre las mismas necesidades. Se elige la zona y luego la tarea.",
+    "zonas": [
+      "Fruta",
+      "Verdura",
+      "Txutxes",
+      "Lineales",
+      "Carne",
+      "Yogures",
+      "Quesos",
+      "Charcutería",
+      "Pan y bollería",
+      "Toda la tienda"
+    ],
+    "tareas": [
+      {
+        "nombre": "Limpiar lineales",
+        "zonas": [
+          "*"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Limpiar suelos",
+        "zonas": [
+          "*"
+        ],
+        "nota": "Bordes y rincones incluidos"
+      },
+      {
+        "nombre": "Limpiar una pared",
+        "zonas": [
+          "*"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Limpiar una puerta",
+        "zonas": [
+          "*"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Limpiar cristales",
+        "zonas": [
+          "*"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Quitar telarañas",
+        "zonas": [
+          "Toda la tienda"
+        ],
+        "nota": "Dentro y fuera del local"
+      },
+      {
+        "nombre": "Hacer paquetes de gominolas de 1 €",
+        "zonas": [
+          "Txutxes"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Hacer paquetes de torcidas de 1 €",
+        "zonas": [
+          "Txutxes"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Cortar y envasar embutido",
+        "zonas": [
+          "Charcutería"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Solo cortar embutido",
+        "zonas": [
+          "Charcutería"
+        ],
+        "nota": ""
+      },
+      {
+        "nombre": "Solo envasar embutido",
+        "zonas": [
+          "Charcutería"
+        ],
+        "nota": ""
+      }
+    ]
+  },
+  "reglas": {
+    "lista_viva": "La lista de tareas es VIVA: se puede añadir, cambiar y quitar. De momento solo la pueden cambiar coordinadoras y gerencia.",
+    "quien_puede_cambiarla": [
+      "gerencia",
+      "coordinadora"
+    ],
+    "acceso": {
+      "gerencia": [
+        "gerencia",
+        "coordinadora",
+        "operaria"
+      ],
+      "coordinadora": [
+        "coordinadora",
+        "operaria"
+      ],
+      "operaria": [
+        "operaria"
+      ]
+    },
+    "acceso_explicado": "La gerencia ve y hace lo de coordinadoras y operarias; las coordinadoras ven y hacen lo de operarias; las operarias ven lo suyo.",
+    "si_sobra_tiempo": "Cuando las coordinadoras han terminado su trabajo, pueden hacer tareas opcionales o tareas de las operarias."
+  }
+}

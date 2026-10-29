@@ -1,0 +1,534 @@
+{
+  "generado_de": "docs/fruta-verdura-familias.xlsx (completado por la propiedad)",
+  "familias": [
+    "Fruta",
+    "Verdura",
+    "Embolsado",
+    "Ensaladas Preparadas",
+    "Legumbres",
+    "Varios"
+  ],
+  "aviso_ci": "El CI es interno: solo gerencia y coordinadoras. Sirve para los pedidos.",
+  "productos": [
+    {
+      "ci": "960036",
+      "nombre": "PLATANO CANARIAS",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960030",
+      "nombre": "MELON BOLLO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961297",
+      "nombre": "SANDIA BOLLO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961339",
+      "nombre": "POMELO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960031",
+      "nombre": "NARANJA BOLLO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960972",
+      "nombre": "NARANJA ZUMO MALLA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960156",
+      "nombre": "NARANJA ZUMO BARATA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960020",
+      "nombre": "CLEMENTINA BOLLO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961268",
+      "nombre": "CLEMENTINA RAMA BOLLO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961131",
+      "nombre": "MANDARINA BARATA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960024",
+      "nombre": "LIMON",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961070",
+      "nombre": "MANZANA VERDE G SMITH",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960028",
+      "nombre": "MANZANA ROYAL GALA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960025",
+      "nombre": "MANZANA FUJI",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960027",
+      "nombre": "MANZANA KANZI",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960017",
+      "nombre": "MANZANA GOLDEN",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961541",
+      "nombre": "MANZANA JOYA ROJA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "96",
+      "nombre": "MANZANA CHANTECLER",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961459",
+      "nombre": "MANZANA PINK LADY",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960026",
+      "nombre": "REINETA PARDA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960034",
+      "nombre": "PERA CONFERENCIA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960151",
+      "nombre": "PERA DUQUESA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960290",
+      "nombre": "PERA BLANQUILLA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "96",
+      "nombre": "PERA CHAMPION",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961179",
+      "nombre": "PERA COMPOTA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961477",
+      "nombre": "PERA QTEE",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960022",
+      "nombre": "KAKI",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960019",
+      "nombre": "CHIRIMOYA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960018",
+      "nombre": "AGUACATES",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960035",
+      "nombre": "PIÑA DEL MONTE",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960038",
+      "nombre": "UVA MORADA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960037",
+      "nombre": "UVA BLANCA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961309",
+      "nombre": "CEREZAS",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960033",
+      "nombre": "PARAGUAYOS",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960021",
+      "nombre": "GRANADA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961141",
+      "nombre": "FRESAS",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960722",
+      "nombre": "FRESAS BLANCAS",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961285",
+      "nombre": "MELOCOTON ROJO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960029",
+      "nombre": "MELOCOTON AMARILLO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960032",
+      "nombre": "NECTARINA AMARILLA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961284",
+      "nombre": "NECTARINA BLANCA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961308",
+      "nombre": "NECTARINA BARATA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960968",
+      "nombre": "CIRUELA ROJA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "96",
+      "nombre": "CIRUELA AMARILLA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960080",
+      "nombre": "CIRUELA CLAUDIA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961286",
+      "nombre": "ALBARICOQUES",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960023",
+      "nombre": "KIWI ZESPRI",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960050",
+      "nombre": "HIGOS CUELLO DAMA BOLSA 500GR",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "96",
+      "nombre": "ARANDANOS / FRAMBUESAS",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960928",
+      "nombre": "BROCOLI",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "96",
+      "nombre": "ROMANESCU",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960926",
+      "nombre": "AJO A PESO",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960933",
+      "nombre": "COLIFLOR",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960941",
+      "nombre": "BERZA",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960936",
+      "nombre": "PUERRO",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960958",
+      "nombre": "ZANAHORIA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960935",
+      "nombre": "CEBOLLETAS",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960940",
+      "nombre": "PIMIENTO VERDE",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960939",
+      "nombre": "PIMIENTO ROJO",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960945",
+      "nombre": "VAINAS",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960893",
+      "nombre": "TOMATE RAF",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960943",
+      "nombre": "TOMATE RAMA",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960946",
+      "nombre": "AJOS TIERNOS",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960952",
+      "nombre": "ESPARRAGOS TIERNOS",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960947",
+      "nombre": "APIO",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960951",
+      "nombre": "ENDIVIAS",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "96",
+      "nombre": "ESCAROLA",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "804343",
+      "nombre": "CORAZONES LECHUGA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "800013",
+      "nombre": "ICEBERG (960954)",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960948",
+      "nombre": "AJO EN BOLSA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960953",
+      "nombre": "PIMIENTO DEL PAIS BOLSA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "394555",
+      "nombre": "GOURMET",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "960973",
+      "nombre": "4 ESTACIONES",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "394587",
+      "nombre": "CESAR",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "960975",
+      "nombre": "FLORETTE INTEGRAL",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "394648",
+      "nombre": "FLORETTE COMPLETA GOURMET",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "960039",
+      "nombre": "ALUBIA BLANCA",
+      "familia": "Legumbres"
+    },
+    {
+      "ci": "960040",
+      "nombre": "ALUBIA TOLOSANA",
+      "familia": "Legumbres"
+    },
+    {
+      "ci": "960041",
+      "nombre": "GARBANZO PEDROSILLANO",
+      "familia": "Legumbres"
+    },
+    {
+      "ci": "960042",
+      "nombre": "LENTEJA PARDINA",
+      "familia": "Legumbres"
+    },
+    {
+      "ci": "961208",
+      "nombre": "NUECES",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960969",
+      "nombre": "CASTAÑAS",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "960949",
+      "nombre": "CHAMPIS BANDEJA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960956",
+      "nombre": "SETAS BANDEJA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960957",
+      "nombre": "TOMATE CHERRY",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960974",
+      "nombre": "CANONIGOS",
+      "familia": "Ensaladas Preparadas"
+    },
+    {
+      "ci": "96",
+      "nombre": "HIERBABUENA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "96",
+      "nombre": "CEBOLLINO",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "961051",
+      "nombre": "CARNE PIMIENTO CHORICERO",
+      "familia": "Varios"
+    },
+    {
+      "ci": "960932",
+      "nombre": "CEBOLLA ROJA",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960470",
+      "nombre": "CEBOLLA BLANCA DULCE",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960156",
+      "nombre": "NARANJA BARATA",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "961502",
+      "nombre": "TOMATE ROSA",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "961604",
+      "nombre": "TOMATE AZUL",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "961316",
+      "nombre": "DATIL 200GR",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "961647",
+      "nombre": "MANGO",
+      "familia": "Fruta"
+    },
+    {
+      "ci": "96",
+      "nombre": "PIMIENTO CRISTAL / PIPARRA",
+      "familia": "Varios"
+    },
+    {
+      "ci": "960930",
+      "nombre": "CALABAZA",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960955",
+      "nombre": "PATATA UDAPA",
+      "familia": "Embolsado"
+    },
+    {
+      "ci": "960937",
+      "nombre": "PATATAS GRANEL (SACO)",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "960931",
+      "nombre": "CEBOLLA GRANEL (SACO)",
+      "familia": "Verdura"
+    },
+    {
+      "ci": "961249",
+      "nombre": "MIEL BREZO GAYUBAR 450GR",
+      "familia": "Varios"
+    },
+    {
+      "ci": "961252",
+      "nombre": "MIEL BREZO GAYUBAR 900GR",
+      "familia": "Varios"
+    },
+    {
+      "ci": "96",
+      "nombre": "PEREJIL",
+      "familia": "Verdura"
+    }
+  ]
+}

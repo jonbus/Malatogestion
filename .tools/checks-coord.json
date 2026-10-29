@@ -1,0 +1,56 @@
+{
+  "format": "xlsx",
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "package",
+      "status": "pass"
+    },
+    {
+      "id": "count",
+      "status": "pass",
+      "expected": 7,
+      "actual": 7
+    }
+  ],
+  "summary": {
+    "sheets": [
+      {
+        "name": "C\u00f3mo usarlo",
+        "cells": 25,
+        "formulas": 0
+      },
+      {
+        "name": "Apertura L-S",
+        "cells": 95,
+        "formulas": 0
+      },
+      {
+        "name": "Apertura domingo",
+        "cells": 101,
+        "formulas": 0
+      },
+      {
+        "name": "El d\u00eda",
+        "cells": 65,
+        "formulas": 0
+      },
+      {
+        "name": "Cierre coordinaci\u00f3n",
+        "cells": 20,
+        "formulas": 0
+      },
+      {
+        "name": "Tienda ma\u00f1ana",
+        "cells": 125,
+        "formulas": 0
+      },
+      {
+        "name": "Tienda tarde",
+        "cells": 161,
+        "formulas": 0
+      }
+    ],
+    "formulas_evaluated": false
+  }
+}

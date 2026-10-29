@@ -1,0 +1,41 @@
+# Lo que NO va al repositorio
+
+# --- secretos: esto no sale de aquí ---
+.pin
+*.pin
+docs/nube/.pin
+.env
+.env.*
+
+# --- datos de la tienda: lo que ha escrito la propiedad ---
+.datos/
+docs/nube/.datos/
+estado.json
+estado-antes-de-limpiar-*.json
+**/estado*.json
+
+# --- copias de seguridad y ficheros temporales ---
+*.zip
+COPIA-APP-MALATO-*
+.tmp-*/
+*.tmp
+*.log
+
+# --- cosas que se descargan solas: no son del proyecto ---
+node_modules/
+.npmcache/
+.npm-cache/
+.tools/node_modules/
+.tools/.npm-cache/
+.tools/_cacache/
+
+# --- basura del sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.~lock.*
+
+# --- el estado de las herramientas ---
+.wrangler/
+.vercel/

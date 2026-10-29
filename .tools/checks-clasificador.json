@@ -1,0 +1,56 @@
+{
+  "format": "xlsx",
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "package",
+      "status": "pass"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "Rutina"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "Clasificar"
+    },
+    {
+      "id": "count",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    }
+  ],
+  "summary": {
+    "sheets": [
+      {
+        "name": "C\u00f3mo se hace",
+        "cells": 20,
+        "formulas": 0
+      },
+      {
+        "name": "Clasificar",
+        "cells": 672,
+        "formulas": 0
+      },
+      {
+        "name": "Qu\u00e9 es cada cosa",
+        "cells": 21,
+        "formulas": 0
+      },
+      {
+        "name": "Listas",
+        "cells": 26,
+        "formulas": 0
+      },
+      {
+        "name": "Resumen",
+        "cells": 29,
+        "formulas": 15
+      }
+    ],
+    "formulas_evaluated": false
+  }
+}

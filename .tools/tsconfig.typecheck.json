@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "typeRoots": ["./nestprobe/node_modules/@types"]
+  },
+  "include": ["../packages/**/*.ts", "../apps/**/*.ts", "../tests/**/*.ts"]
+}

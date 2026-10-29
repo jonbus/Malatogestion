@@ -1,0 +1,1 @@
+{"name":"sqlcheck","private":true,"version":"1.0.0","dependencies":{"libpg-query":"^18.1.5","wrangler":"^4.152.0"}}

@@ -1,0 +1,20 @@
+  c.querySelectorAll(".item").forEach(it=>{
+    const k = it.dataset.k;
+    it.querySelector(".cab-item").addEventListener("click", e=>{
+      if(e.target.closest(".partes") || e.target.closest(".pasarlo")) return;
+      if(k.startsWith("enc")){                        // un encargo: se marca y desaparece
+        const enc = ENC[k];
+        if(enc) encargoHecho(enc.id);
+        return;
+      }
+      const a = origenDe(k);
+      if(a){                                          // de otro día: se marca allí
+        if(a.partes.length) tocarEn(a.f, "ab:" + a.k, !hechaEn(a.f, "ab:" + a.k));
+        else tocarEn(a.f, a.k, !hechaEn(a.f, a.k));
+        return;
+      }
+      const t = REG[k];
+      if(t && t.partes && t.partes.length) tocar("ab:" + k, !hecha("ab:" + k));
+      else tocar(k, !hecha(k));
+    });
+  });

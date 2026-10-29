@@ -1,0 +1,5 @@
+# El repositorio funciona HOY con npm y con Node a secas (sin node_modules de runtime).
+# Este fichero queda preparado para cuando se adopte pnpm.
+packages:
+  - 'packages/*'
+  - 'apps/*'
