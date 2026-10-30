@@ -40,6 +40,7 @@
 | **Los lazos** | para decorar la tarta | — | — |
 | **Las letras** | **«20 urteurrena»** | — | — |
 | **Las palmeritas** | **500 ud**, caseras | — | — |
+| **Las gominolas** | un platito con gummy jellys | — | — |
 | **Las bolsas** | edición 20 aniversario | — | — |
 | **La urna** y las papeletas | 500, **recortadas y dobladas** | **listas el lunes 2** | **—** |
 | **Los carteles** | el de la urna y el de los premios | — | — |
@@ -132,6 +133,17 @@
 - [ ] **El cartel de la urna**
 - [ ] **Las bolsas** — **se llevan a la mesa al montarla**
 - [ ] **Los premios** — **se llevan a la mesa al montarla**
+
+### Paso 7 · El platito de las gominolas
+
+**También va en la mesa de la tarta: un platito con caramelos gummy jellys.**
+
+- [ ] **Poner el plato en un extremo**, no en el centro de la mesa
+- [ ] **Que no esté al sol directo** — **las gominolas se derriten y se pegan entre ellas**
+- [ ] **Que no esté al alcance de las manos de cualquiera** — **está en la calle**
+- [ ] **Reponerlo** cuando se vacíe
+
+> **Las gominolas están abiertas y en la calle.** **Un plato hondo, mejor que uno plano** — **y si hay manera de taparlo entre cliente y cliente, mejor que mejor.** **Y si hace calor, sacarlas del sol o ponerlas en un sitio fresco hasta la hora.**
 
 > **Ojo con el peso y el trasiego**: **en esa mesa van la tarta, 500 palmeritas, la urna, las bolsas y 113 premios**. **Comprobar que el tablón aguanta y que nadie se apoya.**
 
