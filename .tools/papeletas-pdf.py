@@ -105,7 +105,7 @@ for h in range(hojas):
         premio = papeletas[num]
 
         # cabecera
-        c.append(centrado(x, ANCHO_CELDA, y_top - 14, "MALATO · ANIVERSARIO", 7.6, "F2", Gris))
+        c.append(centrado(x, ANCHO_CELDA, y_top - 14, "MALATO · 20 ANIVERSARIO", 7.6, "F2", Gris))
 
         # la misma altura para las dos: arriba, y mas grande
         ALTO_ET = 46
