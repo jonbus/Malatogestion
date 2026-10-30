@@ -27,6 +27,8 @@
 | **Los premios** | 113 | — | — |
 | **Los mandiles y gorros** | dos: verde | — | — |
 | **La mesa auxiliar** | para la batukada | — | — |
+| **Los globos** | la decoración, **montada desde el jueves** | **almacén** | — |
+| **El compresor** | para inflar los globos | — | — |
 | **El picoteo** | abajo, en su lista | — | — |
 
 ### ⚠ Lo primero que hay que resolver: las papeletas están SIN RECORTAR
@@ -43,7 +45,36 @@
 
 ---
 
-## 3 · La mesa de la tarta — EN ESTE ORDEN
+## 3 · La decoración de globos
+
+**Se monta con el compresor, y se empieza el jueves.** **Se deja en el almacén y el mismo día se sube.**
+
+### Cómo se monta
+
+- [ ] **Sacar el compresor** y comprobar que sopla
+- [ ] **Ir inflando y montando por partes**, no todo al final
+- [ ] **Dejar cada pieza terminada y atada** — **una pieza a medias no se puede mover**
+- [ ] **Apuntar cuántos globos entran en cada pieza** — para poder reponer el día del evento
+- [ ] **Dejarlo todo en el almacén**, en el sitio donde no se pise
+
+### El día: subirlo
+
+- [ ] **Subir las piezas ya montadas**, no inflar en la tienda
+- [ ] **Colocarlas** sin tapar la entrada ni la mesa de la tarta
+- [ ] **Comprobar que no molestan al paso** — **ni a los dos niños de la puerta**
+- [ ] **Repasar los globos que se hayan desinflado** y cambiarlos
+
+### Lo que hay que tener en cuenta
+
+> **El compresor es de AIRE, no de helio.** **Los globos no van a volar**: **van en arco, en columna o pegados a una estructura.** **Conviene decidirlo antes de empezar** — **un arco necesita su base hecha** (un alambre, un tubo, una malla), **y eso no se improvisa el jueves por la mañana**.
+
+> **Los globos se desinflan.** **Montado el jueves, el sábado está mustio.** **Lo que se monte el jueves, que sea lo que aguanta** (estructuras, columnas); **lo que se vea de cerca, mejor el viernes por la noche o el mismo día.**
+
+> **Y el calor**: **en el almacén, si hace calor, los globos se dilatan y revientan.** **Cuanto más frescos, mejor.**
+
+> **Y el transporte**: **de la puerta de atrás a la tienda hay un recorrido**. **Lo que no pase por ahí, no sirve** — **comprobar el ancho de paso antes de montar nada.**
+
+## 4 · La mesa de la tarta — EN ESTE ORDEN
 
 **El orden importa**: **si se pone el mantel después, hay que levantar la tarta.**
 
@@ -84,7 +115,7 @@
 
 ---
 
-## 4 · La mesa de la batukada
+## 5 · La mesa de la batukada
 
 **Entre las 11 y las 12 viene la batukada** *(la Jefa es componente)*.
 
@@ -104,7 +135,7 @@
 
 ---
 
-## 5 · La carpa (si llueve)
+## 6 · La carpa (si llueve)
 
 - [ ] **Mirar el tiempo el día antes**
 - [ ] **Si hay duda, montarla** — **montarla de más cuesta una hora; no tenerla cuesta el día**
@@ -112,7 +143,7 @@
 
 ---
 
-## 6 · Los dos niños, en la puerta
+## 7 · Los dos niños, en la puerta
 
 **Dos niños, con mandil verde y gorro de cocinero:**
 
@@ -133,7 +164,7 @@
 
 ---
 
-## 7 · El canje: el ticket por la papeleta
+## 8 · El canje: el ticket por la papeleta
 
 **El cliente entra, coge su palmera y su bolsa. Al salir, cambia el ticket por una papeleta.**
 
@@ -147,7 +178,7 @@
 
 ---
 
-## 8 · Las fotos y la música
+## 9 · Las fotos y la música
 
 **Sobre las 11 o las 12: la foto de todo el equipo de Malato.**
 
@@ -166,11 +197,12 @@
 
 ---
 
-## 9 · El día, hora a hora
+## 10 · El día, hora a hora
 
 | Hora | Qué |
 |---|---|
-| **Antes de abrir** | **Recortar y doblar las papeletas** · montar la mesa de la tarta · el picoteo · la carpa si toca |
+| **Jueves y viernes** | **Montar los globos** con el compresor · dejarlos en el almacén |
+| **Antes de abrir** | **Subir los globos** · **recortar y doblar las papeletas** · montar la mesa de la tarta · el picoteo · la carpa si toca |
 | **Apertura** | **Los dos niños en la puerta** con palmeras y bolsas · la urna lista |
 | **Toda la mañana** | **Canje del ticket por la papeleta** · premios por los niños |
 | **11:00 – 12:00** | **La batukada** · **la foto del equipo** · el picoteo |
@@ -179,7 +211,7 @@
 
 ---
 
-## 10 · Quién hace qué
+## 11 · Quién hace qué
 
 | | Qué hace |
 |---|---|
@@ -192,7 +224,7 @@
 
 ---
 
-## 11 · Lo que NO puede pasar
+## 12 · Lo que NO puede pasar
 
 | | Por qué |
 |---|---|
@@ -202,11 +234,13 @@
 | **Que alguien coja dos papeletas** con un ticket | **se acaban antes de la hora** |
 | **Que los niños se queden sin nada que dar** | **hay que reponer a media mañana** |
 | **Que la batukada llegue y no haya mesa** | **el picoteo se prepara antes** |
+| **Que los globos estén mustios** | **montados el jueves, el sábado se desinflan** |
+| **Que una pieza de globos no pase por la puerta** | **comprobar el ancho antes de montarla** |
 | **Que se haga la foto y falte medio equipo** | **avisar el día antes** |
 
 ---
 
-## 12 · Lo que queda por decir
+## 13 · Lo que queda por decir
 
 **La propiedad ha dicho que le queda algo por contar.** **Aquí se apunta:**
 
@@ -218,3 +252,5 @@
 | **Si la tarta se corta o es solo adorno** | **por confirmar** |
 | **El resto del programa** (actividades, horarios) | pendiente |
 | **Quién cubre a los niños** en el relevo | pendiente |
+| **La fecha del aniversario** | pendiente |
+| **Qué piezas de globos** se van a hacer (arco, columna, suelo) | pendiente |
