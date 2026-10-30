@@ -78,10 +78,10 @@ def centrado(x0, ancho, y, t, tam, fuente="F1", color=(0.11, 0.17, 0.15)):
     return texto(x0 + (ancho - w) / 2, y, t, tam, fuente, color)
 
 
-Gris = (0.42, 0.48, 0.46)
+Gris = (0.08, 0.10, 0.09)
 Oro = (0.69, 0.48, 0.07)
 Tinta = (0.11, 0.17, 0.15)
-Tenue = (0.60, 0.64, 0.63)
+Tenue = (0.08, 0.10, 0.09)
 
 contenido_paginas = []
 
@@ -105,7 +105,7 @@ for h in range(hojas):
         premio = papeletas[num]
 
         # cabecera
-        c.append(centrado(x, ANCHO_CELDA, y_top - 14, "MALATO · ANIVERSARIO", 6.2, "F1", Gris))
+        c.append(centrado(x, ANCHO_CELDA, y_top - 14, "MALATO · ANIVERSARIO", 7.6, "F2", Gris))
 
         # la misma altura para las dos: arriba, y mas grande
         ALTO_ET = 46
@@ -122,7 +122,7 @@ for h in range(hojas):
                 c.append(centrado(x, ANCHO_CELDA, y_top - ALTO_ET - 30 - j * 15, ln, 10.5, "F1", Tinta))
 
         # número
-        c.append(texto(x + ANCHO_CELDA - 34, y_top - ALTO_CELDA + 8, f"nº {num + 1}", 6, "F1", Tenue))
+        c.append(texto(x + ANCHO_CELDA - 34, y_top - ALTO_CELDA + 8, f"nº {num + 1}", 7.4, "F2", Tenue))
 
     contenido_paginas.append("".join(c))
 
