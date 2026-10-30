@@ -19,8 +19,8 @@
 
 | Cuándo | Qué |
 |---|---|
-| **Esta semana** *(29 – 1 nov)* | **Recortar y doblar las 500 papeletas** — **lo que más tiempo cuesta y no depende de nadie** · **decidir qué piezas de globos** y **hacer sus bases** · comprar lo que falte |
-| **Semana del 2** | **Comprar el picoteo** *(jamón, cabecero, chorizo, queso, pastas Dulcesol)* · **confirmar la batukada** · **mirar el tiempo** y decidir la carpa · **imprimir los carteles** |
+| **Esta semana** *(29 – 1 nov)* | **Decidir qué piezas de globos** y **hacer sus bases** · comprar lo que falte |
+| **Semana del 2** | **Recoger las 500 papeletas** *(el lunes 2)* · **comprar el picoteo** *(jamón, cabecero, chorizo, queso, pastas Dulcesol)* · **confirmar la batukada** · **mirar el tiempo** y decidir la carpa · **imprimir los carteles** |
 | **Jueves 5** | **Montar los globos de estructura** *(arcos, columnas)* · dejarlos en el almacén |
 | **Viernes 6** | **Los globos que se ven de cerca** · **el picoteo que se pueda dejar hecho** · la carpa, si se ha decidido |
 | **Sábado 7** | **Dejarlo todo listo**: mesa, mantel, tarta, lazos, letras · **las bolsas y los premios en el almacén, juntos y a mano** · **si se puede, el picoteo montado** |
@@ -41,7 +41,7 @@
 | **Las letras** | **«20 urteurrena»** | — | — |
 | **Las palmeritas** | **500 ud**, caseras | — | — |
 | **Las bolsas** | edición 20 aniversario | — | — |
-| **La urna** y las papeletas | 500 · 34 hojas | — | — |
+| **La urna** y las papeletas | 500, **recortadas y dobladas** | **listas el lunes 2** | **—** |
 | **Los carteles** | el de la urna y el de los premios | — | — |
 | **Los premios** | 113 | — | — |
 | **Los mandiles y gorros** | dos: verde | — | — |
@@ -50,17 +50,17 @@
 | **El compresor** | para inflar los globos | — | — |
 | **El picoteo** | abajo, en su lista | — | — |
 
-### ⚠ Lo primero que hay que resolver: las papeletas están SIN RECORTAR
+### ✓ Las papeletas: resueltas antes
 
-**Las 500 papeletas están todavía en las 34 hojas, sin recortar y sin doblar.**
+**La propiedad las tendrá recortadas y dobladas para el LUNES 2 de noviembre.**
 
-**Eso es trabajo de manos, y no se puede hacer el mismo día a las 10 de la mañana con la tienda llena.**
+**Eso era lo único que iba justo de tiempo** — **y ya no lo va**. **El domingo no se recorta nada.**
 
-- [ ] **Recortar las 34 hojas** — por la línea de puntos
-- [ ] **Doblar las 500**
-- [ ] **Y dejarlas en la urna antes de abrir**
+- [ ] **Recoger las papeletas el lunes 2**
+- [ ] **Contarlas**: **tienen que ser 500**
+- [ ] **Guardarlas en el almacén, con la urna**, hasta el día
 
-> **Cómo se reparte el trabajo**: **cortar es lo que más tarda**. **Con dos personas y una guillotina, una hora.** **A mano con tijera, dos o tres.**
+> **Y el domingo solo hay que abrir la urna y meterlas.** **Dos minutos.**
 
 ---
 
@@ -230,13 +230,13 @@
 |---|---|
 | **Jueves 5 y viernes 6** | **Montar los globos** con el compresor · dejarlos en el almacén |
 | **Antes de las 9:00** | **Subir los globos** y colocarlos |
-| **9:00 – 10:00** | **Recortar y doblar las 500 papeletas** · la urna · **la mesa de la tarta**: caballetes, tablón, mantel, tarta, lazos, letras, palmeritas |
+| **9:00 – 10:00** | **La urna con las papeletas** · **la mesa de la tarta**: caballetes, tablón, mantel, tarta, lazos, letras, palmeritas |
 | **10:00** | **Abrir.** **Los dos niños en la puerta** con las palmeras y las bolsas |
 | **10:00 – 14:30** | **El canje**: el ticket por la papeleta · **los premios, los niños** · la música y las canciones |
 | **11:00 – 12:00** | **La batukada** · **la foto del equipo** · **el picoteo** |
 | **14:30** | **Cerrar.** Recoger la mesa · guardar la urna · los premios que sobren |
 
-> **Lo que no esté a las 10:00, ya no se monta.** **A partir de ahí la tienda está llena y no hay hueco.** **Por eso las papeletas se recortan antes** — **las 500.**
+> **Lo que no esté a las 10:00, ya no se monta.** **A partir de ahí la tienda está llena y no hay hueco.** **Y por eso las papeletas llegan ya hechas: el domingo no se recorta nada.**
 
 > **Y ojo con la hora punta**: **de 10:00 a 14:30 son cuatro horas y media para 500 papeletas** — **unas 110 por hora**. **Si a las 11 hay cola, la cola es en la puerta y la foto se hace con cola.** **No pasa nada** — **pero mejor saberlo.**
 
@@ -259,7 +259,7 @@
 
 | | Por qué |
 |---|---|
-| **Que no haya papeletas recortadas** | **500 sin recortar no se arreglan a las 10 de la mañana** |
+| **Que las papeletas no estén el lunes 2** | **500 sin recortar no se arreglan a las 10 de la mañana** |
 | **Que la mesa se vuelque** | **tablón sobre caballetes, con 500 palmeritas y gente alrededor** |
 | **Que las palmeritas estén al aire** | **son comida, y están en la calle** |
 | **Que alguien coja dos papeletas** con un ticket | **se acaban antes de la hora** |
