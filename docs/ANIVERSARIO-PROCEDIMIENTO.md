@@ -1,5 +1,7 @@
 # 20 ANIVERSARIO · manual del día
 
+> **DOMINGO 8 DE NOVIEMBRE DE 2026** · **de 10:00 a 14:30**
+>
 > **Para que ese día no dependa de que nadie se acuerde de nada.**
 > **Se lee la víspera, se tacha lo que se hace, y el que llega nuevo lo puede seguir solo.**
 
@@ -7,11 +9,28 @@
 
 ## 1 · El día en una frase
 
-**De 10:00 a 14:30.** **La gente entra con una palmera y una bolsa, y sale con una papeleta.** **Alrededor, la tarta, la batukada, las fotos y la música.**
+**Domingo 8 de noviembre. De 10:00 a 14:30.** **La gente entra con una palmera y una bolsa, y sale con una papeleta.** **Alrededor, la tarta, la batukada, las fotos y la música.**
 
 ---
 
-## 2 · Lo que tiene que estar listo ANTES
+## 2 · El calendario de estos días
+
+**Hoy es jueves 29 de octubre. Quedan diez días.**
+
+| Cuándo | Qué |
+|---|---|
+| **Esta semana** *(29 – 1 nov)* | **Recortar y doblar las 500 papeletas** — **lo que más tiempo cuesta y no depende de nadie** · **decidir qué piezas de globos** y **hacer sus bases** · comprar lo que falte |
+| **Semana del 2** | **Comprar el picoteo** *(jamón, cabecero, chorizo, queso, pastas Dulcesol)* · **confirmar la batukada** · **mirar el tiempo** y decidir la carpa · **imprimir los carteles** |
+| **Jueves 5** | **Montar los globos de estructura** *(arcos, columnas)* · dejarlos en el almacén |
+| **Viernes 6** | **Los globos que se ven de cerca** · **el picoteo que se pueda dejar hecho** · la carpa, si se ha decidido |
+| **Sábado 7** | **Dejarlo todo listo**: mesa, mantel, tarta, lazos, letras · **las bolsas y los premios en el almacén, juntos y a mano** · **si se puede, el picoteo montado** |
+| **Domingo 8** | **9:00** subir los globos y montar la mesa · **10:00** abrir · **14:30** cerrar y recoger |
+
+> **Los globos del jueves 5 al domingo 8 son TRES DÍAS.** **Un globo de látex, inflado con aire, a los tres días está mustio.** **Lo que se monte el jueves: la estructura, que no se ve de cerca.** **Lo de la entrada y la mesa, el viernes por la noche o el sábado.**
+
+> **Y el sábado 7 no es un día perdido**: **es el día que hace que el domingo salga bien.** **Ese día no se monta nada nuevo: se deja todo listo.**
+
+## 3 · Lo que tiene que estar listo ANTES
 
 | | Qué | Dónde | Quién |
 |---|---|---|---|
@@ -45,7 +64,7 @@
 
 ---
 
-## 3 · La decoración de globos
+## 4 · La decoración de globos
 
 **Se monta con el compresor, y se empieza el jueves.** **Se deja en el almacén y el mismo día se sube.**
 
@@ -74,7 +93,7 @@
 
 > **Y el transporte**: **de la puerta de atrás a la tienda hay un recorrido**. **Lo que no pase por ahí, no sirve** — **comprobar el ancho de paso antes de montar nada.**
 
-## 4 · La mesa de la tarta — EN ESTE ORDEN
+## 5 · La mesa de la tarta — EN ESTE ORDEN
 
 **El orden importa**: **si se pone el mantel después, hay que levantar la tarta.**
 
@@ -118,7 +137,7 @@
 
 ---
 
-## 5 · La mesa de la batukada
+## 6 · La mesa de la batukada
 
 **Entre las 11 y las 12 viene la batukada** *(la Jefa es componente)*.
 
@@ -138,7 +157,7 @@
 
 ---
 
-## 6 · La carpa (si llueve)
+## 7 · La carpa (si llueve)
 
 - [ ] **Mirar el tiempo el día antes**
 - [ ] **Si hay duda, montarla** — **montarla de más cuesta una hora; no tenerla cuesta el día**
@@ -146,7 +165,7 @@
 
 ---
 
-## 7 · Los dos niños, en la puerta
+## 8 · Los dos niños, en la puerta
 
 **Dos niños, con mandil verde y gorro de cocinero:**
 
@@ -170,7 +189,7 @@
 
 ---
 
-## 8 · El canje: el ticket por la papeleta
+## 9 · El canje: el ticket por la papeleta
 
 **El cliente entra, coge su palmera y su bolsa. Al salir, cambia el ticket por una papeleta.**
 
@@ -184,7 +203,7 @@
 
 ---
 
-## 9 · Las fotos y la música
+## 10 · Las fotos y la música
 
 **Sobre las 11 o las 12: la foto de todo el equipo de Malato.**
 
@@ -203,13 +222,13 @@
 
 ---
 
-## 10 · El día, hora a hora
+## 11 · El día, hora a hora
 
 **El aniversario va de 10:00 a 14:30.** **Cuatro horas y media.** **Todo lo que hay que montar, se monta antes de las 10.**
 
 | Hora | Qué tiene que estar hecho |
 |---|---|
-| **Jueves y viernes** | **Montar los globos** con el compresor · dejarlos en el almacén |
+| **Jueves 5 y viernes 6** | **Montar los globos** con el compresor · dejarlos en el almacén |
 | **Antes de las 9:00** | **Subir los globos** y colocarlos |
 | **9:00 – 10:00** | **Recortar y doblar las 500 papeletas** · la urna · **la mesa de la tarta**: caballetes, tablón, mantel, tarta, lazos, letras, palmeritas |
 | **10:00** | **Abrir.** **Los dos niños en la puerta** con las palmeras y las bolsas |
@@ -223,7 +242,7 @@
 
 ---
 
-## 11 · Quién hace qué
+## 12 · Quién hace qué
 
 | | Qué hace |
 |---|---|
@@ -236,7 +255,7 @@
 
 ---
 
-## 12 · Lo que NO puede pasar
+## 13 · Lo que NO puede pasar
 
 | | Por qué |
 |---|---|
@@ -252,7 +271,7 @@
 
 ---
 
-## 13 · Lo que queda por decir
+## 14 · Lo que queda por decir
 
 **La propiedad ha dicho que le queda algo por contar.** **Aquí se apunta:**
 
@@ -264,5 +283,5 @@
 | ~~Si la tarta se corta~~ | **es de adorno: no se corta** — cerrado |
 | **El resto del programa** (actividades, horarios) | pendiente |
 | **Quién está cerca de los niños** en el relevo | pendiente |
-| **La fecha del aniversario** | pendiente |
+| ~~La fecha~~ | **domingo 8 de noviembre de 2026** — cerrado |
 | **Qué piezas de globos** se van a hacer (arco, columna, suelo) | pendiente |
