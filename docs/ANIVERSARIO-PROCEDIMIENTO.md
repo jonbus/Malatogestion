@@ -1,79 +1,220 @@
 # 20 ANIVERSARIO · manual del día
 
-> **Para que ese día no dependa de que alguien se acuerde de nada.**
-> **Se lee la víspera y se va tachando.**
->
-> **Estado**: **en construcción** — se va completando con lo que dicte la propiedad.
+> **Para que ese día no dependa de que nadie se acuerde de nada.**
+> **Se lee la víspera, se tacha lo que se hace, y el que llega nuevo lo puede seguir solo.**
 
 ---
 
-## 1 · Lo que hay que tener preparado ANTES
+## 1 · El día en una frase
 
-| | Qué | Dónde está | Quién |
+**La gente entra con una palmera y una bolsa, y sale con una papeleta.** **Alrededor, la tarta, la batukada, las fotos y la música.**
+
+---
+
+## 2 · Lo que tiene que estar listo ANTES
+
+| | Qué | Dónde | Quién |
 |---|---|---|---|
-| **La tarta** | **de porexpan, la grande** | **en el almacén** | — |
-| **La mesa** | la que se va a usar para la tarta | — | — |
-| **El mantel** | — | — | — |
-| **Las papeletas** | 500 · 34 hojas | — | — |
-| **La urna** | — | — | — |
+| **La tarta** | de porexpan, montada | **almacén** | — |
+| **La mesa** | un **tablón grande sobre dos caballetes** | — | — |
+| **El mantel** | **ya comprado** | — | — |
+| **Los lazos** | para decorar la tarta | — | — |
+| **Las letras** | **«20 urteurrena»** | — | — |
+| **Las palmeritas** | **500 ud**, caseras | — | — |
+| **Las bolsas** | edición 20 aniversario | — | — |
+| **La urna** y las papeletas | 500 · 34 hojas | — | — |
 | **Los carteles** | el de la urna y el de los premios | — | — |
 | **Los premios** | 113 | — | — |
-| **Las bolsas de tela** | con el lema *2006. urtetik ZUREKIN* | — | — |
+| **Los mandiles y gorros** | dos: verde | — | — |
+| **La mesa auxiliar** | para la batukada | — | — |
+| **El picoteo** | abajo, en su lista | — | — |
+
+### ⚠ Lo primero que hay que resolver: las papeletas están SIN RECORTAR
+
+**Las 500 papeletas están todavía en las 34 hojas, sin recortar y sin doblar.**
+
+**Eso es trabajo de manos, y no se puede hacer el mismo día a las 10 de la mañana con la tienda llena.**
+
+- [ ] **Recortar las 34 hojas** — por la línea de puntos
+- [ ] **Doblar las 500**
+- [ ] **Y dejarlas en la urna antes de abrir**
+
+> **Cómo se reparte el trabajo**: **cortar es lo que más tarda**. **Con dos personas y una guillotina, una hora.** **A mano con tijera, dos o tres.**
 
 ---
 
-## 2 · Lo que hay que hacer ESE DÍA
+## 3 · La mesa de la tarta — EN ESTE ORDEN
 
-### Paso 1 · Montar la mesa de la tarta
+**El orden importa**: **si se pone el mantel después, hay que levantar la tarta.**
 
-**La tarta es de porexpan** — **no se come, no se enfría, no se pincha: es un adorno grande.**
-**Va en una mesa, y esa mesa hay que montarla ese día.**
+### Paso 1 · El sitio
+- [ ] **Elegir el sitio**: **que se vea desde la calle** y **que no estorbe el paso**
+- [ ] **Comprobar que el suelo está llano** — **un tablón sobre caballetes en suelo torcido se vuelca**
 
-- [ ] **Sacar la mesa** al sitio donde va a estar
-- [ ] **Comprobar que está firme** — que no cojee ni se mueva si alguien la roza
+### Paso 2 · La mesa
+- [ ] **Abrir los dos caballetes** y **comprobar que los cuatro pies apoyan**
+- [ ] **Poner el tablón encima** y **comprobar que no baila**
+- [ ] **Si baila**: **calzar el caballete que cojea**, no el tablón
+
+### Paso 3 · El mantel
 - [ ] **Poner el mantel**
-- [ ] **Comprobar que el mantel está limpio y sin arrugas** — que caiga igual por los cuatro lados
-- [ ] **Poner la tarta en el centro**, con cuidado, **cogiéndola por la base**
-- [ ] **Comprobar que se ve desde la calle** y que **no estorba el paso**
+- [ ] **Comprobar que cae igual por los cuatro lados**
+- [ ] **Comprobar que no tiene arrugas** — **una arruga en la foto se ve**
 
-> **Y una cosa importante**: **la tarta es de porexpan y pesa poco** — **si hay aire o alguien la empuja, se cae**. **Si el sitio tiene corriente, lastrar la base o ponerla de espaldas al aire.**
+### Paso 4 · La tarta
+- [ ] **Subir la estructura** de la tarta
+- [ ] **Colocarla en el centro**
+- [ ] **Decorarla con los lazos**
+- [ ] **Poner las letras: «20 urteurrena»** — **comprobar que se leen desde la calle**
+- [ ] **Comprobar que no se mueve** — **es de porexpan: pesa poco y vuelca fácil**
+
+### Paso 5 · Las palmeritas
+- [ ] **Colocarlas alrededor de todas las bases de la tarta**
+- [ ] **Las que no quepan, aparte** — en su bandeja, **tapadas**
+- [ ] **Taparlas hasta la hora** — **están en la calle y son comida**
+
+### Paso 6 · Lo demás de la mesa
+- [ ] **La urna** con las papeletas
+- [ ] **El cartel de los premios**
+- [ ] **El cartel de la urna**
+- [ ] **Las bolsas** — **se llevan a la mesa al montarla**
+- [ ] **Los premios** — **se llevan a la mesa al montarla**
+
+> **Ojo con el peso y el trasiego**: **en esa mesa van la tarta, 500 palmeritas, la urna, las bolsas y 113 premios**. **Comprobar que el tablón aguanta y que nadie se apoya.**
 
 ---
 
-## 3 · Lo que falta por dictar
+## 4 · La mesa de la batukada
 
-**La propiedad irá diciendo. Aquí se apunta lo que queda:**
+**Entre las 11 y las 12 viene la batukada** *(la Jefa es componente)*.
 
-| | Qué falta | Estado |
+**Tiene que estar TODO puesto antes de que lleguen** — **no se puede montar mientras tocan.**
+
+- [ ] **La mesa auxiliar, montada** — con mantel si procede
+- [ ] **El picoteo, ya preparado**:
+  - **jamón**
+  - **cabecero**
+  - **chorizo**
+  - **queso**
+  - **pastas Dulcesol**
+- [ ] **Las botellas negras de agua de Pepsi** — **son el regalo**
+- [ ] **Platos, servilletas y algo para cortar**
+
+> **El picoteo se prepara ANTES de que lleguen.** **Cuando terminan de tocar, lo que quieren es comer, no esperar.**
+
+---
+
+## 5 · La carpa (si llueve)
+
+- [ ] **Mirar el tiempo el día antes**
+- [ ] **Si hay duda, montarla** — **montarla de más cuesta una hora; no tenerla cuesta el día**
+- [ ] **Comprobar que no tapa la entrada** ni la mesa de la tarta
+
+---
+
+## 6 · Los dos niños, en la puerta
+
+**Dos niños, con mandil verde y gorro de cocinero:**
+
+| | Edad | Qué da |
 |---|---|---|
-| **La urna** | dónde se pone y quién la vigila | pendiente |
-| **Las papeletas** | quién las da y cómo se controla que sea una por compra | pendiente |
-| **Los premios** | dónde se guardan y quién los entrega | pendiente |
-| **Las bolsas de tela** | cuándo se dan y a quién | pendiente |
-| **La tarta** | si se corta, si se reparte o si es solo adorno | **por confirmar** |
-| **El resto del programa** | música, actividades, horarios | pendiente |
+| **Chico** | **16** | **una cosa** |
+| **Chica** | **13** | **la otra** |
+
+**Uno da la palmera y el otro la bolsa** — **a todos los clientes, antes de entrar**.
+
+- [ ] **Que estén los dos desde la apertura**
+- [ ] **Que tengan el mandil y el gorro puestos**
+- [ ] **Que haya palmeras y bolsas a mano**, sin tener que ir a buscarlas
+- [ ] **Que un adulto esté pendiente de ellos** — **son dos críos en la puerta todo el día**
+- [ ] **Decidir quién los cubre en el relevo** para comer
+
+> **Y el detalle que lo cambia todo**: **que se les diga que dan el «buenos días»**. **Un crío que saluda y da una palmera vale más que un cartel.**
 
 ---
 
-## 4 · Lo que NO puede pasar
+## 7 · El canje: el ticket por la papeleta
 
-**Se apunta aquí lo que hay que evitar, y por qué:**
+**El cliente entra, coge su palmera y su bolsa. Al salir, cambia el ticket por una papeleta.**
 
-- **Que la tarta se caiga** — **es de porexpan y pesa poco**.
-- **Que alguien se lleve dos papeletas** con un solo ticket.
-- **Que se acaben las papeletas antes de la hora** — **500 para todo el día**.
-- **Que un premio se quede sin entregar** porque no se sabe dónde está.
-- **Que el cartel de la urna no esté puesto** y la gente no sepa que hay sorteo.
+- [ ] **La urna en la mesa**, con las papeletas dentro
+- [ ] **Una papeleta por ticket** — **no dos**
+- [ ] **El cliente mete la mano y saca la suya**
+- [ ] **Si sale premio, lo dan LOS NIÑOS**
+- [ ] **Los premios, a mano y a la vista** — **para que se vea que existen**
+
+> **Y el orden de las cosas**: **la papeleta se coge AL SALIR, después de pagar**. **Si se da antes, se llena la urna de tickets que no compraron.**
 
 ---
 
-## 5 · Quién hace qué
+## 8 · Las fotos y la música
 
-| Puesto | Qué hace ese día |
+**Sobre las 11 o las 12: la foto de todo el equipo de Malato.**
+
+- [ ] **Avisar a todo el equipo el día antes** — **que nadie se haya ido a comer**
+- [ ] **Elegir el sitio**: **delante de la tarta**
+- [ ] **Que salga la tarta y el cartel** en la foto
+
+**Y la música:**
+
+- [ ] **El anuncio de la radio**, con la canción de la IA de fondo
+- [ ] **Las dos canciones creadas para el día**
+- [ ] **Los micrófonos que hacen de altavoz**, cargados
+- [ ] **La coreografía**, si sale — **ensayarla aunque sea cinco minutos**
+
+> **Ojo al cruce**: **la batukada y las fotos caen a la misma hora**. **O se hace la foto con la batukada tocando** *(sale mejor)*, **o se hace justo antes de que empiecen**. **Decidirlo antes, no allí.**
+
+---
+
+## 9 · El día, hora a hora
+
+| Hora | Qué |
 |---|---|
-| **Jefa** | — |
+| **Antes de abrir** | **Recortar y doblar las papeletas** · montar la mesa de la tarta · el picoteo · la carpa si toca |
+| **Apertura** | **Los dos niños en la puerta** con palmeras y bolsas · la urna lista |
+| **Toda la mañana** | **Canje del ticket por la papeleta** · premios por los niños |
+| **11:00 – 12:00** | **La batukada** · **la foto del equipo** · el picoteo |
+| **Resto del día** | La música · las canciones · la coreografía |
+| **Cierre** | **Recoger la mesa** · guardar la urna · los premios que sobren |
+
+---
+
+## 10 · Quién hace qué
+
+| | Qué hace |
+|---|---|
+| **Jefa** | **Libra.** **Va y viene y está pendiente de todo.** **No se le asigna ningún puesto fijo** — **y eso es a propósito: su trabajo ese día es que todo funcione** |
 | **Coordinación** | — |
-| **Tienda** | — |
+| **Tienda** | **La jornada normal** — **la tienda funciona como cualquier día** |
 | **Cocina** | — |
 
-*(pendiente de completar)*
+*(los huecos se rellenan cuando se decida)*
+
+---
+
+## 11 · Lo que NO puede pasar
+
+| | Por qué |
+|---|---|
+| **Que no haya papeletas recortadas** | **500 sin recortar no se arreglan a las 10 de la mañana** |
+| **Que la mesa se vuelque** | **tablón sobre caballetes, con 500 palmeritas y gente alrededor** |
+| **Que las palmeritas estén al aire** | **son comida, y están en la calle** |
+| **Que alguien coja dos papeletas** con un ticket | **se acaban antes de la hora** |
+| **Que los niños se queden sin nada que dar** | **hay que reponer a media mañana** |
+| **Que la batukada llegue y no haya mesa** | **el picoteo se prepara antes** |
+| **Que se haga la foto y falte medio equipo** | **avisar el día antes** |
+
+---
+
+## 12 · Lo que queda por decir
+
+**La propiedad ha dicho que le queda algo por contar.** **Aquí se apunta:**
+
+| | Estado |
+|---|---|
+| **Quién vigila la urna** | pendiente |
+| **Quién repone palmeras y bolsas** | pendiente |
+| **Dónde se guardan los premios** hasta el canje | pendiente |
+| **Si la tarta se corta o es solo adorno** | **por confirmar** |
+| **El resto del programa** (actividades, horarios) | pendiente |
+| **Quién cubre a los niños** en el relevo | pendiente |
