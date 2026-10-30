@@ -107,18 +107,19 @@ for h in range(hojas):
         # cabecera
         c.append(centrado(x, ANCHO_CELDA, y_top - 14, "MALATO · ANIVERSARIO", 6.2, "F1", Gris))
 
+        # la misma altura para las dos: arriba, y mas grande
+        ALTO_ET = 46
         if premio:
-            c.append(centrado(x, ANCHO_CELDA, y_top - 30, "¡ENHORABUENA!", 7.6, "F2", Oro))
-            lineas = envuelve(premio, 20)
-            # centrado de verdad: la primera linea arriba del centro
-            y0 = y_top - ALTO_CELDA / 2 + (len(lineas) - 1) * 6.5 + 2
+            c.append(centrado(x, ANCHO_CELDA, y_top - ALTO_ET, "¡ENHORABUENA!", 9.6, "F2", Tinta))
+            lineas = envuelve(premio, 19)
+            y0 = y_top - ALTO_ET - 30 - (len(lineas) - 1) * 8
             for j, ln in enumerate(lineas):
-                c.append(centrado(x, ANCHO_CELDA, y0 - j * 13, ln, 11.5, "F2", Tinta))
+                c.append(centrado(x, ANCHO_CELDA, y0 - j * 15, ln, 12.5, "F2", Tinta))
         else:
-            c.append(centrado(x, ANCHO_CELDA, y_top - 44, "HOY NO HA SIDO.", 7.6, "F2", Gris))
+            c.append(centrado(x, ANCHO_CELDA, y_top - ALTO_ET, "HOY NO HA SIDO.", 9.6, "F2", Tinta))
             for j, ln in enumerate(["Gracias por acompañarnos",
                                     "en nuestro aniversario."]):
-                c.append(centrado(x, ANCHO_CELDA, y_top - 74 - j * 13, ln, 9.4, "F1", Tinta))
+                c.append(centrado(x, ANCHO_CELDA, y_top - ALTO_ET - 30 - j * 15, ln, 10.5, "F1", Tinta))
 
         # número
         c.append(texto(x + ANCHO_CELDA - 34, y_top - ALTO_CELDA + 8, f"nº {num + 1}", 6, "F1", Tenue))
