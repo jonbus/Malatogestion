@@ -162,7 +162,7 @@ ancho_logo = 200
 alto_logo = ancho_logo * LOGO_H / LOGO_W
 c.append(imagen("Logo", (ANCHO - ancho_logo) / 2, 690, ancho_logo, alto_logo))
 
-c.append(centrado(648, "20 ANIVERSARIO", 17))
+c.append(centrado(648, "2006. urtetik ZUREKIN", 16))
 c.append(linea(120, 628, ANCHO - 120, 628, 1.2))
 
 c.append(centrado(560, "CAMBIA TU TICKET", 32))
@@ -215,7 +215,7 @@ d = []
 ancho_logo2 = 210
 alto_logo2 = ancho_logo2 * LOGO_H / LOGO_W
 d.append(imagen("Logo", (ANCHO - ancho_logo2) / 2, 752, ancho_logo2, alto_logo2))
-d.append(centrado(722, "20 ANIVERSARIO", 16))
+d.append(centrado(722, "2006. urtetik ZUREKIN", 15))
 d.append(linea(95, 706, ANCHO - 95, 706, 1.2))
 d.append(centrado(668, "ESTOS SON LOS PREMIOS", 22))
 d.append(linea(95, 650, ANCHO - 95, 650, 0.8))
@@ -233,5 +233,6 @@ d.append(centrado(y - 24, "113 PREMIOS EN TOTAL", 19))
 d.append(centrado(y - 58, "Cambia tu ticket por una papeleta.", 13.5, "F1", 0.25))
 d.append(imagen("O", ANCHO / 2 - 11, 42, 22, 24))
 
-escribir_pdf("CARTEL-URNA.pdf", [(("".join(c)), [("Logo", LOGO), ("O", O_GLIFO)])])
+# el cartel de la urna lo hace cartel-urna2.py (el dibujado).
+# aqui SOLO los premios, para no pisarlo.
 escribir_pdf("CARTEL-PREMIOS.pdf", [(("".join(d)), [("Logo", LOGO), ("O", O_GLIFO)])])

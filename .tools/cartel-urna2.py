@@ -44,7 +44,7 @@ alto_logo = int(ancho_logo * logo.size[1] / logo.size[0])
 logo = logo.resize((ancho_logo, alto_logo), Image.LANCZOS)
 img.paste(logo, ((W - ancho_logo) // 2, 110))
 
-centro(110 + alto_logo + 40, "20 ANIVERSARIO", 112, ROUND)
+centro(110 + alto_logo + 45, "2006. urtetik ZUREKIN", 104, COMIC)
 
 # ---------------------------------------------------------------- el titulo
 centro(640, "CAMBIA TU TICKET", 168)
