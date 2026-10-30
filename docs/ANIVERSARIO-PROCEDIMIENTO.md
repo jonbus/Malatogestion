@@ -7,7 +7,7 @@
 
 ## 1 · El día en una frase
 
-**La gente entra con una palmera y una bolsa, y sale con una papeleta.** **Alrededor, la tarta, la batukada, las fotos y la música.**
+**De 10:00 a 14:30.** **La gente entra con una palmera y una bolsa, y sale con una papeleta.** **Alrededor, la tarta, la batukada, las fotos y la música.**
 
 ---
 
@@ -199,15 +199,21 @@
 
 ## 10 · El día, hora a hora
 
-| Hora | Qué |
+**El aniversario va de 10:00 a 14:30.** **Cuatro horas y media.** **Todo lo que hay que montar, se monta antes de las 10.**
+
+| Hora | Qué tiene que estar hecho |
 |---|---|
 | **Jueves y viernes** | **Montar los globos** con el compresor · dejarlos en el almacén |
-| **Antes de abrir** | **Subir los globos** · **recortar y doblar las papeletas** · montar la mesa de la tarta · el picoteo · la carpa si toca |
-| **Apertura** | **Los dos niños en la puerta** con palmeras y bolsas · la urna lista |
-| **Toda la mañana** | **Canje del ticket por la papeleta** · premios por los niños |
-| **11:00 – 12:00** | **La batukada** · **la foto del equipo** · el picoteo |
-| **Resto del día** | La música · las canciones · la coreografía |
-| **Cierre** | **Recoger la mesa** · guardar la urna · los premios que sobren |
+| **Antes de las 9:00** | **Subir los globos** y colocarlos |
+| **9:00 – 10:00** | **Recortar y doblar las 500 papeletas** · la urna · **la mesa de la tarta**: caballetes, tablón, mantel, tarta, lazos, letras, palmeritas |
+| **10:00** | **Abrir.** **Los dos niños en la puerta** con las palmeras y las bolsas |
+| **10:00 – 14:30** | **El canje**: el ticket por la papeleta · **los premios, los niños** · la música y las canciones |
+| **11:00 – 12:00** | **La batukada** · **la foto del equipo** · **el picoteo** |
+| **14:30** | **Cerrar.** Recoger la mesa · guardar la urna · los premios que sobren |
+
+> **Lo que no esté a las 10:00, ya no se monta.** **A partir de ahí la tienda está llena y no hay hueco.** **Por eso las papeletas se recortan antes** — **las 500.**
+
+> **Y ojo con la hora punta**: **de 10:00 a 14:30 son cuatro horas y media para 500 papeletas** — **unas 110 por hora**. **Si a las 11 hay cola, la cola es en la puerta y la foto se hace con cola.** **No pasa nada** — **pero mejor saberlo.**
 
 ---
 
