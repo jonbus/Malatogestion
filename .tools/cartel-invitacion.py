@@ -94,30 +94,30 @@ def ticket(cx, cy, w, h, ang):
 
 # ---------------------------------------------------------------- arriba
 logo = Image.open(".tmp-logo/marca-negro.png").convert("L")
-al = 760
+al = 1020
 la = int(al * logo.size[1] / logo.size[0])
 logo = logo.resize((al, la), Image.LANCZOS)
-img.paste(logo, ((W - al) // 2, 110))
-centro(110 + la + 26, "2006. urtetik ZUREKIN", 74)
+img.paste(logo, ((W - al) // 2, 80))
+centro(80 + la + 18, "2006. urtetik ZUREKIN", 72)
 
 # ---------------------------------------------------------------- la fecha
-centro(542, "DOMINGO", 142, ROUND)
-centro(700, "8", 392, ROUND)
-centro(1105, "DE NOVIEMBRE", 126, ROUND)
-centro(1252, "20 ANIVERSARIO", 96)
-centro(1372, "por la mañana", 92)
+centro(596, "DOMINGO", 140, ROUND)
+centro(748, "8", 372, ROUND)
+centro(1112, "DE NOVIEMBRE", 124, ROUND)
+centro(1252, "20 ANIVERSARIO", 94)
+centro(1364, "por la mañana", 90)
 
 # ---------------------------------------------------------------- los dibujos
 star_x = [(330, 1330), (2160, 1330), (250, 1600), (2240, 1610)]
 for (sx, sy) in [(215, 1100), (2265, 1100), (300, 1290), (2180, 1290)]:
     estrella(sx, sy, 58)
 
-globo(430, 1600, 120)
-globo(700, 1520, 96)
-globo(300, 1830, 88)
-globo(2050, 1620, 110)
-globo(2280, 1800, 92)
-globo(1830, 1520, 84)
+globo(400, 1620, 158)
+globo(690, 1520, 128)
+globo(268, 1880, 118)
+globo(2080, 1640, 146)
+globo(2310, 1860, 122)
+globo(1840, 1500, 114)
 
 tarta(760, 1980, 640, 520)
 tambor(1830, 2080, 420, 520)
@@ -128,15 +128,16 @@ for (cx, cy, r) in [(1330, 2330, 22), (1180, 2500, 16), (1500, 2520, 18), (980, 
     d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=NEGRO)
 
 # ---------------------------------------------------------------- el texto
-centro(2680, "TARTA · SORTEO · BATUKADA", 92)
-centro(2790, "PALMERITAS Y MÚSICA", 92)
+centro(2648, "TARTA · PREMIOS", 104)
+centro(2762, "ACTUACIÓN MUSICAL", 96)
+centro(2870, "DULCES ARTESANOS", 94)
 
-d.line([180, 2930, W - 180, 2930], fill=NEGRO, width=14)
-centro(2975, "¡NO TE LO PUEDES", 122)
-centro(3110, "PERDER!", 122)
-d.line([180, 3270, W - 180, 3270], fill=NEGRO, width=14)
+d.line([180, 3010, W - 180, 3010], fill=NEGRO, width=14)
+centro(3032, "¡NO TE LO PUEDES", 108)
+centro(3142, "PERDER!", 108)
+d.line([180, 3300, W - 180, 3300], fill=NEGRO, width=14)
 
-centro(3310, "Te esperamos. Ven a celebrarlo con nosotros.", 66, ROUND)
+centro(3322, "Te esperamos. Ven a celebrarlo con nosotros.", 58, ROUND)
 
 img.save("CARTEL-INVITACION.pdf", "PDF", resolution=300.0)
 print(f"  CARTEL-INVITACION.pdf · {round(__import__('os').path.getsize('CARTEL-INVITACION.pdf')/1024,1)} KB")
