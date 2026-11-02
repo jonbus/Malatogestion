@@ -100,12 +100,13 @@ la = int(al * logo.size[1] / logo.size[0])
 logo = logo.resize((al, la), Image.LANCZOS)
 img.paste(logo, ((W - al) // 2, 80))
 # globos a la altura del logotipo, para que el cartel ya sea fiesta desde arriba
-globo(330, 205, 118, 0.40)
-globo(560, 130, 88, 0.32)
-globo(2140, 195, 122, 0.40)
-globo(2380, 120, 90, 0.32)
-estrella(170, 470, 46)
-estrella(2330, 470, 42)
+# globos al doble, pegados al logotipo pero sin taparlo
+globo(280, 340, 236, 0.12)      # el grande de la izquierda
+globo(520, 250, 176, 0.12)      # el de arriba
+globo(2200, 340, 240, 0.12)     # el grande de la derecha
+globo(1960, 250, 178, 0.12)     # el de arriba
+estrella(150, 690, 44)
+estrella(2350, 690, 40)
 centro(80 + la + 18, "2006. urtetik ZUREKIN", 72)
 
 # ---------------------------------------------------------------- la fecha
