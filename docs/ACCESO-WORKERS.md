@@ -343,6 +343,7 @@ sudo tailscale funnel --bg --https=8443 http://127.0.0.1:3001
 | `deploy/landing-servidor.mjs` | La página en construcción (código) |
 | `deploy/landing/index.html` | El HTML de la portada |
 | `deploy/landing/logo-o-verde.png` | El logo de la portada |
+| `deploy/landing/SambadaMalato.mp3` | Música de bienvenida de la portada |
 | `deploy/malato-landing.service` | Servicio systemd de la portada |
 | `deploy/cloudflared-supermalato.service` | Servicio systemd del túnel |
 | `/opt/malato-gestion/workers-gateway.mjs` | Copia que corre en la Pi |

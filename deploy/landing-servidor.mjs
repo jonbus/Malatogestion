@@ -2,7 +2,7 @@
 /*
   Página "en construcción" para la raíz de supermalato.es.
 
-  Solo sirve dos ficheros: la portada y el logo. Todo lo demás es un 404.
+  Sirve la portada, el logo y la sambada de bienvenida. Todo lo demás es un 404.
   El asador NO pasa por aquí: sus rutas (/asador y /erretegia) van directas
   al 8082 desde el túnel.
 */
@@ -20,15 +20,76 @@ const TIPOS = {
   '.html': 'text/html; charset=utf-8',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.mp3': 'audio/mpeg'
 };
 
-const PERMITIDOS = new Set(['index.html', 'logo-o-verde.png']);
+const PERMITIDOS = new Set(['index.html', 'logo-o-verde.png', 'SambadaMalato.mp3']);
 
 function cabecerasSeguridad(res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'DENY');
   res.setHeader('Referrer-Policy', 'no-referrer');
+}
+
+/* Envía un fichero, con soporte de Range para que el audio pueda buscar
+   dentro del MP3 sin descargarlo entero otra vez. */
+function enviarFichero(req, res, fichero, rel) {
+  let st;
+  try { st = fs.statSync(fichero); }
+  catch (e) {
+    cabecerasSeguridad(res);
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    return res.end('no encontrado');
+  }
+
+  const tipo = TIPOS[path.extname(fichero)] || 'application/octet-stream';
+  const cache = rel === 'index.html' ? 'no-store' : 'public, max-age=86400';
+  const rango = req.headers.range;
+  cabecerasSeguridad(res);
+
+  if (rango) {
+    const m = /^bytes=(\d*)-(\d*)$/.exec(String(rango).trim());
+    let inicio = 0;
+    let fin = st.size - 1;
+    if (m) {
+      if (m[1] === '' && m[2] !== '') {
+        inicio = Math.max(0, st.size - Number(m[2]));
+      } else {
+        inicio = m[1] ? Number(m[1]) : 0;
+        fin = m[2] ? Number(m[2]) : st.size - 1;
+      }
+      if (Number.isFinite(inicio) && Number.isFinite(fin) &&
+          inicio >= 0 && inicio <= fin && inicio < st.size) {
+        fin = Math.min(fin, st.size - 1);
+        res.writeHead(206, {
+          'Content-Type': tipo,
+          'Content-Length': fin - inicio + 1,
+          'Content-Range': `bytes ${inicio}-${fin}/${st.size}`,
+          'Accept-Ranges': 'bytes',
+          'Cache-Control': cache
+        });
+        if (req.method === 'HEAD') return res.end();
+        const flujo = fs.createReadStream(fichero, { start: inicio, end: fin });
+        flujo.on('error', () => res.destroy());
+        return flujo.pipe(res);
+      }
+    }
+    res.writeHead(416, { 'Content-Range': `bytes */${st.size}`,
+                         'Cache-Control': 'no-store' });
+    return res.end();
+  }
+
+  res.writeHead(200, {
+    'Content-Type': tipo,
+    'Content-Length': st.size,
+    'Accept-Ranges': 'bytes',
+    'Cache-Control': cache
+  });
+  if (req.method === 'HEAD') return res.end();
+  const flujo = fs.createReadStream(fichero);
+  flujo.on('error', () => res.destroy());
+  flujo.pipe(res);
 }
 
 const servidor = http.createServer((req, res) => {
@@ -56,23 +117,7 @@ const servidor = http.createServer((req, res) => {
     return res.end('no encontrado');
   }
 
-  let contenido;
-  try {
-    contenido = fs.readFileSync(fichero);
-  } catch (e) {
-    cabecerasSeguridad(res);
-    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-    return res.end('no encontrado');
-  }
-
-  cabecerasSeguridad(res);
-  res.writeHead(200, {
-    'Content-Type': TIPOS[path.extname(fichero)] || 'application/octet-stream',
-    'Content-Length': contenido.length,
-    'Cache-Control': rel === 'index.html' ? 'no-store' : 'public, max-age=86400'
-  });
-  if (req.method === 'HEAD') return res.end();
-  res.end(contenido);
+  enviarFichero(req, res, fichero, rel);
 });
 
 servidor.listen(PUERTO, HOST, () => {

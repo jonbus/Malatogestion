@@ -195,6 +195,11 @@ y reescribe las llamadas `"/api/"` cada vez. Solo se actualiza
 `/opt/malato-gestion/landing/index.html` (o en `deploy/landing/index.html` y se
 copia). El servidor la lee en cada petición: **no hace falta reiniciar**.
 
+**Sonido de bienvenida:** `SambadaMalato.mp3` (2,2 MB, 1 minuto 37 segundos).
+La página intenta reproducirlo al abrir y muestra un botón **Escuchar/Parar**.
+Los navegadores pueden bloquear el autoplay; en ese caso hay que pulsar el botón.
+El fichero está en `deploy/landing/SambadaMalato.mp3`.
+
 > **Detalle completo del acceso público, la clave y Tailscale:**
 > **[`ACCESO-WORKERS.md`](ACCESO-WORKERS.md)**.
 

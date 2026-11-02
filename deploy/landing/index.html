@@ -13,6 +13,7 @@
     --papel: #f6f3ea;
     --borde: #ddd6c6;
     --suave: #66736b;
+    --verde-suave: #eef7f1;
   }
   * { box-sizing: border-box; }
   html, body { height: 100%; }
@@ -81,6 +82,20 @@
     font-size: 13px;
     line-height: 1.55;
   }
+  .sonido { margin: 20px 0 0; }
+  .sonido button {
+    border: 1px solid var(--borde);
+    background: #fff;
+    color: var(--verde);
+    border-radius: 999px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .sonido button:hover { background: var(--verde-suave); }
+  .sonido button:active { transform: translateY(1px); }
   @media (max-width: 420px) {
     main { padding: 34px 20px 28px; border-radius: 20px; }
     .logo { width: 88px; }
@@ -95,6 +110,72 @@
     <p class="texto">Estamos preparando la nueva web de Malato. Muy pronto estará aquí.</p>
     <div class="linea" aria-hidden="true"></div>
     <p class="pie">Gracias por tu paciencia. Si necesitas hacer un pedido, usa el enlace directo que te ha dado la tienda.</p>
+    <div class="sonido">
+      <button id="btn-sonido" type="button" aria-label="Reproducir o parar la música">
+        🔊 Escuchar la sambada
+      </button>
+    </div>
   </main>
+
+  <audio id="audio-portada" src="/SambadaMalato.mp3" preload="auto" playsinline></audio>
+
+  <script>
+  (function () {
+    const audio = document.getElementById("audio-portada");
+    const boton = document.getElementById("btn-sonido");
+    const CLAVE = "malato-portada-sonido";
+
+    audio.volume = 0.5;
+
+    function guardar(estado) {
+      try { localStorage.setItem(CLAVE, estado); } catch (e) {}
+    }
+
+    function pintar() {
+      const suena = !audio.paused && !audio.ended;
+      boton.textContent = suena ? "🔇 Parar" : "🔊 Escuchar la sambada";
+      boton.setAttribute("aria-pressed", suena ? "true" : "false");
+    }
+
+    async function reproducir() {
+      try {
+        await audio.play();
+        guardar("on");
+      } catch (e) {
+        /* El navegador ha bloqueado el audio automático. */
+      }
+      pintar();
+    }
+
+    boton.addEventListener("click", function () {
+      if (audio.paused || audio.ended) {
+        if (audio.ended) audio.currentTime = 0;
+        reproducir();
+      } else {
+        audio.pause();
+        guardar("off");
+        pintar();
+      }
+    });
+
+    audio.addEventListener("play", pintar);
+    audio.addEventListener("pause", pintar);
+    audio.addEventListener("ended", function () {
+      guardar("off");
+      pintar();
+    });
+
+    /* Intento al abrir. Si el navegador lo bloquea, queda el botón. */
+    let preferencia = "on";
+    try { preferencia = localStorage.getItem(CLAVE) || "on"; } catch (e) {}
+    if (preferencia !== "off") {
+      const intentar = () => { reproducir(); };
+      if (document.readyState === "complete") intentar();
+      else window.addEventListener("load", intentar, { once: true });
+    }
+
+    pintar();
+  })();
+  </script>
 </body>
 </html>
