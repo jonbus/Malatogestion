@@ -148,7 +148,7 @@ d.line([180, 3300, W - 180, 3300], fill=NEGRO, width=14)
 centro(3322, "Te esperamos. Ven a celebrarlo con nosotros.", 58, ROUND)
 
 # --- margen de 1,5 cm mas por arriba y por abajo (1,5 cm = 177 px a 300 ppp)
-MARGEN = 177
+MARGEN = 354      # 3 cm: 1,5 cm que ya tenia + 1,5 cm mas
 CABE = H - 2 * MARGEN
 
 caja = img.convert("L").point(lambda px: 0 if px > 250 else 255).getbbox()
