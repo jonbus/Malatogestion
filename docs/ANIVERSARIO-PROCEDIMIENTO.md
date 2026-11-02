@@ -41,6 +41,7 @@
 | **Las letras** | **«20 urteurrena»** | — | — |
 | **Las palmeritas** | **500 ud**, caseras | — | — |
 | **Las gominolas** | un platito con gummy jellys | — | — |
+| **Las mini napolitanas** | **las manda Cadagua** — **por si no llegan las palmeras, y para la batukada** | — | — |
 | **Las bolsas** | edición 20 aniversario | — | — |
 | **La urna** y las papeletas | 500, **recortadas y dobladas** | **listas el lunes 2** | **—** |
 | **Los carteles** | el de la urna y el de los premios | — | — |
@@ -126,6 +127,7 @@
 - [ ] **Colocarlas alrededor de todas las bases de la tarta**
 - [ ] **Las que no quepan, aparte** — en su bandeja, **tapadas**
 - [ ] **Taparlas hasta la hora** — **están en la calle y son comida**
+- [ ] **Las mini napolitanas de Cadagua, aparte** — **son el recambio si se acaban las palmeras**, y una parte **va para la batukada**
 
 ### Paso 6 · Lo demás de la mesa
 - [ ] **La urna** con las papeletas
@@ -163,6 +165,12 @@
   - **queso**
   - **pastas Dulcesol**
 - [ ] **Las botellas negras de agua de Pepsi** — **son el regalo**
+
+**Y a cada integrante de la batukada se le regala una bolsa del 20 aniversario con unos calcetines y una cantimplora.**
+
+- [ ] **Preparar tantas bolsas como integrantes vengan**
+- [ ] **Las preparan los niños**, en un rato que no haya clientes
+- [ ] **Que estén listas antes de que la batukada termine** — **se entregan al acabar, no después**
 - [ ] **Platos, servilletas y algo para cortar**
 
 > **El picoteo se prepara ANTES de que lleguen.** **Cuando terminan de tocar, lo que quieren es comer, no esperar.**
@@ -174,6 +182,7 @@
 - [ ] **Mirar el tiempo el día antes**
 - [ ] **Si hay duda, montarla** — **montarla de más cuesta una hora; no tenerla cuesta el día**
 - [ ] **Comprobar que no tapa la entrada** ni la mesa de la tarta
+- [ ] **Dejarla MONTADA todo el día**, aunque salga el sol — **por si llueve de repente o por lo que pueda pasar**
 
 ---
 
@@ -210,6 +219,9 @@
 - [ ] **El cliente mete la mano y saca la suya**
 - [ ] **Si sale premio, lo dan LOS NIÑOS**
 - [ ] **Los premios, a mano y a la vista** — **para que se vea que existen**
+- [ ] **La PAPELERA**: donde van las papeletas **no premiadas**
+- [ ] **La CAJITA**: donde van las papeletas **premiadas** — **esas se guardan, son el control**
+- [ ] **Las dos, ya preparadas**, al lado de la urna
 
 > **Y el orden de las cosas**: **la papeleta se coge AL SALIR, después de pagar**. **Si se da antes, se llena la urna de tickets que no compraron.**
 
@@ -234,7 +246,25 @@
 
 ---
 
-## 11 · El día, hora a hora
+## 11 · El anuncio, unos días antes
+
+**Antes del domingo hay que avisar a todo el mundo**, o el día llega y no se ha enterado nadie.
+
+- [ ] **A la familia** — por teléfono, no por el estado
+- [ ] **A los amigos**
+- [ ] **A los clientes** — **en la tienda, en voz alta**: *«el domingo 8 hacemos 20 años, ven»*
+- [ ] **En el estado de WhatsApp**
+- [ ] **El cartel, pegado en la tienda**
+
+**Y el vídeo:**
+
+- [ ] **Fotos de las trabajadoras**
+- [ ] **La canción de samba de Malato** por debajo
+- [ ] **Montarlo y mandarlo** — **cuanto antes, mejor**: **un vídeo el sábado por la noche no lo ve nadie**
+
+> **Y una cosa**: **el cartel dice «domingo 8, por la mañana»** — **cuando lo mandes, di la hora**: **de 10:00 a 14:30**. **«Por la mañana» se convierte en «a las 9 y media» si no se dice.**
+
+## 12 · El día, hora a hora
 
 **El aniversario va de 10:00 a 14:30.** **Cuatro horas y media.** **Todo lo que hay que montar, se monta antes de las 10.**
 
@@ -243,6 +273,7 @@
 | **Jueves 5 y viernes 6** | **Montar los globos** con el compresor · dejarlos en el almacén |
 | **Antes de las 9:00** | **Subir los globos** y colocarlos |
 | **9:00 – 10:00** | **La urna con las papeletas** · **la mesa de la tarta**: caballetes, tablón, mantel, tarta, lazos, letras, palmeritas |
+| **9:00** | **Hacer o reservar sitio en el PARKING** para la batukada |
 | **10:00** | **Abrir.** **Los dos niños en la puerta** con las palmeras y las bolsas |
 | **10:00 – 14:30** | **El canje**: el ticket por la papeleta · **los premios, los niños** · la música y las canciones |
 | **11:00 – 12:00** | **La batukada** · **la foto del equipo** · **el picoteo** |
@@ -254,7 +285,7 @@
 
 ---
 
-## 12 · Quién hace qué
+## 13 · Quién hace qué
 
 | | Qué hace |
 |---|---|
@@ -267,7 +298,7 @@
 
 ---
 
-## 13 · Lo que NO puede pasar
+## 14 · Lo que NO puede pasar
 
 | | Por qué |
 |---|---|
@@ -283,7 +314,7 @@
 
 ---
 
-## 14 · Lo que queda por decir
+## 15 · Lo que queda por decir
 
 **La propiedad ha dicho que le queda algo por contar.** **Aquí se apunta:**
 
