@@ -44,14 +44,15 @@ def estrella(cx, cy, r, rellena=True):
         d.line(pts + [pts[0]], fill=NEGRO, width=G)
 
 
-def globo(cx, cy, r):
+def globo(cx, cy, r, largo=1.0):
     d.ellipse([cx - r, cy - r * 1.18, cx + r, cy + r * 1.18], fill=BLANCO, outline=NEGRO, width=G)
     d.polygon([(cx - r * 0.16, cy + r * 1.12), (cx + r * 0.16, cy + r * 1.12), (cx, cy + r * 1.32)],
               fill=NEGRO)
     # el hilo, ondulado
     pts = [(cx, cy + r * 1.32)]
-    for k in range(1, 7):
-        pts.append((cx + (18 if k % 2 else -18), cy + r * 1.32 + k * r * 0.32))
+    pasos = max(2, int(6 * largo))
+    for k in range(1, pasos + 1):
+        pts.append((cx + (18 if k % 2 else -18), cy + r * 1.32 + k * r * 0.32 * largo))
     d.line(pts, fill=NEGRO, width=6, joint="curve")
 
 
@@ -98,6 +99,13 @@ al = 1020
 la = int(al * logo.size[1] / logo.size[0])
 logo = logo.resize((al, la), Image.LANCZOS)
 img.paste(logo, ((W - al) // 2, 80))
+# globos a la altura del logotipo, para que el cartel ya sea fiesta desde arriba
+globo(330, 205, 118, 0.40)
+globo(560, 130, 88, 0.32)
+globo(2140, 195, 122, 0.40)
+globo(2380, 120, 90, 0.32)
+estrella(170, 470, 46)
+estrella(2330, 470, 42)
 centro(80 + la + 18, "2006. urtetik ZUREKIN", 72)
 
 # ---------------------------------------------------------------- la fecha
@@ -138,6 +146,26 @@ centro(3142, "PERDER!", 108)
 d.line([180, 3300, W - 180, 3300], fill=NEGRO, width=14)
 
 centro(3322, "Te esperamos. Ven a celebrarlo con nosotros.", 58, ROUND)
+
+# --- margen de 1,5 cm mas por arriba y por abajo (1,5 cm = 177 px a 300 ppp)
+MARGEN = 177
+CABE = H - 2 * MARGEN
+
+caja = img.convert("L").point(lambda px: 0 if px > 250 else 255).getbbox()
+contenido = img.crop(caja)
+escala = CABE / contenido.size[1]
+nuevo_alto = CABE
+nuevo_ancho = int(contenido.size[0] * escala)
+if nuevo_ancho > W - 2 * 60:
+    nuevo_ancho = W - 120
+    nuevo_alto = int(contenido.size[1] * nuevo_ancho / contenido.size[0])
+contenido = contenido.resize((nuevo_ancho, nuevo_alto), Image.LANCZOS)
+
+lienzo = Image.new("RGB", (W, H), BLANCO)
+lienzo.paste(contenido, ((W - nuevo_ancho) // 2, MARGEN))
+img = lienzo
+print(f"  margen arriba y abajo: {MARGEN} px ({round(MARGEN/300*2.54,1)} cm)")
+print(f"  contenido: {nuevo_ancho} x {nuevo_alto} px")
 
 img.save("CARTEL-INVITACION.pdf", "PDF", resolution=300.0)
 print(f"  CARTEL-INVITACION.pdf · {round(__import__('os').path.getsize('CARTEL-INVITACION.pdf')/1024,1)} KB")
