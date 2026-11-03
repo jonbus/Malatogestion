@@ -86,7 +86,7 @@ y = paso(y, "10:00", "ABRIR. Los dos niños en la puerta: uno da la palmera, el 
 y = paso(y, "10:00", "Empieza EL CANJE: el ticket por una papeleta. Premios: las palmeras y lo que salga, lo dan los niños.")
 y = paso(y, "12:00", "La BATUKADA (Battuere, de Amurrio). La mesa auxiliar y el picoteo YA puestos: jamón, cabecero, chorizo, queso, pastas, botellas de agua.")
 y = paso(y, "12:30", "LA FOTO DE TODO EL EQUIPO, con la batukada tocando.")
-y = paso(y, "12:00", "Regalos a la batukada: bolsa + calcetines + cantimplora. Los preparan los niños.")
+y = paso(y, "13:00", "Regalos a la batukada, al acabar: bolsa + calcetines + cantimplora. Los preparan los niños.")
 y = paso(y, "14:30", "CERRAR. Recoger la mesa. Guardar la urna. Contar la cajita: tienen que ser 113.")
 
 # --- lo que no puede fallar
