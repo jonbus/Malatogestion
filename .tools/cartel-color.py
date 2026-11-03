@@ -227,9 +227,19 @@ def haz(idioma):
     lienzo = Image.new("RGB", (W, H), CREMA)
     lienzo.paste(contenido, ((W - nw) // 2, MARGEN))
 
-    lienzo.save(T["salida"], "PDF", resolution=300.0)
     import os
+    lienzo.save(T["salida"], "PDF", resolution=300.0)
     print(f"  {T['salida']} · {round(os.path.getsize(T['salida'])/1024,1)} KB")
+
+    # --- foto para mandar por WhatsApp: grande, y otra ya preparada
+    nombre = T["salida"].replace(".pdf", "")
+    lienzo.save(nombre + ".jpg", "JPEG", quality=93, optimize=True)
+    print(f"  {nombre}.jpg · {round(os.path.getsize(nombre + '.jpg')/1024,1)} KB")
+
+    peq = lienzo.resize((1600, int(1600 * H / W)), Image.LANCZOS)
+    peq.save(nombre + "-whatsapp.jpg", "JPEG", quality=90, optimize=True)
+    print(f"  {nombre}-whatsapp.jpg · {round(os.path.getsize(nombre + '-whatsapp.jpg')/1024,1)} KB")
+
     lienzo.resize((W // 3, H // 3), Image.LANCZOS).save(f".tmp-cart/{idioma}-vista.png")
 
 
