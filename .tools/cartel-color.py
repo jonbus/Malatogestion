@@ -22,6 +22,7 @@ NARANJA = (246, 146, 46)
 NEGRO = (0, 0, 0)
 BLANCO = (255, 255, 255)
 ROSA = (250, 190, 205)
+VERDE_MALATO = (30, 154, 69)      # el de la «o» del logotipo
 
 COMIC = "C:\\Windows\\Fonts\\comicbd.ttf"
 ROUND = "C:\\Windows\\Fonts\\ARLRDBD.TTF"
@@ -74,6 +75,28 @@ def haz(idioma):
         c = d.textbbox((0, 0), texto, font=ft)
         d.text(((W - (c[2] - c[0])) / 2 - c[0], y), texto, font=ft, fill=color)
         return c[3] - c[1]
+
+    def nube(x0, y0, x1, y1, color):
+        """Una nube: varios bollos unidos por la base, todo del mismo color."""
+        alto = y1 - y0
+        ancho = x1 - x0
+        # la base
+        d.rounded_rectangle([x0 + ancho * 0.03, y0 + alto * 0.10,
+                             x1 - ancho * 0.03, y1 - alto * 0.04],
+                            radius=alto * 0.30, fill=color)
+        # los bollos, asomando solo por el borde de arriba
+        for fx, fr in [(0.12, 0.17), (0.26, 0.20), (0.41, 0.18), (0.55, 0.21),
+                       (0.69, 0.19), (0.83, 0.20), (0.94, 0.16)]:
+            cx = x0 + ancho * fx
+            r = alto * fr
+            cy = y0 + r * 0.92
+            d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
+        # y dos bollos pequenos a los lados, para que no parezca un rectangulo
+        for fx, fy, fr in [(0.02, 0.62, 0.13), (0.98, 0.64, 0.12)]:
+            cx = x0 + ancho * fx
+            cy = y0 + alto * fy
+            r = alto * fr
+            d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
 
     def estrella(cx, cy, r, color=AMARILLO):
         pts = []
@@ -143,13 +166,13 @@ def haz(idioma):
     globo(2200, 340, 240, AZUL, 0.12)
     globo(1960, 250, 178, VERDE, 0.12)
 
-    # --- la banda del coral, con la fecha en blanco
-    d.rectangle([0, 530, W, 1470], fill=CORAL)
-    centro(560, T["domingo"], 140, ROUND, BLANCO)
-    centro(700, T["ocho"], 372, ROUND, BLANCO)
-    centro(1112, T["noviembre"], 124, ROUND, BLANCO)
-    centro(1252, T["aniversario"], 94, ROUND, BLANCO)
-    centro(1364, T["manana"], 90, COMIC, BLANCO)
+    # --- la nube verde con la fecha en blanco
+    nube(110, 430, W - 110, 1590, VERDE_MALATO)
+    centro(650, T["domingo"], 140, ROUND, BLANCO)
+    centro(790, T["ocho"], 360, ROUND, BLANCO)
+    centro(1180, T["noviembre"], 124, ROUND, BLANCO)
+    centro(1310, T["aniversario"], 94, ROUND, BLANCO)
+    centro(1420, T["manana"], 90, COMIC, BLANCO)
 
     # --- los dibujos
     for (sx, sy) in [(215, 1600), (2265, 1600), (300, 1790), (2180, 1790)]:
@@ -184,11 +207,11 @@ def haz(idioma):
     ancho2 = d.textlength(T["gancho2"], font=ft) if T["gancho2"] else 0
     ancho = max(ancho1, ancho2) + 180
     alto_caja = 300 if T["gancho2"] else 180
-    d.rectangle([(W - ancho) / 2, caja_y, (W + ancho) / 2, caja_y + alto_caja],
-                fill=AMARILLO, outline=NEGRO, width=14)
-    centro(caja_y + 40, T["gancho1"], 104)
+    d.rounded_rectangle([(W - ancho) / 2, caja_y, (W + ancho) / 2, caja_y + alto_caja],
+                        radius=48, fill=VERDE_MALATO)
+    centro(caja_y + 40, T["gancho1"], 104, COMIC, BLANCO)
     if T["gancho2"]:
-        centro(caja_y + 165, T["gancho2"], 104)
+        centro(caja_y + 165, T["gancho2"], 104, COMIC, BLANCO)
 
     # --- el pie
     centro(caja_y + alto_caja + 70, T["pie"], 60, ROUND)
