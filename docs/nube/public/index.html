@@ -448,7 +448,26 @@ let formTarea = false, textoTarea = "", puestoTarea = "tienda";
 let formOfertas = false, ofertasDesde = "", ofertasHasta = "", ofertasTitulo = "";
 let recuentos = {};   // el recuento del lunes, por fecha del lunes
 let tahona = {};      // el pan del panadero, por fecha
-let panCual = "entrada";   // qué bloque del pan se está viendo: entrada o devolución
+let panCual = "entrada";
+let panVista = "tahona";   // dentro de «Registro de panes»: tahona o zuaza
+
+/* los dos botones de arriba: Tahona y Zuaza */
+function botonesPan(){
+  const chulo = (q)=> panVista === q
+    ? "font-weight:800;text-decoration:underline"
+    : "opacity:.62";
+  return `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">` +
+    `<button class="btn-add-2" type="button" style="${chulo("tahona")}" ` +
+    `onclick="verPanVista('tahona')">Tahona</button>` +
+    `<button class="btn-add-2" type="button" style="${chulo("zuaza")}" ` +
+    `onclick="verPanVista('zuaza')">Zuaza</button></div>`;
+}
+
+function verPanVista(k){
+  panVista = (k === "zuaza") ? "zuaza" : "tahona";
+  pinta();
+  guardaVista();
+}   // qué bloque del pan se está viendo: entrada o devolución
 let encargosFecha = [];   // los encargos: series con fecha
 let agenda = [];          // los proveedores, con sus teléfonos
 let turnoTarea = "", tipoTarea = "extra";
@@ -2387,7 +2406,7 @@ function pintaZuaza(){
   const ped = dia.pedido || {};
   const v = (x)=> (x === null || x === undefined) ? "" : x;
 
-  let html = `<h2 class="bloque">Zuaza<small>${bonito(f)}</small></h2>`;
+  let html = botonesPan() + `<h2 class="bloque">Zuaza<small>${bonito(f)}</small></h2>`;
 
   html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">
       <button class="btn-add-2" type="button" onclick="moverFechaZuaza(-1)">◀ día anterior</button>
@@ -3676,7 +3695,6 @@ const MENU_POR_PUESTO = {
   coordinacion: [
     ["calendario", "Calendario", "📅"],
     ["panes", "Registro de panes", "🍞"],
-    ["zuaza", "Zuaza", "🥖"],
     ["extra", "Tareas extra", "📌"],
     ["apertura", "Apertura", "🔑"],
     ["dia", "El día", "📋"],
@@ -3685,7 +3703,6 @@ const MENU_POR_PUESTO = {
   gerencia: [
     ["general", "El día", "📋"],
     ["turno", "Turno", "📅"],
-    ["zuaza", "Zuaza", "🥖"],
     ["calendario", "Calendario", "🗓"],
     ["panes", "Registro de panes", "🍞"],
     ["extra", "Tareas extra", "📌"]
@@ -3755,12 +3772,13 @@ function pintaMenu(){
 
 /* la sección «Registro de panes»: aquí vive el pan, no dentro de apertura ni cierre */
 function pintaPanes(){
+  if(panVista === "zuaza"){ pintaZuaza(); return; }
   /* la tienda apunta la devolución; coordinación y la Jefa pueden con las dos */
   const esTienda = quien.puesto === "tienda";
   const cual = esTienda ? "devolucion" : (panCual === "devolucion" ? "devolucion" : "entrada");
   const c = document.getElementById("cuerpo");
 
-  let html = "";
+  let html = botonesPan();
   if(!esTienda){
     const activo = (q)=> cual === q
       ? "font-weight:800;text-decoration:underline"
@@ -3790,7 +3808,6 @@ function pinta(){
   /* el menú de botones, para TODOS (D-284): la Jefa también */
   if(!tab || tab === "menu"){ pintaMenu(); return; }
   if(tab === "panes"){ pintaPanes(); return; }
-  if(tab === "zuaza"){ pintaZuaza(); return; }
   if(tab === "extra"){ pintaExtra(); return; }
   /* la pestaña «General» es de tienda y coordinación; la Jefa tiene la suya */
   if(tab === "general" && quien.puesto !== "gerencia"){ pintaTurnos(); return; }
@@ -3996,7 +4013,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-82";
+const VERSION = "v-2026-10-26-83";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
