@@ -227,6 +227,8 @@ function crearManejador(opciones) {
            Si no vienen, no se guardan (undefined no se escribe en el JSON). */
         producto: c.producto ? String(c.producto).slice(0, 40) : undefined,
         cantidad: Number.isFinite(Number(c.cantidad)) ? Number(c.cantidad) : undefined,
+        /* la observación: texto libre, lo que haga falta escribir */
+        nota: c.nota ? String(c.nota).slice(0, 300) : undefined,
         f: /^\d{4}-\d{2}-\d{2}$/.test(String(c.f || '')) ? String(c.f) : null,
         diario: c.diario === true,
         turno: ['manana','tarde'].includes(c.turno) ? c.turno : null,

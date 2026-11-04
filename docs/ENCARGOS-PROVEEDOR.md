@@ -86,10 +86,12 @@ JUEVES 6
 
 ---
 
-## 6 · Lo que falta decidir
+## 6 · Lo que ya está decidido
 
 | | |
 |---|---|
-| **¿«Varios» necesita también cantidad?** | **o es solo texto libre, como ahora** |
-| **¿El resumen enseña los días ya pasados?** | **o solo de hoy en adelante** |
-| **¿La observación se ve en el resumen?** | **o solo en el encargo** |
+| **«Varios»** | **NO lleva cantidad** — **es texto libre, como ahora** |
+| **El resumen** | **enseña TODO, también los días pasados** — **para poder comprobar cualquier cosa en cualquier momento** |
+| **La observación** | **se ve en el resumen** |
+
+> **Y lo de «enseña todo» tiene una consecuencia buena**: **el resumen no es solo para pedir, es también el histórico**. **Si un día alguien pregunta «¿qué pedimos el jueves pasado?», se mira ahí.**
