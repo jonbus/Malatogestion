@@ -1753,8 +1753,16 @@ function pintaResumenEncargos(){
   let html = `<h2 class="bloque">Resumen por días<small>${dias.length} ${
     dias.length === 1 ? "día" : "días"}</small></h2>`;
 
+  const manana = diaDeManana();
+  const hayManana = (prov)=> (encargosFecha || []).some(e =>
+    e.desde === manana && e.producto && (e.que || "") === prov);
+
   html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">
       <button class="btn-add-2" type="button" onclick="resumenEncargos=false; pinta();">◀ Volver a encargos</button>
+      <button class="btn-add-2" type="button" onclick="mandarPedidoProveedor('Zuaza')"
+        style="${hayManana("Zuaza") ? "" : "opacity:.45"}">📲 Pedido a Zuaza (Patxi)</button>
+      <button class="btn-add-2" type="button" onclick="mandarPedidoProveedor('Tahona')"
+        style="${hayManana("Tahona") ? "" : "opacity:.45"}">📲 Pedido a la Tahona (Jon)</button>
     </div>`;
 
   if(!dias.length){
@@ -1791,6 +1799,50 @@ function pintaResumenEncargos(){
   });
 
   c.innerHTML = html;
+}
+
+/* ------------------------------------------------ MANDAR EL PEDIDO DE MAÑANA
+   Solo lo de mañana, a cada proveedor por su teléfono. */
+const TELEFONOS_PROVEEDOR = {
+  "Zuaza": "34635739926",
+  "Tahona": "34650160078"
+};
+
+function diaDeManana(){
+  const d = new Date(DIA + "T12:00:00");
+  d.setDate(d.getDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function textoPedidoProveedor(prov){
+  const f = diaDeManana();
+  const lista = (encargosFecha || []).filter(e =>
+    e.desde === f && e.producto && (e.que || "") === prov);
+  if(!lista.length) return "";
+  const SALTO = String.fromCharCode(10);
+  const partes = ["Kaixo, tenemos encargado para mañana:", ""];
+  for(const e of lista){
+    let linea = (e.cantidad === "" || e.cantidad === null || e.cantidad === undefined
+      ? "?" : e.cantidad) + " " + e.producto;
+    if(e.nota) linea += " (" + e.nota + ")";
+    partes.push(linea);
+  }
+  partes.push("", "Mila esker,", "Malato");
+  return partes.join(SALTO);
+}
+
+function mandarPedidoProveedor(prov){
+  const texto = textoPedidoProveedor(prov);
+  if(!texto){
+    ponerSync("error", "No hay nada de " + prov + " para mañana");
+    return;
+  }
+  const tel = TELEFONOS_PROVEEDOR[prov];
+  if(!tel){
+    ponerSync("error", "No hay teléfono de " + prov);
+    return;
+  }
+  window.open("https://wa.me/" + tel + "?text=" + encodeURIComponent(texto), "_blank");
 }
 
 function bloqueFormEncargo(){
@@ -4187,7 +4239,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-92";
+const VERSION = "v-2026-10-26-93";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
