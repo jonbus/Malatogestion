@@ -528,6 +528,7 @@ document.getElementById("btn-entrar").addEventListener("click", async ()=>{
             id: (selPuesto === "tienda" ? "op" : "co") + selNumero };
   try { localStorage.setItem("tienda-quien", JSON.stringify(quien)); } catch(e){}
   entrar();
+  guardaVista();
 });
 
 /* ---------------------------------------------- la puerta escondida del logo */
@@ -1567,6 +1568,7 @@ function mandarPedidoZuaza(){
 function verPan(c){
   panCual = (c === "devolucion") ? "devolucion" : "entrada";
   pinta();
+  guardaVista();
 }
 
 async function guardarTahona(cual){
@@ -1926,7 +1928,7 @@ function pintaTabs(){
   b.className = "tab";
   b.type = "button";
   b.textContent = "◀ Menú";
-  b.addEventListener("click", ()=>{ tab = "menu"; pintaTabs(); pinta(); });
+  b.addEventListener("click", ()=>{ tab = "menu"; pintaTabs(); pinta(); guardaVista(); });
   c.appendChild(b);
   return;
   const lista = [];
@@ -2368,6 +2370,7 @@ function moverFechaZuaza(n){
   d.setDate(d.getDate() + n);
   fechaSel = d.toISOString().slice(0, 10);
   pinta();
+  guardaVista();
 }
 
 function hoyZuaza(){
@@ -3695,10 +3698,37 @@ function extrasPendientes(){
     (quien.puesto === "gerencia" ? e.p === "gerencia" : e.p === quien.puesto)).length;
 }
 
+/* ------------------------------------------------ EL BOTÓN DE ATRÁS DEL NAVEGADOR
+   Cada vez que se cambia de pantalla se avisa al navegador, para que «atrás»
+   vuelva al paso anterior y no se salga de la aplicación. */
+function guardaVista(){
+  try{
+    history.pushState(
+      { t: tab || "menu", f: fechaSel, p: panCual, e: editando || "", c: tab },
+      ""
+    );
+  }catch(e){}
+}
+
+function vuelveVista(s){
+  s = s || {};
+  tab = s.t || "menu";
+  if(s.f) fechaSel = s.f;
+  if(s.p) panCual = s.p;
+  editando = s.e || "";
+  pintaTabs();
+  pinta();
+}
+
+window.addEventListener("popstate", function(ev){
+  vuelveVista(ev.state);
+});
+
 function abrirSeccion(k){
   tab = k;
   pintaTabs();      /* sin esto no aparece el boton de volver */
   pinta();
+  guardaVista();
 }
 
 function pintaMenu(){
@@ -3966,7 +3996,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-81";
+const VERSION = "v-2026-10-26-82";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
