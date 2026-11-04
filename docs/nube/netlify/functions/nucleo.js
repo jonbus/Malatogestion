@@ -37,7 +37,7 @@ function horaLocal(zona) {
 
 function estadoVacio() {
   return { version: 0, marcas: {}, fichajes: [], traslados: {}, notas: {},
-             encargos: [], recuentos: {}, tahona: {}, encargosFecha: [], cascadas: {}, nombres: [], proveedores: [], plantilla: {} };
+             encargos: [], recuentos: {}, tahona: {}, zuaza: {}, encargosFecha: [], cascadas: {}, nombres: [], proveedores: [], plantilla: {} };
 }
 
 /* Se queda con los últimos N días y con los fichajes de esos días. */
@@ -88,11 +88,17 @@ function podar(estado, zona) {
   for (const f of Object.keys(estado.tahona || {})) {
     if (f >= desdeRec) tahona[f] = estado.tahona[f];
   }
+  /* el pan de Zuaza, igual: se guarda para poder cuadrar las facturas */
+  const zuaza = {};
+  for (const f of Object.keys(estado.zuaza || {})) {
+    if (f >= desdeRec) zuaza[f] = estado.zuaza[f];
+  }
   return {
     version: estado.version,
     marcas: marcas,
     recuentos: recuentos,
     tahona: tahona,
+    zuaza: zuaza,
     /* los encargos no caducan: se quedan hasta que se reciben */
     cascadas: estado.cascadas || {},
     /* los proveedores no caducan: son una agenda */
@@ -132,6 +138,8 @@ function crearManejador(opciones) {
         ? guardado.recuentos : {},
       tahona: guardado.tahona && typeof guardado.tahona === 'object'
         ? guardado.tahona : {},
+      zuaza: guardado.zuaza && typeof guardado.zuaza === 'object'
+        ? guardado.zuaza : {},
       encargosFecha: Array.isArray(guardado.encargosFecha) ? guardado.encargosFecha : [],
       cascadas: guardado.cascadas && typeof guardado.cascadas === 'object'
         ? guardado.cascadas : {},
@@ -185,7 +193,8 @@ function crearManejador(opciones) {
         marcas: estado.marcas, traslados: estado.traslados,
         notas: estado.notas, fichajes: estado.fichajes,
         encargos: estado.encargos, recuentos: estado.recuentos,
-        tahona: estado.tahona, encargosFecha: estado.encargosFecha,
+        tahona: estado.tahona, zuaza: estado.zuaza,
+        encargosFecha: estado.encargosFecha,
         cascadas: estado.cascadas, nombres: estado.nombres,
         proveedores: estado.proveedores, plantilla: estado.plantilla
       }};
@@ -596,6 +605,53 @@ function crearManejador(opciones) {
       await escribir(podado);
       return { status: 200, body: { ok: true, version: podado.version,
                                     tahona: podado.tahona } };
+    }
+
+    /* -------- borrar el pan de Zuaza de un día */
+    if (ruta.endsWith('/zuaza-borrar') && metodo === 'POST') {
+      const fecha = String((cuerpo && cuerpo.fecha) || '');
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha)) {
+        return { status: 400, body: { ok: false, error: 'fecha no válida' } };
+      }
+      const estado = await leer();
+      if (estado.zuaza && estado.zuaza[fecha]) {
+        delete estado.zuaza[fecha];
+        const podado = podar(estado, zona);
+        await escribir(podado);
+        return { status: 200, body: { ok: true, zuaza: podado.zuaza } };
+      }
+      return { status: 200, body: { ok: true, zuaza: estado.zuaza || {} } };
+    }
+
+    /* -------- el pan de Zuaza: PRIMERO la devolución, después la entrada */
+    if (ruta.endsWith('/zuaza') && metodo === 'POST') {
+      if (!cuerpo) return { status: 400, body: { ok: false, error: 'faltan los datos' } };
+      const fecha = String(cuerpo.fecha || '');
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha)) {
+        return { status: 400, body: { ok: false, error: 'fecha no válida' } };
+      }
+      if (!marca) return { status: 400, body: { ok: false, error: 'falta quién lo apunta' } };
+      const cual = cuerpo.cual === 'entrada' ? 'entrada' : 'devolucion';
+      const PANES = ['casero', 'barra_casera', 'molde', 'integral',
+                     'cereales', 'maiz', 'pasas_nueces', 'txoripan'];
+      const v = cuerpo.valores || {};
+      const num = (x) => {
+        if (x === '' || x === null || x === undefined) return null;
+        const n = Number(x);
+        return Number.isFinite(n) && n >= 0 ? Math.round(n * 100) / 100 : null;
+      };
+      const limpio = {};
+      for (const pan of PANES) limpio[pan] = num(v[pan]);
+      const estado = await leer();
+      if (!estado.zuaza) estado.zuaza = {};
+      const dia = estado.zuaza[fecha] || {};
+      dia[cual] = limpio;
+      dia.q = marca; dia.h = hora;
+      estado.zuaza[fecha] = dia;
+      const podado = podar(estado, zona);
+      await escribir(podado);
+      return { status: 200, body: { ok: true, version: podado.version,
+                                    zuaza: podado.zuaza } };
     }
 
     /* -------- cambiar el texto o la nota de una tarea del guion */
