@@ -631,7 +631,8 @@ function crearManejador(opciones) {
         return { status: 400, body: { ok: false, error: 'fecha no válida' } };
       }
       if (!marca) return { status: 400, body: { ok: false, error: 'falta quién lo apunta' } };
-      const cual = cuerpo.cual === 'entrada' ? 'entrada' : 'devolucion';
+      const cual = (cuerpo.cual === 'entrada' || cuerpo.cual === 'pedido')
+        ? cuerpo.cual : 'devolucion';
       const PANES = ['casero', 'barra_casera', 'molde', 'integral',
                      'cereales', 'maiz', 'pasas_nueces', 'txoripan'];
       const v = cuerpo.valores || {};

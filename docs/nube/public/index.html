@@ -1525,6 +1525,45 @@ function bloqueTahonaResumen(){
   return html;
 }
 
+/* El mensaje para Patxi. Cantidad primero y descripción después, y sin precios. */
+const TELEFONO_ZUAZA = "635 73 99 26";
+
+function textoPedidoZuaza(){
+  const dia = (zuaza || {})[fechaSel] || {};
+  const ped = dia.pedido || {};
+  const lineas = [];
+  for(const par of PANES_ZUAZA){
+    const k = par[0], n = par[1];
+    const c = ped[k];
+    if(c === null || c === undefined || c === '') continue;
+    if(Number(c) === 0) continue;
+    lineas.push(c + ' ' + n);
+  }
+  if(!lineas.length) return '';
+  const manana = (function(){
+    const d = new Date(fechaSel + 'T12:00:00');
+    d.setDate(d.getDate() + 1);
+    return d.toISOString().slice(0, 10);
+  })();
+  const SALTO = String.fromCharCode(10);
+  const partes = ['Kaixo, tenemos encargado para mañana (' + bonito(manana) + '):', ''];
+  for(const ln of lineas) partes.push(ln);
+  partes.push('', 'Mila esker,', 'Malato');
+  return partes.join(SALTO);
+}
+
+function mandarPedidoZuaza(){
+  const texto = textoPedidoZuaza();
+  if(!texto){
+    ponerSync("error", "No hay nada en la columna del pedido");
+    return;
+  }
+  const numero = TELEFONO_ZUAZA.replace(/\D/g, "");
+  const url = "https://wa.me/" + (numero.length === 9 ? "34" + numero : numero) +
+    "?text=" + encodeURIComponent(texto);
+  window.open(url, "_blank");
+}
+
 function verPan(c){
   panCual = (c === "devolucion") ? "devolucion" : "entrada";
   pinta();
@@ -2342,6 +2381,7 @@ function pintaZuaza(){
   const dia = (zuaza || {})[f] || {};
   const dev = dia.devolucion || {};
   const ent = dia.entrada || {};
+  const ped = dia.pedido || {};
   const v = (x)=> (x === null || x === undefined) ? "" : x;
 
   let html = `<h2 class="bloque">Zuaza<small>${bonito(f)}</small></h2>`;
@@ -2362,6 +2402,7 @@ function pintaZuaza(){
           <th style="text-align:left;padding:6px 4px">Pan</th>
           <th style="padding:6px 4px">Devolución</th>
           <th style="padding:6px 4px">Entrada</th>
+          <th style="padding:6px 4px">Pedido<br><small style="font-weight:400">para mañana</small></th>
         </tr>`;
 
   PANES_ZUAZA.forEach(([k, n, precio])=>{
@@ -2373,6 +2414,9 @@ function pintaZuaza(){
         <td style="padding:6px 4px;text-align:center">
           <input type="number" min="0" inputmode="decimal" id="z-e-${k}"
                  value="${v(ent[k])}" style="width:78px;text-align:center"></td>
+        <td style="padding:6px 4px;text-align:center">
+          <input type="number" min="0" inputmode="decimal" id="z-p-${k}"
+                 value="${v(ped[k])}" style="width:78px;text-align:center"></td>
       </tr>`;
   });
 
@@ -2380,6 +2424,10 @@ function pintaZuaza(){
       <div class="nueva-nota">
         <button class="btn-add" type="button" onclick="guardarZuaza()">Guardar el pan de este día</button>
         <span class="pista" style="margin-left:8px">${dia.h ? "apuntado a las " + dia.h : ""}</span>
+      </div>
+      <div class="nueva-nota" style="border:none;margin-top:6px">
+        <button class="btn-add-2" type="button" onclick="mandarPedidoZuaza()">📲 Mandar el pedido a Patxi</button>
+        <span class="pista" style="margin-left:8px">abre WhatsApp con el mensaje hecho</span>
       </div>
     </div></div>`;
 
@@ -2398,7 +2446,7 @@ async function guardarZuaza(){
   };
   ponerSync("trabajando", "Guardando el pan de Zuaza…");
   try{
-    for(const par of [["devolucion", "d-"], ["entrada", "e-"]]){
+    for(const par of [["devolucion", "d-"], ["entrada", "e-"], ["pedido", "p-"]]){
       const r = await fetch("/api/zuaza", {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fecha: f, cual: par[0], quien: quien.id, valores: recoge(par[1]) })
@@ -3918,7 +3966,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-79";
+const VERSION = "v-2026-10-26-81";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
