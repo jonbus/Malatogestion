@@ -641,7 +641,7 @@ let formOfertas = false, ofertasDesde = "", ofertasHasta = "", ofertasTitulo = "
 let recuentos = {};   // el recuento del lunes, por fecha del lunes
 let tahona = {};      // el pan del panadero, por fecha
 let panCual = "entrada";
-let panVista = "tahona";   // dentro de «Registro de panes»: tahona o zuaza
+let panVista = "";   // dentro de «Registro de panes»: al entrar, sin elegir
 
 /* los dos botones de arriba: Tahona y Zuaza */
 function botonesPan(){
@@ -3927,6 +3927,13 @@ function pintaMenu(){
 
 /* la sección «Registro de panes»: aquí vive el pan, no dentro de apertura ni cierre */
 function pintaPanes(){
+  const c0 = document.getElementById("cuerpo");
+  if(!panVista){
+    c0.innerHTML = botonesPan() +
+      '<div class="lista"><div class="item"><p class="pista" style="padding:6px">' +
+      '¿Qué pan quieres mirar? Toca Tahona o Zuaza.</p></div></div>';
+    return;
+  }
   if(panVista === "zuaza"){ pintaZuaza(); return; }
   /* la tienda apunta la devolución; coordinación y la Jefa pueden con las dos */
   const esTienda = quien.puesto === "tienda";
@@ -4168,7 +4175,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-85";
+const VERSION = "v-2026-10-26-86";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
