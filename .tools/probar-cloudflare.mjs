@@ -1,6 +1,7 @@
 /* Prueba completa de la app en Cloudflare.
    node .tools\probar-cloudflare.mjs
 */
+const PIN = process.env.GERENCIA_PIN || "";
 const U = 'https://app.supermalato.workers.dev';
 
 /* Cloudflare rechaza a los programas que no se identifican como navegador,
