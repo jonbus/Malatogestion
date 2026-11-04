@@ -1916,6 +1916,14 @@ let formEncargo = false, encQue = "", encCliente = "", encTipo = "dia",
     encDesde = "", encHasta = "", encDias = [], encAntes = "1", encPide = "coordinacion";
 /* de quién es el encargo: "zuaza", "tahona", o "" cuando es uno cualquiera */
 let encProveedor = "";
+let encCantidad = "", encNota = "";
+
+/* los productos de cada proveedor, para el desplegable */
+function productosDeEncargo(){
+  if(encProveedor === "zuaza") return PANES_ZUAZA.map(p => p[1]);
+  if(encProveedor === "tahona") return PANES_TAHONA_DOS.map(p => p[1]);
+  return [];
+}
 
 function bloqueFormEncargo(){
   const lunes = proximoLunes();
@@ -1939,11 +1947,22 @@ function bloqueFormEncargo(){
     : "Encargo";
   html += `<div class="lista"><div class="nueva-nota">
       <span class="pista" style="font-weight:700;flex:1 0 100%">${deQuien}</span>
-      <input type="text" id="enc-que" maxlength="200" placeholder="Qué es (1 txapata, 25 pollos…)"
-             oninput="encQue=this.value" value="${encQue}">
+      ${encProveedor ? `<select id="enc-que" onchange="encQue=this.value">
+        <option value="">Elige el producto…</option>
+        ${productosDeEncargo().map(n =>
+          `<option value="${n}"${encQue === n ? " selected" : ""}>${n}</option>`).join("")}
+      </select>
+      <input type="number" min="0" inputmode="numeric" id="enc-cant" placeholder="Cantidad"
+             oninput="encCantidad=this.value" value="${encCantidad}" style="flex:0 1 110px">`
+      : `<input type="text" id="enc-que" maxlength="200" placeholder="Qué es (1 txapata, 25 pollos…)"
+             oninput="encQue=this.value" value="${encQue}">`}
       <input type="text" id="enc-cli" maxlength="60" placeholder="Para quién"
              oninput="encCliente=this.value" value="${encCliente}" style="flex:0 1 130px">
     </div>
+    ${encProveedor ? `<div class="nueva-nota">
+      <input type="text" id="enc-nota" maxlength="300" placeholder="Observaciones (si hace falta algo)"
+             oninput="encNota=this.value" value="${encNota}">
+    </div>` : ""}
     <div class="nueva-nota">
       <select id="enc-tipo" onchange="encTipo=this.value; pinta();">
         <option value="dia"${encTipo==="dia"?" selected":""}>Un día</option>
@@ -2008,7 +2027,10 @@ async function guardarEncargo(){
     desde: d, hasta: tipo === "dia" ? d : hasta,
     dias: tipo === "semana" ? encDias : [],
     antelacion: Number(valorDe("enc-antes", encAntes)) || 0,
-    quienPide: valorDe("enc-pide", encPide) || "coordinacion"
+    quienPide: valorDe("enc-pide", encPide) || "coordinacion",
+    producto: encProveedor ? que : undefined,
+    cantidad: encProveedor ? (Number(valorDe("enc-cant", encCantidad)) || "") : undefined,
+    nota: encProveedor ? String(valorDe("enc-nota", encNota) || "").trim() : undefined
   };
   ponerSync("trabajando", "Guardando el encargo…");
   try{
@@ -2020,6 +2042,7 @@ async function guardarEncargo(){
     if(!r.ok) throw new Error(res.error || ("HTTP " + r.status));
     encargosFecha = res.encargosFecha || [];
     formEncargo = false; encQue = ""; encCliente = "";
+    encProveedor = ""; encCantidad = ""; encNota = "";
     ponerSync("ok", "Encargo añadido");
   }catch(e){
     ponerSync("error", "No se pudo: " + e.message);
@@ -4010,6 +4033,8 @@ window.addEventListener("popstate", function(ev){
 
 function abrirSeccion(k){
   tab = k;
+  /* al salir de encargos, el formulario se cierra: al volver, los tres botones */
+  if(k !== "calendario"){ formEncargo = false; encProveedor = ""; }
   pintaTabs();      /* sin esto no aparece el boton de volver */
   pinta();
   guardaVista();
@@ -4288,7 +4313,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-89";
+const VERSION = "v-2026-10-26-90";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
