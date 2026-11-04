@@ -2391,6 +2391,8 @@ function notasDe(f){
 
 function abrirCal(k){
   calBloque = (calBloque === k) ? "" : k;
+  /* al entrar en encargos, siempre por los tres botones */
+  if(calBloque === "encargos"){ formEncargo = false; encProveedor = ""; resumenEncargos = false; }
   /* al abrir «Tareas» se abre el formulario entero, no un botón que hay que pulsar */
   if(calBloque === "tareas") formTarea = true;
   pinta();
@@ -4144,6 +4146,9 @@ function guardaVista(){
 
 function vuelveVista(s){
   s = s || {};
+  /* atrás es subir un escalón: se cierra el bloque del calendario y encargos vuelve al principio */
+  calBloque = "";
+  formEncargo = false; encProveedor = ""; resumenEncargos = false;
   tab = s.t || "menu";
   if(s.f) fechaSel = s.f;
   if(s.p) panCual = s.p;
@@ -4439,7 +4444,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-94";
+const VERSION = "v-2026-10-26-95";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
