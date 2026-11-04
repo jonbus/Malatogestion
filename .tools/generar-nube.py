@@ -640,6 +640,7 @@ let formTarea = false, textoTarea = "", puestoTarea = "tienda";
 let formOfertas = false, ofertasDesde = "", ofertasHasta = "", ofertasTitulo = "";
 let recuentos = {};   // el recuento del lunes, por fecha del lunes
 let tahona = {};      // el pan del panadero, por fecha
+let panCual = "entrada";   // qué bloque del pan se está viendo: entrada o devolución
 let encargosFecha = [];   // los encargos: series con fecha
 let agenda = [];          // los proveedores, con sus teléfonos
 let turnoTarea = "", tipoTarea = "extra";
@@ -1714,6 +1715,11 @@ function bloqueTahonaResumen(){
   }
   html += `</div>`;
   return html;
+}
+
+function verPan(c){
+  panCual = (c === "devolucion") ? "devolucion" : "entrada";
+  pinta();
 }
 
 async function guardarTahona(cual){
@@ -3863,9 +3869,23 @@ function pintaMenu(){
 
 /* la sección «Registro de panes»: aquí vive el pan, no dentro de apertura ni cierre */
 function pintaPanes(){
-  const cual = quien.puesto === "tienda" ? "devolucion" : "entrada";
+  /* la tienda apunta la devolución; coordinación y la Jefa pueden con las dos */
+  const esTienda = quien.puesto === "tienda";
+  const cual = esTienda ? "devolucion" : (panCual === "devolucion" ? "devolucion" : "entrada");
   const c = document.getElementById("cuerpo");
-  c.innerHTML = bloqueTahona(cual);
+
+  let html = "";
+  if(!esTienda){
+    const activo = (q)=> cual === q
+      ? "font-weight:800;text-decoration:underline"
+      : "opacity:.65";
+    html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">` +
+      `<button class="btn-add-2" type="button" style="${activo("entrada")}" ` +
+      `onclick="verPan('entrada')">Entrada del pan</button>` +
+      `<button class="btn-add-2" type="button" style="${activo("devolucion")}" ` +
+      `onclick="verPan('devolucion')">Devolución</button></div>`;
+  }
+  c.innerHTML = html + bloqueTahona(cual);
   const s = document.getElementById("sub");
   if(s) s.textContent = "Registro de panes · " + bonito(fechaSel);
 }
@@ -4090,7 +4110,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-78";
+const VERSION = "v-2026-10-26-79";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
