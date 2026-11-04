@@ -484,6 +484,9 @@ function crearManejador(opciones) {
       const e = {
         id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
         que: que,
+        producto: c.producto ? String(c.producto).slice(0, 40) : undefined,
+        cantidad: Number.isFinite(Number(c.cantidad)) ? Number(c.cantidad) : undefined,
+        nota: c.nota ? String(c.nota).slice(0, 300) : undefined,
         cliente: String(c.cliente || '').trim().slice(0, 60),
         tipo: tipo, desde: desde, hasta: hasta, dias: dias,
         antelacion: antelacion,
