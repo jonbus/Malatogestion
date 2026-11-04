@@ -223,6 +223,10 @@ function crearManejador(opciones) {
       estado.encargos.push({
         id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
         t: texto, p: puesto, q: marca,
+        /* el pedido de Zuaza: el producto del desplegable y la cantidad.
+           Si no vienen, no se guardan (undefined no se escribe en el JSON). */
+        producto: c.producto ? String(c.producto).slice(0, 40) : undefined,
+        cantidad: Number.isFinite(Number(c.cantidad)) ? Number(c.cantidad) : undefined,
         f: /^\d{4}-\d{2}-\d{2}$/.test(String(c.f || '')) ? String(c.f) : null,
         diario: c.diario === true,
         turno: ['manana','tarde'].includes(c.turno) ? c.turno : null,
