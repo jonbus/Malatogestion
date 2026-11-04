@@ -1737,74 +1737,62 @@ function productosDeEncargo(){
 /* ------------------------------------------------ EL RESUMEN POR DÍAS
    Todo lo encargado, agrupado por día y, dentro de cada día, por proveedor.
    Enseña también los días pasados: sirve para comprobar cualquier cosa. */
+let diaResumen = "";   /* el día que se está mirando en el resumen */
+
 function pintaResumenEncargos(){
+  const f = diaResumen || DIA;
+  const lista = (encargosFecha || []).filter(e => e.desde === f);
 
-  /* se agrupa por el día para el que es cada encargo */
-  const porDia = {};
-  for(const e of (encargosFecha || [])){
-    const f = e.desde || "";
-    if(!f) continue;
-    if(!porDia[f]) porDia[f] = [];
-    porDia[f].push(e);
+  /* se agrupa por proveedor */
+  const grupos = {};
+  for(const e of lista){
+    const g = e.producto ? (e.que || "Proveedor") : "Varios";
+    if(!grupos[g]) grupos[g] = [];
+    grupos[g].push(e);
   }
-  const dias = Object.keys(porDia).sort();
-
-  let html = `<h2 class="bloque">Resumen por días<small>${dias.length} ${
-    dias.length === 1 ? "día" : "días"}</small></h2>`;
 
   const manana = diaDeManana();
-  const hayManana = (prov)=> (encargosFecha || []).some(e =>
-    e.desde === manana && e.producto && (e.que || "") === prov);
+
+  let html = `<h2 class="bloque">Resumen por días<small>${bonito(f)}</small></h2>`;
 
   html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">
       <button class="btn-add-2" type="button" onclick="resumenEncargos=false; pinta();">◀ Volver a encargos</button>
-      <button class="btn-add-2" type="button" onclick="mandarPedidoProveedor('Zuaza')"
-        style="${hayManana("Zuaza") ? "" : "opacity:.45"}">📲 Pedido a Zuaza (Patxi)</button>
-      <button class="btn-add-2" type="button" onclick="mandarPedidoProveedor('Tahona')"
-        style="${hayManana("Tahona") ? "" : "opacity:.45"}">📲 Pedido a la Tahona (Jon)</button>
+      <button class="btn-add-2" type="button" onclick="diaResumen='${DIA}'; pinta();">hoy</button>
+      <button class="btn-add-2" type="button" onclick="diaResumen='${manana}'; pinta();">mañana</button>
+      <input type="date" value="${f}" onchange="diaResumen=this.value; pinta();" style="flex:0 1 160px">
     </div>`;
 
-  if(!dias.length){
-    /* aunque no haya nada, se ven los días: hoy y mañana, vacíos */
-    const hoy = DIA;
-    const manana = diaDeManana().slice(0, 10);
-    for(const f of [hoy, manana]){
-      html += `<div class="lista"><div class="item">
-        <div class="cab-item"><span class="txt"><b>${bonito(f)}</b>
-          <span class="n">sin encargos</span></span></div>
-      </div></div>`;
-    }
-    return html;
+  html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">
+      <button class="btn-add-2" type="button" onclick="mandarPedidoProveedor('Zuaza')"
+        style="${lista.some(e => e.que === 'Zuaza') ? '' : 'opacity:.45'}">📲 Pedido a Zuaza (Patxi)</button>
+      <button class="btn-add-2" type="button" onclick="mandarPedidoProveedor('Tahona')"
+        style="${lista.some(e => e.que === 'Tahona') ? '' : 'opacity:.45'}">📲 Pedido a la Tahona (Jon)</button>
+    </div>`;
+
+  if(!lista.length){
+    return html + `<div class="lista"><div class="item">
+      <div class="cab-item"><span class="txt"><b>${bonito(f)}</b>
+        <span class="n">sin encargos</span></span></div>
+    </div></div>`;
   }
 
-  dias.forEach(f=>{
-    const lista = porDia[f];
-    /* dentro del día, por proveedor: Zuaza, Tahona y lo demás aparte */
-    const grupos = {};
-    for(const e of lista){
-      const g = e.producto ? (e.que || "Proveedor") : "Varios";
-      if(!grupos[g]) grupos[g] = [];
-      grupos[g].push(e);
-    }
-    html += `<div class="lista"><div class="item">
-      <div class="cab-item"><span class="txt"><b>${bonito(f)}</b>
-        <span class="n">${lista.length} ${lista.length === 1 ? "encargo" : "encargos"}</span>
-      </span></div>`;
-    for(const g of Object.keys(grupos).sort()){
-      html += `<div style="padding:6px 0"><b style="font-size:12px">${g}</b>`;
-      for(const e of grupos[g]){
-        html += `<div style="padding:4px 0 4px 12px;font-size:13px">
-          ${e.producto
-            ? `<b>${e.cantidad || "?"}</b> ${e.producto}`
-            : `${e.que}`}
-          ${e.nota ? `<span class="n" style="display:block">${e.nota}</span>` : ""}
-        </div>`;
-      }
-      html += `</div>`;
-    }
-    html += `</div></div>`;
-  });
+  html += `<div class="lista"><div class="item">
+    <div class="cab-item"><span class="txt"><b>${bonito(f)}</b>
+      <span class="n">${lista.length} ${lista.length === 1 ? "encargo" : "encargos"}</span>
+    </span></div>`;
 
+  for(const g of Object.keys(grupos).sort()){
+    html += `<div style="padding:6px 0"><b style="font-size:12px">${g}</b>`;
+    for(const e of grupos[g]){
+      html += `<div style="padding:4px 0 4px 12px;font-size:13px">
+        ${e.producto ? `<b>${e.cantidad || "?"}</b> ${e.producto}` : `${e.que}`}
+        ${e.nota ? `<span class="n" style="display:block">${e.nota}</span>` : ""}
+      </div>`;
+    }
+    html += `</div>`;
+  }
+
+  html += `</div></div>`;
   return html;
 }
 
@@ -2200,7 +2188,7 @@ function notasDe(f){
 function abrirCal(k){
   calBloque = (calBloque === k) ? "" : k;
   /* al entrar en encargos, siempre por los tres botones */
-  if(calBloque === "encargos"){ formEncargo = false; encProveedor = ""; resumenEncargos = false; }
+  if(calBloque === "encargos"){ formEncargo = false; encProveedor = ""; resumenEncargos = false; diaResumen = ""; }
   /* al abrir «Tareas» se abre el formulario entero, no un botón que hay que pulsar */
   if(calBloque === "tareas") formTarea = true;
   pinta();
@@ -4252,7 +4240,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-95";
+const VERSION = "v-2026-10-26-96";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
