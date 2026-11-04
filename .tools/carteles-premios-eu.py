@@ -133,7 +133,7 @@ def escribir_pdf(nombre, paginas):
     print(f"  {nombre} · {round(os.path.getsize(nombre)/1024,1)} KB")
 
 
-LOGO = ".tmp-logo/marca.jpg"
+LOGO = ".tmp-logo/marca-eu.jpg"
 O_GLIFO = ".tmp-logo/o.jpg"
 LOGO_W, LOGO_H = 657, 250
 
