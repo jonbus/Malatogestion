@@ -1914,19 +1914,31 @@ async function marcarEncargo(id, cual, fecha){
 /* ---------------------------------------------------- el alta de un encargo */
 let formEncargo = false, encQue = "", encCliente = "", encTipo = "dia",
     encDesde = "", encHasta = "", encDias = [], encAntes = "1", encPide = "coordinacion";
+/* de quién es el encargo: "zuaza", "tahona", o "" cuando es uno cualquiera */
+let encProveedor = "";
 
 function bloqueFormEncargo(){
   const lunes = proximoLunes();
   const d = encDesde || fechaSel || lunes;
   let html = `<h2 class="bloque">Encargos<small>lo que hay que tener un día</small></h2>`;
   if(!formEncargo){
-    return html + `<div class="lista"><div class="nueva-nota fila-tarea">
+    return html + `<div class="lista">
+      <div class="nueva-nota fila-tarea">
+        <button class="btn-add-2" type="button" onclick="abrirEncargoProveedor('zuaza')">Zuaza</button>
+        <button class="btn-add-2" type="button" onclick="abrirEncargoProveedor('tahona')">Tahona</button>
+        <button class="btn-add-2" type="button" onclick="abrirEncargoProveedor('')">Varios</button>
+      </div>
+      <div class="nueva-nota fila-tarea">
         <button id="enc-nueva" class="btn-add-2" type="button"
-                onclick="formEncargo=true; pinta();">+ Añadir un encargo</button>
+                onclick="abrirEncargoProveedor('')">+ Añadir un encargo</button>
         <span class="pista">Si hay que pedirlo antes, saldrá un aviso el día de pedirlo</span>
       </div></div>`;
   }
+  const deQuien = encProveedor === "zuaza" ? "Pedido a Zuaza"
+    : encProveedor === "tahona" ? "Pedido a la Tahona"
+    : "Encargo";
   html += `<div class="lista"><div class="nueva-nota">
+      <span class="pista" style="font-weight:700;flex:1 0 100%">${deQuien}</span>
       <input type="text" id="enc-que" maxlength="200" placeholder="Qué es (1 txapata, 25 pollos…)"
              oninput="encQue=this.value" value="${encQue}">
       <input type="text" id="enc-cli" maxlength="60" placeholder="Para quién"
@@ -1969,6 +1981,13 @@ function bloqueFormEncargo(){
               onclick="guardarEncargo()">Añadir el encargo</button>
     </div></div>`;
   return html;
+}
+
+function abrirEncargoProveedor(c){
+  encProveedor = (c === "zuaza" || c === "tahona") ? c : "";
+  encQue = "";
+  formEncargo = true;
+  pinta();
 }
 
 function alternarDiaEnc(i){
@@ -4269,7 +4288,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-88";
+const VERSION = "v-2026-10-26-89";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
