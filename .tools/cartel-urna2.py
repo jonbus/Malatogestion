@@ -163,6 +163,8 @@ d.text(((W - (caja[2] - caja[0])) / 2 - caja[0], 3228), "Una compra, una papelet
 centro(3382, "Gracias por estos 20 años a tu lado.", 64, ROUND)
 
 img.save("CARTEL-URNA.pdf", "PDF", resolution=300.0)
+img.save("CARTEL-URNA.jpg", "JPEG", quality=93, optimize=True)
+print(f"  CARTEL-URNA.jpg · {round(__import__('os').path.getsize('CARTEL-URNA.jpg')/1024,1)} KB")
 print(f"  CARTEL-URNA.pdf · {round(__import__('os').path.getsize('CARTEL-URNA.pdf')/1024,1)} KB")
 img.resize((W // 3, H // 3), Image.LANCZOS).save(".tmp-cart/URNA-vista.png")
 print("  vista previa hecha")
