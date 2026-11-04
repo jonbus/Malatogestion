@@ -463,6 +463,15 @@ function botonesPan(){
     `onclick="verPanVista('zuaza')">Zuaza</button></div>`;
 }
 
+/* los tres botones del día, los mismos que en Zuaza */
+function botonesDia(){
+  return '<div style="display:flex;gap:8px;margin:6px 0 10px;flex-wrap:wrap">' +
+    '<button class="btn-add-2" type="button" onclick="moverFechaZuaza(-1)">día anterior</button>' +
+    '<button class="btn-add-2" type="button" onclick="hoyZuaza()">hoy</button>' +
+    '<button class="btn-add-2" type="button" onclick="moverFechaZuaza(1)">día siguiente</button>' +
+    '<span class="pista" style="margin-left:6px">' + bonito(fechaSel) + '</span></div>';
+}
+
 function verPanVista(k){
   panVista = (k === "zuaza") ? "zuaza" : "tahona";
   pinta();
@@ -3732,7 +3741,7 @@ function pintaPanes(){
   const cual = esTienda ? "devolucion" : (panCual === "devolucion" ? "devolucion" : "entrada");
   const c = document.getElementById("cuerpo");
 
-  let html = botonesPan();
+  let html = botonesPan() + botonesDia();
   if(!esTienda){
     const activo = (q)=> cual === q
       ? "font-weight:800;text-decoration:underline"
@@ -3967,7 +3976,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-84";
+const VERSION = "v-2026-10-26-85";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
