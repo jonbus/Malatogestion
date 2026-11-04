@@ -656,7 +656,14 @@ function botonesPan(){
 }
 
 /* los tres botones del día, los mismos que en Zuaza */
+/* el día que se puede tocar: la tienda, solo hoy */
+function fechaPan(){
+  return (quien && quien.puesto === "tienda") ? DIA : fechaSel;
+}
+
 function botonesDia(){
+  /* la tienda no cambia de día: solo apunta el de hoy */
+  if(quien && quien.puesto === "tienda") return "";
   return '<div style="display:flex;gap:8px;margin:6px 0 10px;flex-wrap:wrap">' +
     '<button class="btn-add-2" type="button" onclick="moverFechaZuaza(-1)">día anterior</button>' +
     '<button class="btn-add-2" type="button" onclick="hoyZuaza()">hoy</button>' +
@@ -2561,7 +2568,7 @@ function hoyZuaza(){
 
 function pintaZuaza(){
   const c = document.getElementById("cuerpo");
-  const f = fechaSel;
+  const f = fechaPan();
   const dia = (zuaza || {})[f] || {};
   const dev = dia.devolucion || {};
   const ent = dia.entrada || {};
@@ -2570,11 +2577,13 @@ function pintaZuaza(){
 
   let html = botonesPan() + `<h2 class="bloque">Zuaza<small>${bonito(f)}</small></h2>`;
 
-  html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">
+  if(quien.puesto !== "tienda"){
+    html += `<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap">
       <button class="btn-add-2" type="button" onclick="moverFechaZuaza(-1)">◀ día anterior</button>
       <button class="btn-add-2" type="button" onclick="hoyZuaza()">hoy</button>
       <button class="btn-add-2" type="button" onclick="moverFechaZuaza(1)">día siguiente ▶</button>
     </div>`;
+  }
 
   html += `<div class="lista"><div class="item">
       <div class="cab-item"><span class="txt">
@@ -2612,7 +2621,7 @@ function pintaZuaza(){
 }
 
 async function guardarZuaza(){
-  const f = fechaSel;
+  const f = fechaPan();
   const recoge = (pre)=>{
     const x = {};
     for(const [k] of PANES_ZUAZA){
@@ -2654,7 +2663,7 @@ const PANES_TAHONA_DOS = [
 
 function pintaTahona(){
   const c = document.getElementById("cuerpo");
-  const f = fechaSel;
+  const f = fechaPan();
   const dia = (tahona || {})[f] || {};
   const ent = dia.entrada || {};
   const dev = dia.devolucion || {};
@@ -2696,7 +2705,7 @@ function pintaTahona(){
 }
 
 async function guardarTahonaDos(){
-  const f = fechaSel;
+  const f = fechaPan();
   const recoge = (pre)=>{
     const x = {};
     for(const p of PANES_TAHONA_DOS){
@@ -4260,7 +4269,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-87";
+const VERSION = "v-2026-10-26-88";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
