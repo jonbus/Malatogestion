@@ -1930,7 +1930,6 @@ function productosDeEncargo(){
    Todo lo encargado, agrupado por día y, dentro de cada día, por proveedor.
    Enseña también los días pasados: sirve para comprobar cualquier cosa. */
 function pintaResumenEncargos(){
-  const c = document.getElementById("cuerpo");
 
   /* se agrupa por el día para el que es cada encargo */
   const porDia = {};
@@ -1958,8 +1957,16 @@ function pintaResumenEncargos(){
     </div>`;
 
   if(!dias.length){
-    return html + `<div class="lista"><p class="pista" style="padding:14px">
-      Todavía no hay encargos.</p></div>`;
+    /* aunque no haya nada, se ven los días: hoy y mañana, vacíos */
+    const hoy = DIA;
+    const manana = diaDeManana().slice(0, 10);
+    for(const f of [hoy, manana]){
+      html += `<div class="lista"><div class="item">
+        <div class="cab-item"><span class="txt"><b>${bonito(f)}</b>
+          <span class="n">sin encargos</span></span></div>
+      </div></div>`;
+    }
+    return html;
   }
 
   dias.forEach(f=>{
@@ -1990,7 +1997,7 @@ function pintaResumenEncargos(){
     html += `</div></div>`;
   });
 
-  c.innerHTML = html;
+  return html;
 }
 
 /* ------------------------------------------------ MANDAR EL PEDIDO DE MAÑANA
@@ -4152,7 +4159,8 @@ window.addEventListener("popstate", function(ev){
 function abrirSeccion(k){
   tab = k;
   /* al salir de encargos, el formulario se cierra: al volver, los tres botones */
-  if(k !== "calendario"){ formEncargo = false; encProveedor = ""; resumenEncargos = false; }
+  /* cada vez que se entra, se empieza por los tres botones */
+  formEncargo = false; encProveedor = ""; resumenEncargos = false;
   pintaTabs();      /* sin esto no aparece el boton de volver */
   pinta();
   guardaVista();
@@ -4431,7 +4439,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-93";
+const VERSION = "v-2026-10-26-94";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
