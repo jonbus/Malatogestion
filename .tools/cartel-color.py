@@ -54,7 +54,7 @@ TEXTOS = {
         "gancho1": "EZ GALDU!",
         "gancho2": "",
         "pie": "Zure zain gaude. Etorri gurekin ospatzera.",
-        "salida": "CARTEL-ANIVERSARIO-EUSKERA.pdf",
+        "salida": "Kartel Urteurrena.pdf",
     },
 }
 
@@ -159,6 +159,17 @@ def haz(idioma):
     # el blanco del logotipo se vuelve transparente, para que se vea el fondo
     mascara = logo.convert("L").point(lambda p: 255 if p < 245 else 0)
     img.paste(logo, ((W - al) // 2, 32), mascara)
+
+    # en euskera, «supermercado» pasa a «supermerkatua»
+    if idioma == "eu":
+        arriba = 32
+        franja = int(la * 0.38)
+        d.rectangle([(W - al) // 2 - 4, arriba - 6, (W + al) // 2 + 4, arriba + franja],
+                    fill=CREMA)
+        f_txt = f("C:\\Windows\\Fonts\\arial.ttf", 66)
+        ancho_txt = d.textlength("supermerkatua", font=f_txt)
+        d.text(((W - ancho_txt) / 2, arriba + 6), "supermerkatua",
+               font=f_txt, fill=(97, 99, 96))
 
     # globos de arriba, con color
     globo(280, 340, 236, CORAL, 0.12)
