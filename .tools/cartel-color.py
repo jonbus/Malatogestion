@@ -40,7 +40,7 @@ TEXTOS = {
         "gancho1": "¡NO TE LO PUEDES",
         "gancho2": "PERDER!",
         "pie": "Te esperamos. Ven a celebrarlo con nosotros.",
-        "salida": "CARTEL-ANIVERSARIO-CASTELLANO.pdf",
+        "salida": "Kartel Urteurrena (castellano).pdf",
     },
     "eu": {
         "domingo": "IGANDEA",
