@@ -41,6 +41,22 @@ mascara = logo.convert("L").point(lambda p: 255 if p < 245 else 0)
 img.paste(logo, ((W - al) // 2, 90), mascara)
 centro(90 + la + 30, "2006. urtetik ZUREKIN", 64)
 
+# --- unos globos al lado del logotipo, para que se vea fiesta desde arriba
+def _globo(cx, cy, r, largo=1.0):
+    d.ellipse([cx - r, cy - r * 1.15, cx + r, cy + r * 1.15],
+              fill=BLANCO, outline=NEGRO, width=G)
+    d.polygon([(cx - r * 0.16, cy + r * 1.12), (cx + r * 0.16, cy + r * 1.12), (cx, cy + r * 1.3)],
+              fill=NEGRO)
+    pts = [(cx, cy + r * 1.3)]
+    for k in range(1, max(3, int(6 * largo))):
+        pts.append((cx + (16 if k % 2 else -16), cy + r * 1.3 + k * r * 0.3 * largo))
+    d.line(pts, fill=NEGRO, width=6, joint="curve")
+
+
+_globo(2010, 260, 118, 0.65)
+_globo(2240, 165, 84, 0.5)
+_globo(1880, 420, 62, 0.45)
+
 # --- la frase
 centro(560, "HOY NO HA SIDO", 150, ROUND)
 centro(730, "…pero te llevas una", 108)
@@ -67,7 +83,7 @@ centro(2380, "Cambia tu papeleta en la caja", 96, ROUND)
 centro(2520, "y te damos una piruleta.", 96, ROUND)
 
 d.line([200, 2740, W - 200, 2740], fill=NEGRO, width=12)
-centro(2810, "¡GRACIAS POR VENIR!", 120, ROUND)
+centro(2800, "ESKERRIK ASKO ETORTZEAGATIK!", 96, ROUND)
 d.line([200, 3000, W - 200, 3000], fill=NEGRO, width=12)
 
 centro(3080, "Gracias por estos 20 años a tu lado.", 64, ROUND)
