@@ -2,329 +2,153 @@
 
 > **DOMINGO 8 DE NOVIEMBRE DE 2026** · **de 10:00 a 14:30**
 >
-> **Para que ese día no dependa de que nadie se acuerde de nada.**
 > **Se lee la víspera, se tacha lo que se hace, y el que llega nuevo lo puede seguir solo.**
+> **Actualizado con todo lo último que ha dicho la propiedad.**
 
 ---
 
-## 1 · El día en una frase
-
-**Domingo 8 de noviembre. De 10:00 a 14:30.** **La gente entra con una palmera y una bolsa, y sale con una papeleta.** **Alrededor, la tarta, la batukada, las fotos y la música.**
-
----
-
-## 2 · El calendario de estos días
-
-**Hoy es jueves 29 de octubre. Quedan diez días.**
+## 1 · Lo que hay que hacer ANTES
 
 | Cuándo | Qué |
 |---|---|
-| **Esta semana** *(29 – 1 nov)* | **Decidir qué piezas de globos** y **hacer sus bases** · comprar lo que falte |
-| **Semana del 2** | **Recoger las 500 papeletas** *(el lunes 2)* · **comprar el picoteo** *(jamón, cabecero, chorizo, queso, pastas Dulcesol)* · **confirmar la batukada** · **mirar el tiempo** y decidir la carpa · **imprimir los carteles** |
-| **Jueves 5** | **Montar los globos de estructura** *(arcos, columnas)* · dejarlos en el almacén |
-| **Viernes 6** | **Los globos que se ven de cerca** · **el picoteo que se pueda dejar hecho** · la carpa, si se ha decidido |
-| **Sábado 7** | **Dejarlo todo listo**: mesa, mantel, tarta, lazos, letras · **las bolsas y los premios en el almacén, juntos y a mano** · **si se puede, el picoteo montado** |
-| **Domingo 8** | **9:00** subir los globos y montar la mesa · **10:00** abrir · **14:30** cerrar y recoger |
+| **Jueves 5** | **Montar los globos de estructura** (arcos, columnas). **Dejarlos en el almacén.** |
+| **Viernes 6** | **Los globos que se ven de cerca.** **La carpa**, si se ha decidido. |
+| **Sábado 7** | **Dejarlo TODO listo.** **Nada nuevo.** **Las bolsas y los premios juntos.** **Los platos del lunch, preparados.** **Y confirmar el ALTAVOZ con la batukada.** |
 
-> **Los globos del jueves 5 al domingo 8 son TRES DÍAS.** **Un globo de látex, inflado con aire, a los tres días está mustio.** **Lo que se monte el jueves: la estructura, que no se ve de cerca.** **Lo de la entrada y la mesa, el viernes por la noche o el sábado.**
-
-> **Y el sábado 7 no es un día perdido**: **es el día que hace que el domingo salga bien.** **Ese día no se monta nada nuevo: se deja todo listo.**
-
-## 3 · Lo que tiene que estar listo ANTES
-
-| | Qué | Dónde | Quién |
-|---|---|---|---|
-| **La tarta** | de porexpan, montada | **almacén** | — |
-| **La mesa** | un **tablón grande sobre dos caballetes** | — | — |
-| **El mantel** | **ya comprado** | — | — |
-| **Los lazos** | para decorar la tarta | — | — |
-| **Las letras** | **«20 urteurrena»** | — | — |
-| **Las palmeritas** | **500 ud**, caseras | — | — |
-| **Las gominolas** | un platito con gummy jellys | — | — |
-| **Las mini napolitanas** | **las manda Cadagua** — **por si no llegan las palmeras, y para la batukada** | — | — |
-| **Las bolsas** | edición 20 aniversario | — | — |
-| **La urna** y las papeletas | 500, **recortadas y dobladas** | **listas el lunes 2** | **—** |
-| **Los carteles** | el de la urna y el de los premios | — | — |
-| **Los premios** | 113 | — | — |
-| **Los mandiles y gorros** | dos: verde | — | — |
-| **La mesa auxiliar** | para la batukada | — | — |
-| **Los globos** | la decoración, **montada desde el jueves** | **almacén** | — |
-| **El compresor** | para inflar los globos | — | — |
-| **El picoteo** | abajo, en su lista | — | — |
-
-### ✓ Las papeletas: resueltas antes
-
-**La propiedad las tendrá recortadas y dobladas para el LUNES 2 de noviembre.**
-
-**Eso era lo único que iba justo de tiempo** — **y ya no lo va**. **El domingo no se recorta nada.**
-
-- [ ] **Recoger las papeletas el lunes 2**
-- [ ] **Contarlas**: **tienen que ser 500**
-- [ ] **Guardarlas en el almacén, con la urna**, hasta el día
-
-> **Y el domingo solo hay que abrir la urna y meterlas.** **Dos minutos.**
+**Y una cosa que ya está hecha**: **las 500 papeletas, cortadas y dobladas.** **No hay que recortar nada ese día.**
 
 ---
 
-## 4 · La decoración de globos
+## 2 · El domingo, hora a hora
 
-**Se monta con el compresor, y se empieza el jueves.** **Se deja en el almacén y el mismo día se sube.**
+| Hora | Qué |
+|---|---|
+| **7:00** | **Llegamos nosotras.** |
+| **7:30** | **Llegan LAS PALMERAS.** |
+| **8:00** | **El LUNCH de la batukada**, en los platos que se dejaron el sábado. **Todo antes de abrir.** |
+| **9:00** | **Subir y colocar los globos.** **Y hacer o reservar sitio en el parking** para la batukada. |
+| **9:00** | **LA MESA DE LA TARTA**, en el orden de abajo. |
+| **9:30** | **La urna, los carteles, las bolsas, los premios, la papelera y la cajita.** |
+| **10:00** | **ABRIR.** **Los dos niños en la puerta.** **Y llega EL FOTÓGRAFO.** |
+| **10:00** | **Empieza EL CANJE.** |
+| **11:00** | **La BATUKADA**, con el lunch ya puesto. |
+| **11:00** | **Visitar a ROSA** y llevarle unas pastas. |
+| **11:30** | **LA FOTO DE TODO EL EQUIPO**, delante de la tarta. |
+| **13:00** | **Los regalos a la batukada**, al acabar de tocar. |
+| **14:30** | **CERRAR.** Recoger. **Contar la cajita: tienen que ser 113.** |
 
-### Cómo se monta
+---
 
-- [ ] **Sacar el compresor** y comprobar que sopla
-- [ ] **Ir inflando y montando por partes**, no todo al final
-- [ ] **Dejar cada pieza terminada y atada** — **una pieza a medias no se puede mover**
-- [ ] **Apuntar cuántos globos entran en cada pieza** — para poder reponer el día del evento
-- [ ] **Dejarlo todo en el almacén**, en el sitio donde no se pise
-
-### El día: subirlo
-
-- [ ] **Subir las piezas ya montadas**, no inflar en la tienda
-- [ ] **Colocarlas** sin tapar la entrada ni la mesa de la tarta
-- [ ] **Comprobar que no molestan al paso** — **ni a los dos niños de la puerta**
-- [ ] **Repasar los globos que se hayan desinflado** y cambiarlos
-
-### Lo que hay que tener en cuenta
-
-> **El compresor es de AIRE, no de helio.** **Los globos no van a volar**: **van en arco, en columna o pegados a una estructura.** **Conviene decidirlo antes de empezar** — **un arco necesita su base hecha** (un alambre, un tubo, una malla), **y eso no se improvisa el jueves por la mañana**.
-
-> **Los globos se desinflan.** **Montado el jueves, el sábado está mustio.** **Lo que se monte el jueves, que sea lo que aguanta** (estructuras, columnas); **lo que se vea de cerca, mejor el viernes por la noche o el mismo día.**
-
-> **Y el calor**: **en el almacén, si hace calor, los globos se dilatan y revientan.** **Cuanto más frescos, mejor.**
-
-> **Y el transporte**: **de la puerta de atrás a la tienda hay un recorrido**. **Lo que no pase por ahí, no sirve** — **comprobar el ancho de paso antes de montar nada.**
-
-## 5 · La mesa de la tarta — EN ESTE ORDEN
+## 3 · La mesa de la tarta — EN ESTE ORDEN
 
 **El orden importa**: **si se pone el mantel después, hay que levantar la tarta.**
 
-### Paso 1 · El sitio
-- [ ] **Elegir el sitio**: **que se vea desde la calle** y **que no estorbe el paso**
-- [ ] **Comprobar que el suelo está llano** — **un tablón sobre caballetes en suelo torcido se vuelca**
-
-### Paso 2 · La mesa
-- [ ] **Abrir los dos caballetes** y **comprobar que los cuatro pies apoyan**
-- [ ] **Poner el tablón encima** y **comprobar que no baila**
-- [ ] **Si baila**: **calzar el caballete que cojea**, no el tablón
-
-### Paso 3 · El mantel
-- [ ] **Poner el mantel**
-- [ ] **Comprobar que cae igual por los cuatro lados**
-- [ ] **Comprobar que no tiene arrugas** — **una arruga en la foto se ve**
-
-### Paso 4 · La tarta
-
-> **La tarta es de ADORNO.** **Es una estructura de porexpan: no se corta, no se reparte y no se come.** **Nadie tiene que llevar cuchillo ni platos** — **lo que se come son las palmeritas.**
-
-- [ ] **Subir la estructura** de la tarta
-- [ ] **Colocarla en el centro**
-- [ ] **Decorarla con los lazos**
-- [ ] **Poner las letras: «20 urteurrena»** — **comprobar que se leen desde la calle**
-- [ ] **Comprobar que no se mueve** — **es de porexpan: pesa poco y vuelca fácil**
-
-### Paso 5 · Las palmeritas
-- [ ] **Colocarlas alrededor de todas las bases de la tarta**
-- [ ] **Las que no quepan, aparte** — en su bandeja, **tapadas**
-- [ ] **Taparlas hasta la hora** — **están en la calle y son comida**
-- [ ] **Las mini napolitanas de Cadagua, aparte** — **son el recambio si se acaban las palmeras**, y una parte **va para la batukada**
-
-### Paso 6 · Lo demás de la mesa
-- [ ] **La urna** con las papeletas
-- [ ] **El cartel de los premios**
-- [ ] **El cartel de la urna**
-- [ ] **Las bolsas** — **se llevan a la mesa al montarla**
-- [ ] **Los premios** — **se llevan a la mesa al montarla**
-
-### Paso 7 · El platito de las gominolas
-
-**También va en la mesa de la tarta: un platito con caramelos gummy jellys.**
-
-- [ ] **Poner el plato en un extremo**, no en el centro de la mesa
-- [ ] **Que no esté al sol directo** — **las gominolas se derriten y se pegan entre ellas**
-- [ ] **Que no esté al alcance de las manos de cualquiera** — **está en la calle**
-- [ ] **Reponerlo** cuando se vacíe
-
-> **Las gominolas están abiertas y en la calle.** **Un plato hondo, mejor que uno plano** — **y si hay manera de taparlo entre cliente y cliente, mejor que mejor.** **Y si hace calor, sacarlas del sol o ponerlas en un sitio fresco hasta la hora.**
-
-> **Ojo con el peso y el trasiego**: **en esa mesa van la tarta, 500 palmeritas, la urna, las bolsas y 113 premios**. **Comprobar que el tablón aguanta y que nadie se apoya.**
+1. **El sitio** — que se vea desde la calle y **que no estorbe**
+2. **Los caballetes** — **que los cuatro pies apoyen**; **si baila, se calza el caballete, no el tablón**
+3. **El mantel** — **sin arrugas, y que caiga igual por los cuatro lados**
+4. **La tarta** — **es de porexpan: no se corta, no se reparte y no se come**
+5. **Los lazos** y **las letras «20 urteurrena»** — que se lean desde la calle
+6. **Las palmeritas** alrededor, **y las que no quepan aparte y tapadas**
+7. **Las gominolas** — **un plato hondo, y que no le dé el sol**
+8. **Las PIRULETAS**
+9. **La urna, los carteles, las bolsas y los premios**
 
 ---
 
-## 6 · La mesa de la batukada
+## 4 · El lunch de la batukada
 
-**Entre las 11 y las 12 viene la batukada** *(la Jefa es componente)*.
+**Es SOLO para la batukada.** **Aparte, no en la mesa de la tarta.**
 
-**Tiene que estar TODO puesto antes de que lleguen** — **no se puede montar mientras tocan.**
+- **jamón · cabecero · pastas · aceitunas · patatas · pan · queso**
+- **En los platos que se dejaron listos el sábado**
+- **Y las botellas negras de agua de Pepsi**, que son el regalo
 
-- [ ] **La mesa auxiliar, montada** — con mantel si procede
-- [ ] **El picoteo, ya preparado**:
-  - **jamón**
-  - **cabecero**
-  - **chorizo**
-  - **queso**
-  - **pastas Dulcesol**
-- [ ] **Las botellas negras de agua de Pepsi** — **son el regalo**
+**Para la batukada se sacan las PASTAS CONGELADAS del almacén.**
 
-**Y a cada integrante de la batukada se le regala una bolsa del 20 aniversario con unos calcetines y una cantimplora.**
+- [ ] **Todo puesto antes de abrir** — **no se monta mientras tocan**
 
-- [ ] **Preparar tantas bolsas como integrantes vengan**
-- [ ] **Las preparan los niños**, en un rato que no haya clientes
-- [ ] **Que estén listas antes de que la batukada termine** — **se entregan al acabar, no después**
-- [ ] **Platos, servilletas y algo para cortar**
-
-> **El picoteo se prepara ANTES de que lleguen.** **Cuando terminan de tocar, lo que quieren es comer, no esperar.**
+**Y a cada integrante se le regala una bolsa del 20 aniversario con unos calcetines y una cantimplora.** **Lo preparan los niños** en un rato sin clientes, **y tiene que estar listo antes de que terminen.**
 
 ---
 
-## 7 · La carpa (si llueve)
+## 5 · Los dos niños, en la puerta
 
-- [ ] **Mirar el tiempo el día antes**
-- [ ] **Si hay duda, montarla** — **montarla de más cuesta una hora; no tenerla cuesta el día**
-- [ ] **Comprobar que no tapa la entrada** ni la mesa de la tarta
-- [ ] **Dejarla MONTADA todo el día**, aunque salga el sol — **por si llueve de repente o por lo que pueda pasar**
+**Chico, 16 años · chica, 13.** **Mandil verde y gorro de cocinero.**
 
----
+**Uno da la palmera y el otro la bolsa** — **a todo el que entra.**
 
-## 8 · Los dos niños, en la puerta
+**Y se encargan de la mesa de las palmeras y de la urna.** **Es su sitio.**
 
-**Dos niños, con mandil verde y gorro de cocinero:**
-
-| | Edad | Qué da |
-|---|---|---|
-| **Chico** | **16** | **una cosa** |
-| **Chica** | **13** | **la otra** |
-
-**Uno da la palmera y el otro la bolsa** — **a todos los clientes, antes de entrar**.
-
-**Y además se encargan de la mesa de las palmeras y de la urna.** **Es su sitio**: **ahí está todo lo que se da, y ellos son los que lo dan.**
-
-- [ ] **Que estén los dos desde la apertura**
-- [ ] **Que tengan el mandil y el gorro puestos**
-- [ ] **Que haya palmeras y bolsas a mano**, sin tener que ir a buscarlas
-- [ ] **Que un adulto esté cerca** — **no para quitarles el sitio, sino para que puedan ir al baño, comer o descansar un rato**
-- [ ] **Que la mesa de las palmeras y la urna estén donde ellos alcancen** — **sin tener que salir de su sitio**
-- [ ] **Decidir quién los cubre en el relevo** para comer
-
-> **Y el detalle que lo cambia todo**: **que se les diga que dan el «buenos días»**. **Un crío que saluda y da una palmera vale más que un cartel.**
+- [ ] **Que estén desde la apertura**
+- [ ] **Que la mesa esté a su altura** — sin tener que salir de su sitio
+- [ ] **Un adulto cerca, pero no encima** — **para que puedan ir al baño, comer o descansar**
+- [ ] **Que haya palmeras y bolsas de sobra** para reponer
 
 ---
 
-## 9 · El canje: el ticket por la papeleta
+## 6 · El canje y la piruleta
 
-**El cliente entra, coge su palmera y su bolsa. Al salir, cambia el ticket por una papeleta.**
+**El cliente paga, y al salir cambia el ticket por una papeleta.**
 
-- [ ] **La urna en la mesa**, con las papeletas dentro
-- [ ] **Una papeleta por ticket** — **no dos**
-- [ ] **El cliente mete la mano y saca la suya**
-- [ ] **Si sale premio, lo dan LOS NIÑOS**
-- [ ] **Los premios, a mano y a la vista** — **para que se vea que existen**
-- [ ] **La PAPELERA**: donde van las papeletas **no premiadas**
-- [ ] **La CAJITA**: donde van las papeletas **premiadas** — **esas se guardan, son el control**
-- [ ] **Las dos, ya preparadas**, al lado de la urna
+- [ ] **Una papeleta por ticket**
+- [ ] **Premiada → a la CAJITA** (esas se guardan: **son el control**)
+- [ ] **No premiada → a la PAPELERA**
+- [ ] **Y quien no gane, cambia la papeleta por una PIRULETA, en la caja**
 
-> **Y el orden de las cosas**: **la papeleta se coge AL SALIR, después de pagar**. **Si se da antes, se llena la urna de tickets que no compraron.**
+**Hay 500 piruletas para 387 papeletas que no ganan.** **Sobran 113.**
 
 ---
 
-## 10 · Las fotos y la música
+## 7 · El fotógrafo
 
-**Sobre las 11 o las 12: la foto de todo el equipo de Malato.**
+**Distira (Javi) — 647 91 06 17.**
 
-- [ ] **Avisar a todo el equipo el día antes** — **que nadie se haya ido a comer**
-- [ ] **Elegir el sitio**: **delante de la tarta**
-- [ ] **Que salga la tarta y el cartel** en la foto
+**Viene a las 10:00 y se queda hasta las 14:30.**
 
-**Y la música:**
-
-- [ ] **El anuncio de la radio**, con la canción de la IA de fondo
-- [ ] **Las dos canciones creadas para el día**
-- [ ] **Los micrófonos que hacen de altavoz**, cargados
-- [ ] **La coreografía**, si sale — **ensayarla aunque sea cinco minutos**
-
-> **Ojo al cruce**: **la batukada y las fotos caen a la misma hora**. **O se hace la foto con la batukada tocando** *(sale mejor)*, **o se hace justo antes de que empiecen**. **Decidirlo antes, no allí.**
+- [ ] **Que sepa dónde ponerse**: **la tarta y la mesa son el fondo**
+- [ ] **La foto de todo el equipo, a las 11:30** — **avisar a todos el sábado**
+- [ ] **Que salgan la tarta, el cartel y los niños**
 
 ---
 
-## 11 · El anuncio, unos días antes
+## 8 · La visita a Rosa
 
-**Antes del domingo hay que avisar a todo el mundo**, o el día llega y no se ha enterado nadie.
+**Sobre las 11**, **con unas pastas.**
 
-- [ ] **A la familia** — por teléfono, no por el estado
-- [ ] **A los amigos**
-- [ ] **A los clientes** — **en la tienda, en voz alta**: *«el domingo 8 hacemos 20 años, ven»*
-- [ ] **En el estado de WhatsApp**
-- [ ] **El cartel, pegado en la tienda**
-
-**Y el vídeo:**
-
-- [ ] **Fotos de las trabajadoras**
-- [ ] **La canción de samba de Malato** por debajo
-- [ ] **Montarlo y mandarlo** — **cuanto antes, mejor**: **un vídeo el sábado por la noche no lo ve nadie**
-
-> **Y una cosa**: **el cartel dice «domingo 8, por la mañana»** — **cuando lo mandes, di la hora**: **de 10:00 a 14:30**. **«Por la mañana» se convierte en «a las 9 y media» si no se dice.**
-
-## 12 · El día, hora a hora
-
-**El aniversario va de 10:00 a 14:30.** **Cuatro horas y media.** **Todo lo que hay que montar, se monta antes de las 10.**
-
-| Hora | Qué tiene que estar hecho |
-|---|---|
-| **Jueves 5 y viernes 6** | **Montar los globos** con el compresor · dejarlos en el almacén |
-| **Antes de las 9:00** | **Subir los globos** y colocarlos |
-| **9:00 – 10:00** | **La urna con las papeletas** · **la mesa de la tarta**: caballetes, tablón, mantel, tarta, lazos, letras, palmeritas |
-| **9:00** | **Hacer o reservar sitio en el PARKING** para la batukada |
-| **10:00** | **Abrir.** **Los dos niños en la puerta** con las palmeras y las bolsas |
-| **10:00 – 14:30** | **El canje**: el ticket por la papeleta · **los premios, los niños** · la música y las canciones |
-| **11:00 – 12:00** | **La batukada** · **la foto del equipo** · **el picoteo** |
-| **14:30** | **Cerrar.** Recoger la mesa · guardar la urna · los premios que sobren |
-
-> **Lo que no esté a las 10:00, ya no se monta.** **A partir de ahí la tienda está llena y no hay hueco.** **Y por eso las papeletas llegan ya hechas: el domingo no se recorta nada.**
-
-> **Y ojo con la hora punta**: **de 10:00 a 14:30 son cuatro horas y media para 500 papeletas** — **unas 110 por hora**. **Si a las 11 hay cola, la cola es en la puerta y la foto se hace con cola.** **No pasa nada** — **pero mejor saberlo.**
+- [ ] **Que alguien vaya** — **que no se pase la hora entre la batukada y la foto**
+- [ ] **Las pastas, aparte**, **no las del lunch**
 
 ---
 
-## 13 · Quién hace qué
-
-| | Qué hace |
-|---|---|
-| **Jefa** | **Libra.** **Va y viene y está pendiente de todo.** **No se le asigna ningún puesto fijo** — **y eso es a propósito: su trabajo ese día es que todo funcione** |
-| **Coordinación** | — |
-| **Tienda** | **La jornada normal.** **Los turnos ya están arreglados** — **no hay que tocar nada** |
-| **Cocina** | — |
-
-*(los huecos se rellenan cuando se decida)*
-
----
-
-## 14 · Lo que NO puede pasar
+## 9 · Lo que NO puede pasar
 
 | | Por qué |
 |---|---|
-| **Que las papeletas no estén el lunes 2** | **500 sin recortar no se arreglan a las 10 de la mañana** |
-| **Que la mesa se vuelque** | **tablón sobre caballetes, con 500 palmeritas y gente alrededor** |
-| **Que las palmeritas estén al aire** | **son comida, y están en la calle** |
-| **Que alguien coja dos papeletas** con un ticket | **se acaban antes de la hora** |
-| **Que los niños se queden sin nada que dar** | **hay que reponer a media mañana** |
-| **Que la batukada llegue y no haya mesa** | **el picoteo se prepara antes** |
-| **Que los globos estén mustios** | **montados el jueves, el sábado se desinflan** |
-| **Que una pieza de globos no pase por la puerta** | **comprobar el ancho antes de montarla** |
-| **Que se haga la foto y falte medio equipo** | **avisar el día antes** |
+| **Que la mesa se vuelque** | tablón sobre caballetes, con 500 palmeritas, la urna y 113 premios |
+| **Que las palmeritas estén al aire** | son comida, y están en la calle |
+| **Que se cambie dos veces el mismo ticket** | se acaban las papeletas antes de la hora |
+| **Que los niños se queden sin nada que dar** | hay que reponer a media mañana |
+| **Que la batukada llegue y no haya lunch** | se prepara antes de abrir |
+| **Que la batukada y la música suenen a la vez** | no se oye ninguna de las dos |
+| **Que al cerrar la cajita no tenga 113** | falta un premio por entregar |
 
 ---
 
-## 15 · Lo que queda por decir
+## 10 · Quién hace qué
 
-**La propiedad ha dicho que le queda algo por contar.** **Aquí se apunta:**
-
-| | Estado |
+| | |
 |---|---|
-| ~~Quién vigila la urna~~ | **los niños** — cerrado |
-| **Quién repone palmeras y bolsas** | pendiente |
-| **Dónde se guardan los premios** hasta el canje | pendiente |
-| ~~Si la tarta se corta~~ | **es de adorno: no se corta** — cerrado |
-| **El resto del programa** (actividades, horarios) | pendiente |
-| **Quién está cerca de los niños** en el relevo | pendiente |
-| ~~La fecha~~ | **domingo 8 de noviembre de 2026** — cerrado |
-| **Qué piezas de globos** se van a hacer (arco, columna, suelo) | pendiente |
+| **Jefa** | **Libra.** **Va y viene y está pendiente de todo.** **No tiene puesto fijo: su trabajo es que aquello funcione** |
+| **Tienda** | **La jornada normal.** **Los turnos ya están arreglados** |
+| **Coordinación** | **El pan de la tahona y de Zuaza**, **y el canje** |
+| **Cocina** | — |
+
+---
+
+## 11 · Los números
+
+```
+500 papeletas   ·   113 con premio   ·   387 de «hoy no ha sido»
+500 palmeritas  ·   500 bolsas de tela   ·   500 piruletas
+113 premios     ·   2 niños   ·   de 10:00 a 14:30
+```
