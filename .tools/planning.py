@@ -79,15 +79,18 @@ y = paso(y, "Sáb 7", "Dejarlo TODO listo. Nada nuevo. Bolsas y premios juntos."
 
 # --- el domingo
 y = apartado(y, "EL DOMINGO")
+y = paso(y, "7:00", "Llegamos nosotras. A las 7:30 llegan LAS PALMERAS.")
+y = paso(y, "8:00", "Preparar el LUNCH de la batukada en los platos que se dejaron listos el sábado: jamón, cabecero, pastas, aceitunas, patatas, pan y queso. Todo antes de abrir.")
 y = paso(y, "9:00", "Subir y colocar los globos. Hacer o reservar sitio en el parking para la batukada.")
-y = paso(y, "9:00", "LA MESA: caballetes y tablón / mantel / tarta / lazos / letras «20 urteurrena» / palmeritas alrededor / gominolas")
-y = paso(y, "9:30", "La urna con las papeletas (ya recortadas) / los carteles / las bolsas / los premios / la papelera y la cajita")
-y = paso(y, "10:00", "ABRIR. Los dos niños en la puerta: uno da la palmera, el otro la bolsa.")
-y = paso(y, "10:00", "Empieza EL CANJE: el ticket por una papeleta. Premios: las palmeras y lo que salga, lo dan los niños.")
-y = paso(y, "12:00", "La BATUKADA (Battuere, de Amurrio). La mesa auxiliar y el picoteo YA puestos: jamón, cabecero, chorizo, queso, pastas, botellas de agua.")
-y = paso(y, "12:30", "LA FOTO DE TODO EL EQUIPO, con la batukada tocando.")
+y = paso(y, "9:00", "LA MESA: caballetes y tablón / mantel / tarta / lazos / letras «20 urteurrena» / palmeritas alrededor / gominolas / PIRULETAS")
+y = paso(y, "9:30", "La urna/ los carteles / las bolsas / los premios / la papelera y la cajita")
+y = paso(y, "10:00", "ABRIR. Los dos niños en la puerta. Y llega EL FOTÓGRAFO (Distira, Javi 647 91 06 17): se queda hasta las 14:30.")
+y = paso(y, "10:00", "Empieza EL CANJE: el ticket por una papeleta. Quien no gane, cambia la papeleta por una PIRULETA en la caja.")
+y = paso(y, "11:00", "La BATUKADA. El lunch ya tiene que estar puesto.")
+y = paso(y, "11:00", "Visitar a ROSA y llevarle unas pastas.")
+y = paso(y, "11:30", "LA FOTO DE TODO EL EQUIPO, delante de la tarta.")
 y = paso(y, "13:00", "Regalos a la batukada, al acabar: bolsa + calcetines + cantimplora. Los preparan los niños.")
-y = paso(y, "14:30", "CERRAR. Recoger la mesa. Guardar la urna. Contar la cajita: tienen que ser 113.")
+y = paso(y, "14:30", "CERRAR. Recoger. Contar la cajita: tienen que ser 113.")
 
 # --- lo que no puede fallar
 y = apartado(y, "LO QUE NO PUEDE FALLAR")
@@ -116,19 +119,9 @@ for linea in [
     y += 62 * len(lineas) + 14
 
 # --- los numeros, de un vistazo
-y = apartado(y, "LOS NÚMEROS DEL DÍA")
-for linea in [
-    "500 papeletas: 113 con premio y 387 de «hoy no ha sido»",
-    "500 palmeritas y 500 bolsas de tela, una por cliente",
-    "113 premios, y los entregan los dos niños",
-]:
-    d.text((M + 20, y), "•", font=f(ROUND, 52), fill=N)
-    d.text((M + 70, y), linea, font=f(ROUND, 52), fill=N)
-    y += 62
-
 # --- pie
 raya(H - 165, 8)
-centro(H - 145, "Los turnos de la tienda ya están arreglados.", 44)
+centro(H - 145, "Los turnos de la tienda ya están arreglados. El fotógrafo, hasta las 14:30.", 40)
 centro(H - 92, "El detalle, en el manual: ANIVERSARIO-PROCEDIMIENTO.md", 34)
 
 img.save("PLANNING-8-NOVIEMBRE.pdf", "PDF", resolution=300.0)
