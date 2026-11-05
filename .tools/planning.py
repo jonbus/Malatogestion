@@ -95,15 +95,17 @@ y = paso(y, "14:30", "CERRAR. Recoger. Contar la cajita: tienen que ser 113.")
 # --- lo que no puede fallar
 y = apartado(y, "LO QUE NO PUEDE FALLAR")
 for linea in [
-    "Las 500 papeletas llegan el lunes 2. Se cuentan y se guardan con la urna.",
+    "Las 500 papeletas YA ESTAN cortadas y en la urna. Y 500 piruletas para las 387 que no ganan.",
     "La mesa firme: tablón sobre caballetes, y encima van 500 palmeritas, la urna y 113 premios.",
     "Las palmeritas TAPADAS hasta la hora. Están en la calle.",
     "Las napolitanas de Cadagua, aparte: son el recambio si se acaban las palmeras.",
     "La batukada y la música no suenan a la vez.",
     "Al cerrar: 113 papeletas en la cajita. Si no, falta un premio.",
+    "El ALTAVOZ lo trae la batukada, y el FOTOGRAFO viene de 10:00 a 14:30.",
+    "El LUNCH es solo para la batukada: aparte, no en la mesa de la tarta.",
 ]:
     d.text((M + 20, y), "•", font=f(ROUND, 54), fill=N)
-    ft = f(ROUND, 52)
+    ft = f(ROUND, 45)
     palabras, lineas, actual = linea.split(), [], ""
     for p in palabras:
         prueba = (actual + " " + p).strip()
@@ -115,8 +117,8 @@ for linea in [
     if actual:
         lineas.append(actual)
     for i, ln in enumerate(lineas):
-        d.text((M + 70, y + i * 62), ln, font=ft, fill=N)
-    y += 62 * len(lineas) + 14
+        d.text((M + 70, y + i * 54), ln, font=ft, fill=N)
+    y += 54 * len(lineas) + 8
 
 # --- los numeros, de un vistazo
 # --- pie
