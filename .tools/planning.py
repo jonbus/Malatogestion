@@ -75,7 +75,7 @@ raya(y + 20, 12)
 y = apartado(y + 30, "LOS DÍAS ANTES")
 y = paso(y, "Jue 5", "Montar los globos de estructura (arcos y columnas). Dejarlos en el almacén.")
 y = paso(y, "Vie 6", "Los globos que se ven de cerca. La carpa, si se ha decidido.")
-y = paso(y, "Sáb 7", "Dejarlo TODO listo. Nada nuevo. Bolsas y premios juntos.")
+y = paso(y, "Sáb 7", "Dejarlo TODO listo. Nada nuevo. Bolsas y premios juntos. Y confirmar el ALTAVOZ con la batukada.")
 
 # --- el domingo
 y = apartado(y, "EL DOMINGO")
@@ -86,7 +86,7 @@ y = paso(y, "9:00", "LA MESA: caballetes y tablón / mantel / tarta / lazos / le
 y = paso(y, "9:30", "La urna/ los carteles / las bolsas / los premios / la papelera y la cajita")
 y = paso(y, "10:00", "ABRIR. Los dos niños en la puerta. Y llega EL FOTÓGRAFO (Distira, Javi 647 91 06 17): se queda hasta las 14:30.")
 y = paso(y, "10:00", "Empieza EL CANJE: el ticket por una papeleta. Quien no gane, cambia la papeleta por una PIRULETA en la caja.")
-y = paso(y, "11:00", "La BATUKADA. El lunch ya tiene que estar puesto.")
+y = paso(y, "11:00", "La BATUKADA. Trae su altavoz para la música. El lunch ya tiene que estar puesto.")
 y = paso(y, "11:00", "Visitar a ROSA y llevarle unas pastas.")
 y = paso(y, "11:30", "LA FOTO DE TODO EL EQUIPO, delante de la tarta.")
 y = paso(y, "13:00", "Regalos a la batukada, al acabar: bolsa + calcetines + cantimplora. Los preparan los niños.")
