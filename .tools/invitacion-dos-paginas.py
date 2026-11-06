@@ -78,9 +78,10 @@ def pagina(idioma, numero):
     d = ImageDraw.Draw(img)
 
     # el título del documento, igual en las dos páginas
-    ft_titulo = ImageFont.truetype(ROUND, 40)
-    w = d.textlength("Invitación / Gonbidapena", font=ft_titulo)
-    d.text(((W - w) / 2, 232), "Invitación / Gonbidapena", font=ft_titulo, fill=GRIS)
+    cabecera = "Gonbidapena" if idioma == "EUSKERA" else "Invitación"
+    ft_titulo = ImageFont.truetype(ROUND, 46)
+    w = d.textlength(cabecera, font=ft_titulo)
+    d.text(((W - w) / 2, 226), cabecera, font=ft_titulo, fill=GRIS)
     d.line([(W / 2 - 90, 292), (W / 2 + 90, 292)], fill=GRIS, width=2)
 
     # el título del idioma
