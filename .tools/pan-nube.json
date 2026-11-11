@@ -1,0 +1,332 @@
+{
+  "tahona": {
+    "2026-10-26": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co1",
+      "h": "14:06"
+    },
+    "2026-10-27": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co1",
+      "h": "09:21"
+    },
+    "2026-10-28": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "ge1",
+      "h": "08:32",
+      "devolucion": {
+        "txapata": 1,
+        "txapatita": 2,
+        "barra": 1,
+        "cuarto": 2,
+        "txoripan": null
+      }
+    },
+    "2026-10-29": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co1",
+      "h": "08:36"
+    },
+    "2026-10-30": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co1",
+      "h": "09:16"
+    },
+    "2026-11-01": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "08:27",
+      "devolucion": {
+        "txapata": 1.5,
+        "txapatita": 1,
+        "barra": null,
+        "cuarto": 1,
+        "txoripan": null
+      }
+    },
+    "2026-11-02": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "08:27",
+      "devolucion": {
+        "txapata": 1,
+        "txapatita": null,
+        "barra": null,
+        "cuarto": null,
+        "txoripan": null
+      }
+    },
+    "2026-11-04": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "08:26",
+      "devolucion": {
+        "txapata": 1,
+        "txapatita": 1,
+        "barra": 1,
+        "cuarto": null,
+        "txoripan": null
+      }
+    },
+    "2026-11-03": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "08:27",
+      "devolucion": {
+        "txapata": 0.5,
+        "txapatita": 1,
+        "barra": 1,
+        "cuarto": 2,
+        "txoripan": null
+      }
+    },
+    "2026-11-05": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 4
+      },
+      "q": "co2",
+      "h": "08:43",
+      "devolucion": {
+        "txapata": 1,
+        "txapatita": 1,
+        "barra": 1,
+        "cuarto": 1,
+        "txoripan": null
+      }
+    },
+    "2026-11-06": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "09:27",
+      "devolucion": {
+        "txapata": null,
+        "txapatita": null,
+        "barra": null,
+        "cuarto": 1,
+        "txoripan": null
+      }
+    },
+    "2026-11-07": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 5,
+        "cuarto": 1,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "09:01",
+      "devolucion": {
+        "txapata": null,
+        "txapatita": null,
+        "barra": null,
+        "cuarto": null,
+        "txoripan": null
+      }
+    },
+    "2026-11-08": {
+      "entrada": {
+        "txapata": 7,
+        "txapatita": 3,
+        "barra": 6,
+        "cuarto": 2,
+        "txoripan": 5
+      },
+      "q": "co2",
+      "h": "09:15",
+      "devolucion": {
+        "txapata": null,
+        "txapatita": null,
+        "barra": null,
+        "cuarto": null,
+        "txoripan": null
+      }
+    }
+  },
+  "zuaza": {
+    "2026-11-04": {
+      "devolucion": {
+        "casero": 3,
+        "barra_casera": 2,
+        "molde": null,
+        "integral": null,
+        "cereales": null,
+        "maiz": null,
+        "pasas_nueces": null,
+        "txoripan": null
+      },
+      "q": "co2",
+      "h": "08:29",
+      "entrada": {
+        "casero": 5,
+        "barra_casera": 4,
+        "molde": 1,
+        "integral": 1,
+        "cereales": 2,
+        "maiz": 2,
+        "pasas_nueces": 1,
+        "txoripan": 8
+      }
+    },
+    "2026-11-05": {
+      "devolucion": {
+        "casero": null,
+        "barra_casera": null,
+        "molde": null,
+        "integral": null,
+        "cereales": null,
+        "maiz": null,
+        "pasas_nueces": null,
+        "txoripan": null
+      },
+      "q": "co1",
+      "h": "12:13",
+      "entrada": {
+        "casero": 4,
+        "barra_casera": 4,
+        "molde": 1,
+        "integral": 1,
+        "cereales": 1,
+        "maiz": 1,
+        "pasas_nueces": 1,
+        "txoripan": 8
+      }
+    },
+    "2026-11-01": {
+      "devolucion": {
+        "casero": null,
+        "barra_casera": null,
+        "molde": null,
+        "integral": null,
+        "cereales": null,
+        "maiz": null,
+        "pasas_nueces": null,
+        "txoripan": null
+      },
+      "q": "co2",
+      "h": "08:28",
+      "entrada": {
+        "casero": 10,
+        "barra_casera": 5,
+        "molde": 1,
+        "integral": 2,
+        "cereales": 1,
+        "maiz": 1,
+        "pasas_nueces": 2,
+        "txoripan": 10
+      }
+    },
+    "2026-11-06": {
+      "devolucion": {
+        "casero": 1,
+        "barra_casera": null,
+        "molde": null,
+        "integral": null,
+        "cereales": 1,
+        "maiz": null,
+        "pasas_nueces": null,
+        "txoripan": null
+      },
+      "q": "co2",
+      "h": "10:00",
+      "entrada": {
+        "casero": 4,
+        "barra_casera": 4,
+        "molde": 1,
+        "integral": 1,
+        "cereales": 1,
+        "maiz": 1,
+        "pasas_nueces": 1,
+        "txoripan": 8
+      }
+    },
+    "2026-11-07": {
+      "devolucion": {
+        "casero": 1,
+        "barra_casera": 1,
+        "molde": null,
+        "integral": null,
+        "cereales": 1,
+        "maiz": 1,
+        "pasas_nueces": null,
+        "txoripan": null
+      },
+      "q": "co2",
+      "h": "10:01",
+      "entrada": {
+        "casero": 5,
+        "barra_casera": 4,
+        "molde": 1,
+        "integral": 1,
+        "cereales": 1,
+        "maiz": 1,
+        "pasas_nueces": 2,
+        "txoripan": 8
+      }
+    }
+  }
+}
