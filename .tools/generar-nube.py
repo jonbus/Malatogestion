@@ -1516,6 +1516,26 @@ async function guardarRecuento(){
 /* ---------------------------------------------------------- la tahona
    El pan del panadero: entra por la mañana y se devuelve lo que no se vende.
    A fin de mes se suma entradas y se restan devoluciones, para cotejar con su factura. */
+/* ------------------------------------------------ EL ENTER, HACIA ABAJO
+   En las casillas del pan, el Enter va a la de debajo (la misma columna),
+   no a la de al lado. Se busca la siguiente casilla que tenga el mismo
+   principio de identificador (tahE-, tahD-, z-d-, z-e-...). */
+document.addEventListener("keydown", function(ev){
+  if(ev.key !== "Enter") return;
+  const el = ev.target;
+  if(!el || el.tagName !== "INPUT" || !el.id) return;
+  const m = el.id.match(/^([a-zA-Z]+-)(.+)$/);
+  if(!m) return;
+  ev.preventDefault();
+  const prefijo = m[1];
+  const casillas = Array.prototype.filter.call(
+    document.querySelectorAll('input'),
+    x => x.id && x.id.indexOf(prefijo) === 0 && x.offsetParent !== null
+  );
+  const i = casillas.indexOf(el);
+  if(i >= 0 && i + 1 < casillas.length) casillas[i + 1].focus();
+});
+
 function euros(n){
   if(n === null || n === undefined || n === "") return "—";
   return Number(n).toFixed(2).replace(".", ",") + " €";
@@ -2794,13 +2814,13 @@ let zuaza = {};
 
 const PANES_ZUAZA = [
   ["casero", "Casero", "3,65"],
-  ["barra_casera", "Barra Casera", "2,15"],
-  ["molde", "Molde", "3,65"],
-  ["integral", "Integral", "3,15"],
-  ["cereales", "Cereales", "3,85"],
-  ["maiz", "Maíz", "3,85"],
   ["pasas_nueces", "Pasas/Nueces", "4,65"],
-  ["txoripan", "Txoripan", "1,85"]
+  ["integral", "Integral", "3,15"],
+  ["txoripan", "Txoripan", "1,85"],
+  ["molde", "Molde", "3,65"],
+  ["barra_casera", "Barra Casera", "2,15"],
+  ["cereales", "Cereales", "3,85"],
+  ["maiz", "Maíz", "3,85"]
 ];
 
 function moverFechaZuaza(n){
@@ -4525,7 +4545,7 @@ window.addEventListener("unhandledrejection", e =>
 document.getElementById("cuerpo").addEventListener("click", atenderClic);
 
 /* arranque */
-const VERSION = "v-2026-10-26-99";
+const VERSION = "v-2026-10-27-100";
 try{ document.getElementById("version").textContent = VERSION; }catch(e){}
 
 pintarLogin();
